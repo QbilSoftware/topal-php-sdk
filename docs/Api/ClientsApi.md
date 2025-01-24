@@ -13,7 +13,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `clientsGet()`
 
 ```php
-clientsGet(): \OpenAPI\Client\Model\Client[]
+clientsGet(): \Topal\Client\Model\Client[]
 ```
 
 Retreives list of client
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ClientsApi(
+$apiInstance = new Topal\Client\Api\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Client[]**](../Model/Client.md)
+[**\Topal\Client\Model\Client[]**](../Model/Client.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 ## `clientsGet_0()`
 
 ```php
-clientsGet_0($id): \OpenAPI\Client\Model\Client
+clientsGet_0($id): \Topal\Client\Model\Client
 ```
 
 Retreives a client with specified unique identifier
@@ -77,7 +77,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ClientsApi(
+$apiInstance = new Topal\Client\Api\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -100,7 +100,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Client**](../Model/Client.md)
+[**\Topal\Client\Model\Client**](../Model/Client.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ No authorization required
 ## `clientsPost()`
 
 ```php
-clientsPost($client): \OpenAPI\Client\Model\Client
+clientsPost($client): \Topal\Client\Model\Client
 ```
 
 Save client
@@ -131,12 +131,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ClientsApi(
+$apiInstance = new Topal\Client\Api\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$client = new \OpenAPI\Client\Model\Client(); // \OpenAPI\Client\Model\Client
+$client = new \Topal\Client\Model\Client(); // \Topal\Client\Model\Client
 
 try {
     $result = $apiInstance->clientsPost($client);
@@ -150,11 +150,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **client** | [**\OpenAPI\Client\Model\Client**](../Model/Client.md)|  | |
+| **client** | [**\Topal\Client\Model\Client**](../Model/Client.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Client**](../Model/Client.md)
+[**\Topal\Client\Model\Client**](../Model/Client.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ClientsApi(
+$apiInstance = new Topal\Client\Api\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

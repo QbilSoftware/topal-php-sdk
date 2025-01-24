@@ -37,7 +37,7 @@ Name | Type | Description | Notes
 **current_reminder_level** | **int** |  | [optional]
 **has_document** | **int** |  | [optional]
 **current_reminder_date** | **\DateTime** |  | [optional]
-**payment_postings** | [**\OpenAPI\Client\Model\Posting[]**](Posting.md) |  | [optional]
-**transaction** | [**\OpenAPI\Client\Model\Transaction**](Transaction.md) |  | [optional]
+**payment_postings** | [**\Topal\Client\Model\Posting[]**](Posting.md) |  | [optional]
+**transaction** | [**\Topal\Client\Model\Transaction**](Transaction.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

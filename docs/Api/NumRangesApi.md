@@ -12,7 +12,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `numRangesGet()`
 
 ```php
-numRangesGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\NumRange[]
+numRangesGet($client_id, $fiscal_year_id): \Topal\Client\Model\NumRange[]
 ```
 
 get list of numRanges
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NumRangesApi(
+$apiInstance = new Topal\Client\Api\NumRangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -50,7 +50,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NumRange[]**](../Model/NumRange.md)
+[**\Topal\Client\Model\NumRange[]**](../Model/NumRange.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `numRangesGetByCode()`
 
 ```php
-numRangesGetByCode($code, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\NumRange
+numRangesGetByCode($code, $client_id, $fiscal_year_id): \Topal\Client\Model\NumRange
 ```
 
 Get numRange by code
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NumRangesApi(
+$apiInstance = new Topal\Client\Api\NumRangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -108,7 +108,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NumRange**](../Model/NumRange.md)
+[**\Topal\Client\Model\NumRange**](../Model/NumRange.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `numRangesGet_0()`
 
 ```php
-numRangesGet_0($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\NumRange
+numRangesGet_0($id, $client_id, $fiscal_year_id): \Topal\Client\Model\NumRange
 ```
 
 Get numRange by id
@@ -139,7 +139,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\NumRangesApi(
+$apiInstance = new Topal\Client\Api\NumRangesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -166,7 +166,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NumRange**](../Model/NumRange.md)
+[**\Topal\Client\Model\NumRange**](../Model/NumRange.md)
 
 ### Authorization
 

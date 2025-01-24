@@ -13,7 +13,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `currenciesGet()`
 
 ```php
-currenciesGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Currency[]
+currenciesGet($client_id, $fiscal_year_id): \Topal\Client\Model\Currency[]
 ```
 
 Retreives list of currencies
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesApi(
+$apiInstance = new Topal\Client\Api\CurrenciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -51,7 +51,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Currency[]**](../Model/Currency.md)
+[**\Topal\Client\Model\Currency[]**](../Model/Currency.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `currenciesGetByCode()`
 
 ```php
-currenciesGetByCode($code, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Currency
+currenciesGetByCode($code, $client_id, $fiscal_year_id): \Topal\Client\Model\Currency
 ```
 
 Get country by code
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesApi(
+$apiInstance = new Topal\Client\Api\CurrenciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -109,7 +109,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Currency**](../Model/Currency.md)
+[**\Topal\Client\Model\Currency**](../Model/Currency.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 ## `currenciesGet_0()`
 
 ```php
-currenciesGet_0($date, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Currency[]
+currenciesGet_0($date, $client_id, $fiscal_year_id): \Topal\Client\Model\Currency[]
 ```
 
 Retreives list of currencies
@@ -140,7 +140,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesApi(
+$apiInstance = new Topal\Client\Api\CurrenciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -167,7 +167,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Currency[]**](../Model/Currency.md)
+[**\Topal\Client\Model\Currency[]**](../Model/Currency.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 ## `currenciesGet_1()`
 
 ```php
-currenciesGet_1($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Currency
+currenciesGet_1($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Currency
 ```
 
 Get country by id
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CurrenciesApi(
+$apiInstance = new Topal\Client\Api\CurrenciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -225,7 +225,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Currency**](../Model/Currency.md)
+[**\Topal\Client\Model\Currency**](../Model/Currency.md)
 
 ### Authorization
 

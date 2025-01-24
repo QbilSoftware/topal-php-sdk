@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FiscalYearApi(
+$apiInstance = new Topal\Client\Api\FiscalYearApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -69,7 +69,7 @@ No authorization required
 ## `fiscalYearGet()`
 
 ```php
-fiscalYearGet($client_id): \OpenAPI\Client\Model\FiscalYear[]
+fiscalYearGet($client_id): \Topal\Client\Model\FiscalYear[]
 ```
 
 Retreives list of fiscal years
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FiscalYearApi(
+$apiInstance = new Topal\Client\Api\FiscalYearApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FiscalYear[]**](../Model/FiscalYear.md)
+[**\Topal\Client\Model\FiscalYear[]**](../Model/FiscalYear.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `fiscalYearGet_0()`
 
 ```php
-fiscalYearGet_0($id, $client_id): \OpenAPI\Client\Model\FiscalYear
+fiscalYearGet_0($id, $client_id): \Topal\Client\Model\FiscalYear
 ```
 
 get fiscal year by id
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FiscalYearApi(
+$apiInstance = new Topal\Client\Api\FiscalYearApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -161,7 +161,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FiscalYear**](../Model/FiscalYear.md)
+[**\Topal\Client\Model\FiscalYear**](../Model/FiscalYear.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ## `fiscalYearPost()`
 
 ```php
-fiscalYearPost($client_id, $fiscal_year): \OpenAPI\Client\Model\FiscalYear
+fiscalYearPost($client_id, $fiscal_year): \Topal\Client\Model\FiscalYear
 ```
 
 saves fiscal year
@@ -192,13 +192,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\FiscalYearApi(
+$apiInstance = new Topal\Client\Api\FiscalYearApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$fiscal_year = new \OpenAPI\Client\Model\FiscalYear(); // \OpenAPI\Client\Model\FiscalYear
+$fiscal_year = new \Topal\Client\Model\FiscalYear(); // \Topal\Client\Model\FiscalYear
 
 try {
     $result = $apiInstance->fiscalYearPost($client_id, $fiscal_year);
@@ -213,11 +213,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **fiscal_year** | [**\OpenAPI\Client\Model\FiscalYear**](../Model/FiscalYear.md)|  | |
+| **fiscal_year** | [**\Topal\Client\Model\FiscalYear**](../Model/FiscalYear.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FiscalYear**](../Model/FiscalYear.md)
+[**\Topal\Client\Model\FiscalYear**](../Model/FiscalYear.md)
 
 ### Authorization
 

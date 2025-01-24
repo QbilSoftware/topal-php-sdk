@@ -15,7 +15,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `accountsGet()`
 
 ```php
-accountsGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Account[]
+accountsGet($client_id, $fiscal_year_id): \Topal\Client\Model\Account[]
 ```
 
 Gets list of accounts
@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Topal\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Account[]**](../Model/Account.md)
+[**\Topal\Client\Model\Account[]**](../Model/Account.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `accountsGetByCode()`
 
 ```php
-accountsGetByCode($code, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Account
+accountsGetByCode($code, $client_id, $fiscal_year_id): \Topal\Client\Model\Account
 ```
 
 Gets account by code
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Topal\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Account**](../Model/Account.md)
+[**\Topal\Client\Model\Account**](../Model/Account.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `accountsGetStatement()`
 
 ```php
-accountsGetStatement($id, $date_from, $date_until, $client_id, $fiscal_year_id, $select_contra_postings): \OpenAPI\Client\Model\BalancePosting[]
+accountsGetStatement($id, $date_from, $date_until, $client_id, $fiscal_year_id, $select_contra_postings): \Topal\Client\Model\BalancePosting[]
 ```
 
 get account statement
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Topal\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BalancePosting[]**](../Model/BalancePosting.md)
+[**\Topal\Client\Model\BalancePosting[]**](../Model/BalancePosting.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
 ## `accountsGetStatementDataView()`
 
 ```php
-accountsGetStatementDataView($id, $date_from, $date_until, $client_id, $fiscal_year_id, $data_view, $select_contra_postings): \OpenAPI\Client\Model\DataViewBalancePosting
+accountsGetStatementDataView($id, $date_from, $date_until, $client_id, $fiscal_year_id, $data_view, $select_contra_postings): \Topal\Client\Model\DataViewBalancePosting
 ```
 
 get account statement with filtering, sorting and pagination.
@@ -206,7 +206,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Topal\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -216,7 +216,7 @@ $date_from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
 $date_until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
 $client_id = 'client_id_example'; // string
 $fiscal_year_id = 'fiscal_year_id_example'; // string
-$data_view = new \OpenAPI\Client\Model\DataViewBalancePosting(); // \OpenAPI\Client\Model\DataViewBalancePosting
+$data_view = new \Topal\Client\Model\DataViewBalancePosting(); // \Topal\Client\Model\DataViewBalancePosting
 $select_contra_postings = True; // bool
 
 try {
@@ -236,12 +236,12 @@ try {
 | **date_until** | **\DateTime**|  | |
 | **client_id** | **string**|  | |
 | **fiscal_year_id** | **string**|  | |
-| **data_view** | [**\OpenAPI\Client\Model\DataViewBalancePosting**](../Model/DataViewBalancePosting.md)|  | |
+| **data_view** | [**\Topal\Client\Model\DataViewBalancePosting**](../Model/DataViewBalancePosting.md)|  | |
 | **select_contra_postings** | **bool**|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DataViewBalancePosting**](../Model/DataViewBalancePosting.md)
+[**\Topal\Client\Model\DataViewBalancePosting**](../Model/DataViewBalancePosting.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ No authorization required
 ## `accountsGetSummary()`
 
 ```php
-accountsGetSummary($id, $date_from, $date_until, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\AccountSummary
+accountsGetSummary($id, $date_from, $date_until, $client_id, $fiscal_year_id): \Topal\Client\Model\AccountSummary
 ```
 
 get account summary
@@ -272,7 +272,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Topal\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -303,7 +303,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountSummary**](../Model/AccountSummary.md)
+[**\Topal\Client\Model\AccountSummary**](../Model/AccountSummary.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ No authorization required
 ## `accountsGet_0()`
 
 ```php
-accountsGet_0($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Account
+accountsGet_0($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Account
 ```
 
 Gets account by id
@@ -334,7 +334,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Topal\Client\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -361,7 +361,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Account**](../Model/Account.md)
+[**\Topal\Client\Model\Account**](../Model/Account.md)
 
 ### Authorization
 

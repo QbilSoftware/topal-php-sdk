@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **is_current** | **bool** |  | [optional]
 **is_password_protected** | **bool** |  | [optional]
 **currency_code** | **string** |  | [optional]
-**fiscal_years** | [**\OpenAPI\Client\Model\FiscalYear[]**](FiscalYear.md) |  | [optional]
-**vat_periods** | [**\OpenAPI\Client\Model\VATPeriod[]**](VATPeriod.md) |  | [optional]
+**fiscal_years** | [**\Topal\Client\Model\FiscalYear[]**](FiscalYear.md) |  | [optional]
+**vat_periods** | [**\Topal\Client\Model\VATPeriod[]**](VATPeriod.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

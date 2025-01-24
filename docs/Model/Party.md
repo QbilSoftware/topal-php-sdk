@@ -28,9 +28,9 @@ Name | Type | Description | Notes
 **country_code** | **string** |  | [optional]
 **language_code** | **string** |  | [optional]
 **zip** | **string** |  | [optional]
-**person** | [**\OpenAPI\Client\Model\Person**](Person.md) |  | [optional]
-**debtor** | [**\OpenAPI\Client\Model\Debtor**](Debtor.md) |  | [optional]
-**creditor** | [**\OpenAPI\Client\Model\Creditor**](Creditor.md) |  | [optional]
+**person** | [**\Topal\Client\Model\Person**](Person.md) |  | [optional]
+**debtor** | [**\Topal\Client\Model\Debtor**](Debtor.md) |  | [optional]
+**creditor** | [**\Topal\Client\Model\Creditor**](Creditor.md) |  | [optional]
 **uid** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

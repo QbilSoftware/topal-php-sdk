@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BanksApi(
+$apiInstance = new Topal\Client\Api\BanksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -70,7 +70,7 @@ No authorization required
 ## `banksGet()`
 
 ```php
-banksGet($client_id): \OpenAPI\Client\Model\Bank[]
+banksGet($client_id): \Topal\Client\Model\Bank[]
 ```
 
 Retreives list of banks
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BanksApi(
+$apiInstance = new Topal\Client\Api\BanksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Bank[]**](../Model/Bank.md)
+[**\Topal\Client\Model\Bank[]**](../Model/Bank.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `banksGetByCode()`
 
 ```php
-banksGetByCode($code, $client_id): \OpenAPI\Client\Model\Bank
+banksGetByCode($code, $client_id): \Topal\Client\Model\Bank
 ```
 
 Get bank by code
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BanksApi(
+$apiInstance = new Topal\Client\Api\BanksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Bank**](../Model/Bank.md)
+[**\Topal\Client\Model\Bank**](../Model/Bank.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `banksGet_0()`
 
 ```php
-banksGet_0($id, $client_id): \OpenAPI\Client\Model\Bank
+banksGet_0($id, $client_id): \Topal\Client\Model\Bank
 ```
 
 Get bank by id
@@ -193,7 +193,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BanksApi(
+$apiInstance = new Topal\Client\Api\BanksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -218,7 +218,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Bank**](../Model/Bank.md)
+[**\Topal\Client\Model\Bank**](../Model/Bank.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ No authorization required
 ## `banksPost()`
 
 ```php
-banksPost($client_id, $bank): \OpenAPI\Client\Model\Bank
+banksPost($client_id, $bank): \Topal\Client\Model\Bank
 ```
 
 Save bank
@@ -249,13 +249,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BanksApi(
+$apiInstance = new Topal\Client\Api\BanksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$bank = new \OpenAPI\Client\Model\Bank(); // \OpenAPI\Client\Model\Bank
+$bank = new \Topal\Client\Model\Bank(); // \Topal\Client\Model\Bank
 
 try {
     $result = $apiInstance->banksPost($client_id, $bank);
@@ -270,11 +270,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **bank** | [**\OpenAPI\Client\Model\Bank**](../Model/Bank.md)|  | |
+| **bank** | [**\Topal\Client\Model\Bank**](../Model/Bank.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Bank**](../Model/Bank.md)
+[**\Topal\Client\Model\Bank**](../Model/Bank.md)
 
 ### Authorization
 

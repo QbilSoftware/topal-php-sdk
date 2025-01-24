@@ -10,7 +10,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `defaultsGet()`
 
 ```php
-defaultsGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Defaults
+defaultsGet($client_id, $fiscal_year_id): \Topal\Client\Model\Defaults
 ```
 
 Gets current defaults
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DefaultsApi(
+$apiInstance = new Topal\Client\Api\DefaultsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -48,7 +48,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Defaults**](../Model/Defaults.md)
+[**\Topal\Client\Model\Defaults**](../Model/Defaults.md)
 
 ### Authorization
 

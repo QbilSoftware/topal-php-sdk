@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **is_confirmed** | **bool** |  | [optional]
 **num_range_fid** | **int** |  | [optional]
 **has_document** | **bool** |  | [optional]
-**postings** | [**\OpenAPI\Client\Model\Posting[]**](Posting.md) |  | [optional]
+**postings** | [**\Topal\Client\Model\Posting[]**](Posting.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

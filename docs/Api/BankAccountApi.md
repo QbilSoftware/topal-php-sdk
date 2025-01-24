@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BankAccountApi(
+$apiInstance = new Topal\Client\Api\BankAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -70,7 +70,7 @@ No authorization required
 ## `bankAccountGet()`
 
 ```php
-bankAccountGet($client_id): \OpenAPI\Client\Model\BankAccount[]
+bankAccountGet($client_id): \Topal\Client\Model\BankAccount[]
 ```
 
 Retreives list of bankAccounts
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BankAccountApi(
+$apiInstance = new Topal\Client\Api\BankAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BankAccount[]**](../Model/BankAccount.md)
+[**\Topal\Client\Model\BankAccount[]**](../Model/BankAccount.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `bankAccountGet_0()`
 
 ```php
-bankAccountGet_0($id, $client_id): \OpenAPI\Client\Model\BankAccount
+bankAccountGet_0($id, $client_id): \Topal\Client\Model\BankAccount
 ```
 
 Get bankAccount by id
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BankAccountApi(
+$apiInstance = new Topal\Client\Api\BankAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BankAccount**](../Model/BankAccount.md)
+[**\Topal\Client\Model\BankAccount**](../Model/BankAccount.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `bankAccountGet_1()`
 
 ```php
-bankAccountGet_1($name, $client_id): \OpenAPI\Client\Model\BankAccount
+bankAccountGet_1($name, $client_id): \Topal\Client\Model\BankAccount
 ```
 
 Get bankAccount by name
@@ -193,7 +193,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BankAccountApi(
+$apiInstance = new Topal\Client\Api\BankAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -218,7 +218,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BankAccount**](../Model/BankAccount.md)
+[**\Topal\Client\Model\BankAccount**](../Model/BankAccount.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ No authorization required
 ## `bankAccountPost()`
 
 ```php
-bankAccountPost($client_id, $bank_account): \OpenAPI\Client\Model\BankAccount
+bankAccountPost($client_id, $bank_account): \Topal\Client\Model\BankAccount
 ```
 
 Save bankAccount
@@ -249,13 +249,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BankAccountApi(
+$apiInstance = new Topal\Client\Api\BankAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$bank_account = new \OpenAPI\Client\Model\BankAccount(); // \OpenAPI\Client\Model\BankAccount
+$bank_account = new \Topal\Client\Model\BankAccount(); // \Topal\Client\Model\BankAccount
 
 try {
     $result = $apiInstance->bankAccountPost($client_id, $bank_account);
@@ -270,11 +270,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **bank_account** | [**\OpenAPI\Client\Model\BankAccount**](../Model/BankAccount.md)|  | |
+| **bank_account** | [**\Topal\Client\Model\BankAccount**](../Model/BankAccount.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BankAccount**](../Model/BankAccount.md)
+[**\Topal\Client\Model\BankAccount**](../Model/BankAccount.md)
 
 ### Authorization
 

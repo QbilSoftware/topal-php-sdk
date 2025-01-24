@@ -11,7 +11,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `partnersGet()`
 
 ```php
-partnersGet($client_id): \OpenAPI\Client\Model\Partner[]
+partnersGet($client_id): \Topal\Client\Model\Partner[]
 ```
 
 get list of partners
@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartnersApi(
+$apiInstance = new Topal\Client\Api\PartnersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -47,7 +47,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Partner[]**](../Model/Partner.md)
+[**\Topal\Client\Model\Partner[]**](../Model/Partner.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 ## `partnersGet_0()`
 
 ```php
-partnersGet_0($id, $client_id): \OpenAPI\Client\Model\Partner
+partnersGet_0($id, $client_id): \Topal\Client\Model\Partner
 ```
 
 Get partner by id
@@ -78,7 +78,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartnersApi(
+$apiInstance = new Topal\Client\Api\PartnersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Partner**](../Model/Partner.md)
+[**\Topal\Client\Model\Partner**](../Model/Partner.md)
 
 ### Authorization
 

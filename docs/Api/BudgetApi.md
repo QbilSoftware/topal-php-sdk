@@ -11,7 +11,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `budgetGet()`
 
 ```php
-budgetGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Budget[]
+budgetGet($client_id, $fiscal_year_id): \Topal\Client\Model\Budget[]
 ```
 
 Retreives list of buget
@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BudgetApi(
+$apiInstance = new Topal\Client\Api\BudgetApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Budget[]**](../Model/Budget.md)
+[**\Topal\Client\Model\Budget[]**](../Model/Budget.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `budgetGet_0()`
 
 ```php
-budgetGet_0($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Budget
+budgetGet_0($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Budget
 ```
 
 Get budget by id
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BudgetApi(
+$apiInstance = new Topal\Client\Api\BudgetApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -107,7 +107,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Budget**](../Model/Budget.md)
+[**\Topal\Client\Model\Budget**](../Model/Budget.md)
 
 ### Authorization
 

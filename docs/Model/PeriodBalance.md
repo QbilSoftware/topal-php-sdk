@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**period** | [**\OpenAPI\Client\Model\Period**](Period.md) |  | [optional]
-**sub_items** | [**\OpenAPI\Client\Model\StatementItem[]**](StatementItem.md) |  | [optional]
+**period** | [**\Topal\Client\Model\Period**](Period.md) |  | [optional]
+**sub_items** | [**\Topal\Client\Model\StatementItem[]**](StatementItem.md) |  | [optional]
 **name** | **string** |  | [optional]
 **code** | **string** |  | [optional]
 **amount** | **float** |  | [optional]

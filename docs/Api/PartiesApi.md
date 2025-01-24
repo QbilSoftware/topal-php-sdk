@@ -32,7 +32,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -88,7 +88,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -144,7 +144,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -187,7 +187,7 @@ No authorization required
 ## `partiesGet()`
 
 ```php
-partiesGet($client_id): \OpenAPI\Client\Model\Party[]
+partiesGet($client_id): \Topal\Client\Model\Party[]
 ```
 
 Retreives list of parties
@@ -200,7 +200,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -223,7 +223,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Party[]**](../Model/Party.md)
+[**\Topal\Client\Model\Party[]**](../Model/Party.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ No authorization required
 ## `partiesGetByFreeNumber()`
 
 ```php
-partiesGetByFreeNumber($free_party_num, $client_id): \OpenAPI\Client\Model\Party
+partiesGetByFreeNumber($free_party_num, $client_id): \Topal\Client\Model\Party
 ```
 
 Get party by freePartyNum
@@ -254,7 +254,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -279,7 +279,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Party**](../Model/Party.md)
+[**\Topal\Client\Model\Party**](../Model/Party.md)
 
 ### Authorization
 
@@ -297,7 +297,7 @@ No authorization required
 ## `partiesGetByNumber()`
 
 ```php
-partiesGetByNumber($party_num, $client_id): \OpenAPI\Client\Model\Party
+partiesGetByNumber($party_num, $client_id): \Topal\Client\Model\Party
 ```
 
 Get party by partyNum
@@ -310,7 +310,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -335,7 +335,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Party**](../Model/Party.md)
+[**\Topal\Client\Model\Party**](../Model/Party.md)
 
 ### Authorization
 
@@ -353,7 +353,7 @@ No authorization required
 ## `partiesGet_0()`
 
 ```php
-partiesGet_0($id, $client_id): \OpenAPI\Client\Model\Party
+partiesGet_0($id, $client_id): \Topal\Client\Model\Party
 ```
 
 Get party by id
@@ -366,7 +366,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -391,7 +391,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Party**](../Model/Party.md)
+[**\Topal\Client\Model\Party**](../Model/Party.md)
 
 ### Authorization
 
@@ -409,7 +409,7 @@ No authorization required
 ## `partiesPost()`
 
 ```php
-partiesPost($client_id, $party): \OpenAPI\Client\Model\Party
+partiesPost($client_id, $party): \Topal\Client\Model\Party
 ```
 
 Save party
@@ -422,13 +422,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$party = new \OpenAPI\Client\Model\Party(); // \OpenAPI\Client\Model\Party
+$party = new \Topal\Client\Model\Party(); // \Topal\Client\Model\Party
 
 try {
     $result = $apiInstance->partiesPost($client_id, $party);
@@ -443,11 +443,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **party** | [**\OpenAPI\Client\Model\Party**](../Model/Party.md)|  | |
+| **party** | [**\Topal\Client\Model\Party**](../Model/Party.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Party**](../Model/Party.md)
+[**\Topal\Client\Model\Party**](../Model/Party.md)
 
 ### Authorization
 
@@ -465,7 +465,7 @@ No authorization required
 ## `partiesPost_0()`
 
 ```php
-partiesPost_0($id, $client_id, $creditor): \OpenAPI\Client\Model\Creditor
+partiesPost_0($id, $client_id, $creditor): \Topal\Client\Model\Creditor
 ```
 
 Assign creditor to party creditor
@@ -478,14 +478,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int
 $client_id = 'client_id_example'; // string
-$creditor = new \OpenAPI\Client\Model\Creditor(); // \OpenAPI\Client\Model\Creditor
+$creditor = new \Topal\Client\Model\Creditor(); // \Topal\Client\Model\Creditor
 
 try {
     $result = $apiInstance->partiesPost_0($id, $client_id, $creditor);
@@ -501,11 +501,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **client_id** | **string**|  | |
-| **creditor** | [**\OpenAPI\Client\Model\Creditor**](../Model/Creditor.md)|  | |
+| **creditor** | [**\Topal\Client\Model\Creditor**](../Model/Creditor.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Creditor**](../Model/Creditor.md)
+[**\Topal\Client\Model\Creditor**](../Model/Creditor.md)
 
 ### Authorization
 
@@ -523,7 +523,7 @@ No authorization required
 ## `partiesPost_1()`
 
 ```php
-partiesPost_1($id, $client_id, $debtor): \OpenAPI\Client\Model\Debtor
+partiesPost_1($id, $client_id, $debtor): \Topal\Client\Model\Debtor
 ```
 
 Assign debtor to party
@@ -536,14 +536,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PartiesApi(
+$apiInstance = new Topal\Client\Api\PartiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = 56; // int
 $client_id = 'client_id_example'; // string
-$debtor = new \OpenAPI\Client\Model\Debtor(); // \OpenAPI\Client\Model\Debtor
+$debtor = new \Topal\Client\Model\Debtor(); // \Topal\Client\Model\Debtor
 
 try {
     $result = $apiInstance->partiesPost_1($id, $client_id, $debtor);
@@ -559,11 +559,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**|  | |
 | **client_id** | **string**|  | |
-| **debtor** | [**\OpenAPI\Client\Model\Debtor**](../Model/Debtor.md)|  | |
+| **debtor** | [**\Topal\Client\Model\Debtor**](../Model/Debtor.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Debtor**](../Model/Debtor.md)
+[**\Topal\Client\Model\Debtor**](../Model/Debtor.md)
 
 ### Authorization
 

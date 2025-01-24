@@ -13,7 +13,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `costCentersGet()`
 
 ```php
-costCentersGet($client_id): \OpenAPI\Client\Model\CostCenter[]
+costCentersGet($client_id): \Topal\Client\Model\CostCenter[]
 ```
 
 gets list of costCenters
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersApi(
+$apiInstance = new Topal\Client\Api\CostCentersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenter[]**](../Model/CostCenter.md)
+[**\Topal\Client\Model\CostCenter[]**](../Model/CostCenter.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `costCentersGetByCode()`
 
 ```php
-costCentersGetByCode($code, $client_id): \OpenAPI\Client\Model\CostCenter
+costCentersGetByCode($code, $client_id): \Topal\Client\Model\CostCenter
 ```
 
 Get costCenter by code
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersApi(
+$apiInstance = new Topal\Client\Api\CostCentersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenter**](../Model/CostCenter.md)
+[**\Topal\Client\Model\CostCenter**](../Model/CostCenter.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `costCentersGet_0()`
 
 ```php
-costCentersGet_0($id, $client_id): \OpenAPI\Client\Model\CostCenter
+costCentersGet_0($id, $client_id): \Topal\Client\Model\CostCenter
 ```
 
 Get costCenter by id
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersApi(
+$apiInstance = new Topal\Client\Api\CostCentersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -161,7 +161,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenter**](../Model/CostCenter.md)
+[**\Topal\Client\Model\CostCenter**](../Model/CostCenter.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ## `costCentersPost()`
 
 ```php
-costCentersPost($client_id, $cost_center): \OpenAPI\Client\Model\CostCenter
+costCentersPost($client_id, $cost_center): \Topal\Client\Model\CostCenter
 ```
 
 Save costCenter
@@ -192,13 +192,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CostCentersApi(
+$apiInstance = new Topal\Client\Api\CostCentersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$cost_center = new \OpenAPI\Client\Model\CostCenter(); // \OpenAPI\Client\Model\CostCenter
+$cost_center = new \Topal\Client\Model\CostCenter(); // \Topal\Client\Model\CostCenter
 
 try {
     $result = $apiInstance->costCentersPost($client_id, $cost_center);
@@ -213,11 +213,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **cost_center** | [**\OpenAPI\Client\Model\CostCenter**](../Model/CostCenter.md)|  | |
+| **cost_center** | [**\Topal\Client\Model\CostCenter**](../Model/CostCenter.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CostCenter**](../Model/CostCenter.md)
+[**\Topal\Client\Model\CostCenter**](../Model/CostCenter.md)
 
 ### Authorization
 

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **biller_id** | **string** |  | [optional]
 **vat_number** | **string** |  | [optional]
 **no_default_vat** | **bool** |  | [optional]
-**person** | [**\OpenAPI\Client\Model\Person**](Person.md) |  | [optional]
-**pay_methods** | [**\OpenAPI\Client\Model\PayMethod[]**](PayMethod.md) |  | [optional]
+**person** | [**\Topal\Client\Model\Person**](Person.md) |  | [optional]
+**pay_methods** | [**\Topal\Client\Model\PayMethod[]**](PayMethod.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

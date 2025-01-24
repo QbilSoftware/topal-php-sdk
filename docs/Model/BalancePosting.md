@@ -37,6 +37,6 @@ Name | Type | Description | Notes
 **has_any_document** | **bool** |  | [optional]
 **posting_index** | **int** |  | [optional]
 **is_in_cost_center_transaction** | **bool** |  | [optional]
-**contra_postings** | [**\OpenAPI\Client\Model\BalancePosting[]**](BalancePosting.md) |  | [optional]
+**contra_postings** | [**\Topal\Client\Model\BalancePosting[]**](BalancePosting.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -47,7 +47,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -163,7 +163,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -221,7 +221,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -266,7 +266,7 @@ No authorization required
 ## `receivablesGet()`
 
 ```php
-receivablesGet($only_open, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGet($only_open, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of receivables invoices
@@ -279,7 +279,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -306,7 +306,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ No authorization required
 ## `receivablesGetAll()`
 
 ```php
-receivablesGetAll($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetAll($client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of receivables invoices
@@ -337,7 +337,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -362,7 +362,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -380,7 +380,7 @@ No authorization required
 ## `receivablesGetAllPartyInvoices()`
 
 ```php
-receivablesGetAllPartyInvoices($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetAllPartyInvoices($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of party all receivables invoices
@@ -393,7 +393,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -420,7 +420,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -438,7 +438,7 @@ No authorization required
 ## `receivablesGetByFreeInvoiceNum()`
 
 ```php
-receivablesGetByFreeInvoiceNum($free_invoice_num, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice
+receivablesGetByFreeInvoiceNum($free_invoice_num, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice
 ```
 
 Get receivables invoice by freeInvoiceNum, return error if there is more than one invoice with this number
@@ -451,7 +451,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -478,7 +478,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ No authorization required
 ## `receivablesGetByFreeInvoicesNum()`
 
 ```php
-receivablesGetByFreeInvoicesNum($free_invoice_num, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetByFreeInvoicesNum($free_invoice_num, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Get list of receivables invoices by freeInvoiceNum
@@ -509,7 +509,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -536,7 +536,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -554,7 +554,7 @@ No authorization required
 ## `receivablesGetByInvoiceNum()`
 
 ```php
-receivablesGetByInvoiceNum($invoice_num, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice
+receivablesGetByInvoiceNum($invoice_num, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice
 ```
 
 Get receivables invoice by invoiceNum
@@ -567,7 +567,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -594,7 +594,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -612,7 +612,7 @@ No authorization required
 ## `receivablesGetInvoicesByPeriod()`
 
 ```php
-receivablesGetInvoicesByPeriod($date_from, $date_until, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetInvoicesByPeriod($date_from, $date_until, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of receivables invoices by period
@@ -625,7 +625,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -654,7 +654,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ No authorization required
 ## `receivablesGetManualPayment()`
 
 ```php
-receivablesGetManualPayment($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Payment
+receivablesGetManualPayment($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Payment
 ```
 
 get manualPayment by id
@@ -685,7 +685,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -712,7 +712,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Payment**](../Model/Payment.md)
+[**\Topal\Client\Model\Payment**](../Model/Payment.md)
 
 ### Authorization
 
@@ -730,7 +730,7 @@ No authorization required
 ## `receivablesGetManualPayments()`
 
 ```php
-receivablesGetManualPayments($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Payment[]
+receivablesGetManualPayments($client_id, $fiscal_year_id): \Topal\Client\Model\Payment[]
 ```
 
 Retreives list of Manual Payments
@@ -743,7 +743,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -768,7 +768,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Payment[]**](../Model/Payment.md)
+[**\Topal\Client\Model\Payment[]**](../Model/Payment.md)
 
 ### Authorization
 
@@ -786,7 +786,7 @@ No authorization required
 ## `receivablesGetOpen()`
 
 ```php
-receivablesGetOpen($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetOpen($client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of receivables invoices
@@ -799,7 +799,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -824,7 +824,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -842,7 +842,7 @@ No authorization required
 ## `receivablesGetOpenInvoicesByPeriod()`
 
 ```php
-receivablesGetOpenInvoicesByPeriod($date_from, $date_until, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetOpenInvoicesByPeriod($date_from, $date_until, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of receivables invoices by period
@@ -855,7 +855,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -884,7 +884,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -902,7 +902,7 @@ No authorization required
 ## `receivablesGetOpenPartyInvoices()`
 
 ```php
-receivablesGetOpenPartyInvoices($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetOpenPartyInvoices($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of party open receivables invoices
@@ -915,7 +915,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -942,7 +942,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -960,7 +960,7 @@ No authorization required
 ## `receivablesGetPartyInvoiceByFreeInvoiceNum()`
 
 ```php
-receivablesGetPartyInvoiceByFreeInvoiceNum($party_id, $free_invoice_num, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice
+receivablesGetPartyInvoiceByFreeInvoiceNum($party_id, $free_invoice_num, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice
 ```
 
 Get receivables invoice by party ID and freeInvoiceNum, return error if there is more than one invoice with this number
@@ -973,7 +973,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1002,7 +1002,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -1020,7 +1020,7 @@ No authorization required
 ## `receivablesGetPartyInvoices()`
 
 ```php
-receivablesGetPartyInvoices($id, $only_open, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetPartyInvoices($id, $only_open, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Retreives list of party receivables invoices
@@ -1033,7 +1033,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1062,7 +1062,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -1080,7 +1080,7 @@ No authorization required
 ## `receivablesGetPartyInvoicesByFreeInvoiceNum()`
 
 ```php
-receivablesGetPartyInvoicesByFreeInvoiceNum($party_id, $free_invoice_num, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice[]
+receivablesGetPartyInvoicesByFreeInvoiceNum($party_id, $free_invoice_num, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice[]
 ```
 
 Get list of receivables invoices by partyFID freeInvoiceNum
@@ -1093,7 +1093,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1122,7 +1122,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice[]**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice[]**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -1140,7 +1140,7 @@ No authorization required
 ## `receivablesGet_0()`
 
 ```php
-receivablesGet_0($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice
+receivablesGet_0($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Invoice
 ```
 
 Get receivables invoice by id
@@ -1153,7 +1153,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1180,7 +1180,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -1211,7 +1211,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1256,7 +1256,7 @@ No authorization required
 ## `receivablesNew()`
 
 ```php
-receivablesNew($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Invoice
+receivablesNew($client_id, $fiscal_year_id): \Topal\Client\Model\Invoice
 ```
 
 creates new invoice
@@ -1269,7 +1269,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1294,7 +1294,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -1312,7 +1312,7 @@ No authorization required
 ## `receivablesPayInvoice()`
 
 ```php
-receivablesPayInvoice($id, $date, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Payment
+receivablesPayInvoice($id, $date, $client_id, $fiscal_year_id): \Topal\Client\Model\Payment
 ```
 
 pay invoice by id
@@ -1325,7 +1325,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1354,7 +1354,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Payment**](../Model/Payment.md)
+[**\Topal\Client\Model\Payment**](../Model/Payment.md)
 
 ### Authorization
 
@@ -1372,7 +1372,7 @@ No authorization required
 ## `receivablesPost()`
 
 ```php
-receivablesPost($client_id, $fiscal_year_id, $invoice): \OpenAPI\Client\Model\Invoice
+receivablesPost($client_id, $fiscal_year_id, $invoice): \Topal\Client\Model\Invoice
 ```
 
 Save receivables invouce
@@ -1385,14 +1385,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
 $fiscal_year_id = 'fiscal_year_id_example'; // string
-$invoice = new \OpenAPI\Client\Model\Invoice(); // \OpenAPI\Client\Model\Invoice
+$invoice = new \Topal\Client\Model\Invoice(); // \Topal\Client\Model\Invoice
 
 try {
     $result = $apiInstance->receivablesPost($client_id, $fiscal_year_id, $invoice);
@@ -1408,11 +1408,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
 | **fiscal_year_id** | **string**|  | |
-| **invoice** | [**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)|  | |
+| **invoice** | [**\Topal\Client\Model\Invoice**](../Model/Invoice.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Topal\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -1430,7 +1430,7 @@ No authorization required
 ## `receivablesPostManualPayment()`
 
 ```php
-receivablesPostManualPayment($client_id, $fiscal_year_id, $payment): \OpenAPI\Client\Model\Payment
+receivablesPostManualPayment($client_id, $fiscal_year_id, $payment): \Topal\Client\Model\Payment
 ```
 
 saves manualPayment
@@ -1443,14 +1443,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReceivablesApi(
+$apiInstance = new Topal\Client\Api\ReceivablesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
 $fiscal_year_id = 'fiscal_year_id_example'; // string
-$payment = new \OpenAPI\Client\Model\Payment(); // \OpenAPI\Client\Model\Payment
+$payment = new \Topal\Client\Model\Payment(); // \Topal\Client\Model\Payment
 
 try {
     $result = $apiInstance->receivablesPostManualPayment($client_id, $fiscal_year_id, $payment);
@@ -1466,11 +1466,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
 | **fiscal_year_id** | **string**|  | |
-| **payment** | [**\OpenAPI\Client\Model\Payment**](../Model/Payment.md)|  | |
+| **payment** | [**\Topal\Client\Model\Payment**](../Model/Payment.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Payment**](../Model/Payment.md)
+[**\Topal\Client\Model\Payment**](../Model/Payment.md)
 
 ### Authorization
 

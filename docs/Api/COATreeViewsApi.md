@@ -28,7 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COATreeViewsApi(
+$apiInstance = new Topal\Client\Api\COATreeViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -73,7 +73,7 @@ No authorization required
 ## `cOATreeViewsGet()`
 
 ```php
-cOATreeViewsGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\COATreeView[]
+cOATreeViewsGet($client_id, $fiscal_year_id): \Topal\Client\Model\COATreeView[]
 ```
 
 get list of coatreeViews
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COATreeViewsApi(
+$apiInstance = new Topal\Client\Api\COATreeViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COATreeView[]**](../Model/COATreeView.md)
+[**\Topal\Client\Model\COATreeView[]**](../Model/COATreeView.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `cOATreeViewsGetByCOA()`
 
 ```php
-cOATreeViewsGetByCOA($coa_id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\COATreeView[]
+cOATreeViewsGetByCOA($coa_id, $client_id, $fiscal_year_id): \Topal\Client\Model\COATreeView[]
 ```
 
 Get coaTreeView by id within given coa
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COATreeViewsApi(
+$apiInstance = new Topal\Client\Api\COATreeViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -169,7 +169,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COATreeView[]**](../Model/COATreeView.md)
+[**\Topal\Client\Model\COATreeView[]**](../Model/COATreeView.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 ## `cOATreeViewsGet_0()`
 
 ```php
-cOATreeViewsGet_0($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\COATreeView
+cOATreeViewsGet_0($id, $client_id, $fiscal_year_id): \Topal\Client\Model\COATreeView
 ```
 
 Get coaTreeView by id
@@ -200,7 +200,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COATreeViewsApi(
+$apiInstance = new Topal\Client\Api\COATreeViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -227,7 +227,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COATreeView**](../Model/COATreeView.md)
+[**\Topal\Client\Model\COATreeView**](../Model/COATreeView.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ No authorization required
 ## `cOATreeViewsGet_1()`
 
 ```php
-cOATreeViewsGet_1($code, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\COATreeView
+cOATreeViewsGet_1($code, $client_id, $fiscal_year_id): \Topal\Client\Model\COATreeView
 ```
 
 Get coaTreeView by code
@@ -258,7 +258,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COATreeViewsApi(
+$apiInstance = new Topal\Client\Api\COATreeViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -285,7 +285,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COATreeView**](../Model/COATreeView.md)
+[**\Topal\Client\Model\COATreeView**](../Model/COATreeView.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ No authorization required
 ## `cOATreeViewsPost()`
 
 ```php
-cOATreeViewsPost($client_id, $fiscal_year_id, $coa_tree_view, $parent_group_code): \OpenAPI\Client\Model\COATreeView
+cOATreeViewsPost($client_id, $fiscal_year_id, $coa_tree_view, $parent_group_code): \Topal\Client\Model\COATreeView
 ```
 
 saves CoaTreeView   COATreeView item type:  - Account = 1  - COA Group = 2  - Counter = 3  - Mirror Account = 4  - Account Copy = 5  - Result = 6  - Commentary Line = 7
@@ -316,14 +316,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COATreeViewsApi(
+$apiInstance = new Topal\Client\Api\COATreeViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
 $fiscal_year_id = 'fiscal_year_id_example'; // string
-$coa_tree_view = new \OpenAPI\Client\Model\COATreeView(); // \OpenAPI\Client\Model\COATreeView
+$coa_tree_view = new \Topal\Client\Model\COATreeView(); // \Topal\Client\Model\COATreeView
 $parent_group_code = 'parent_group_code_example'; // string | parent group
 
 try {
@@ -340,12 +340,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
 | **fiscal_year_id** | **string**|  | |
-| **coa_tree_view** | [**\OpenAPI\Client\Model\COATreeView**](../Model/COATreeView.md)|  | |
+| **coa_tree_view** | [**\Topal\Client\Model\COATreeView**](../Model/COATreeView.md)|  | |
 | **parent_group_code** | **string**| parent group | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COATreeView**](../Model/COATreeView.md)
+[**\Topal\Client\Model\COATreeView**](../Model/COATreeView.md)
 
 ### Authorization
 

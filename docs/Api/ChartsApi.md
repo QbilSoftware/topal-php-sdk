@@ -14,7 +14,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `chartsGetCCStatement()`
 
 ```php
-chartsGetCCStatement($account_code, $cost_center_code, $date, $period_name, $periods_count, $client_id): \OpenAPI\Client\Model\Statement
+chartsGetCCStatement($account_code, $cost_center_code, $date, $period_name, $periods_count, $client_id): \Topal\Client\Model\Statement
 ```
 
 Gets accouht cost cetner balance witin given period  periods: year, quarter, month, day  maximum periods count - 12
@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ChartsApi(
+$apiInstance = new Topal\Client\Api\ChartsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Statement**](../Model/Statement.md)
+[**\Topal\Client\Model\Statement**](../Model/Statement.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 ## `chartsGetFormulaList()`
 
 ```php
-chartsGetFormulaList($client_id): \OpenAPI\Client\Model\MisFormulaTree[]
+chartsGetFormulaList($client_id): \Topal\Client\Model\MisFormulaTree[]
 ```
 
 Gets list of MIS formulas trees of client
@@ -91,7 +91,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ChartsApi(
+$apiInstance = new Topal\Client\Api\ChartsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -114,7 +114,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MisFormulaTree[]**](../Model/MisFormulaTree.md)
+[**\Topal\Client\Model\MisFormulaTree[]**](../Model/MisFormulaTree.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ No authorization required
 ## `chartsGetFormulaStatement()`
 
 ```php
-chartsGetFormulaStatement($formula, $date, $period_name, $periods_count, $client_id): \OpenAPI\Client\Model\FormulaStatement
+chartsGetFormulaStatement($formula, $date, $period_name, $periods_count, $client_id): \Topal\Client\Model\FormulaStatement
 ```
 
 Gets period values of given formula  periods: year, quarter, month, day  maximum periods count - 12
@@ -145,7 +145,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ChartsApi(
+$apiInstance = new Topal\Client\Api\ChartsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -176,7 +176,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FormulaStatement**](../Model/FormulaStatement.md)
+[**\Topal\Client\Model\FormulaStatement**](../Model/FormulaStatement.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ No authorization required
 ## `chartsGetStatement()`
 
 ```php
-chartsGetStatement($code, $date, $period_name, $periods_count, $client_id): \OpenAPI\Client\Model\Statement
+chartsGetStatement($code, $date, $period_name, $periods_count, $client_id): \Topal\Client\Model\Statement
 ```
 
 Gets list of COA balances within given period  periods: year, quarter, month, day  maximum periods count - 12
@@ -207,7 +207,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ChartsApi(
+$apiInstance = new Topal\Client\Api\ChartsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -238,7 +238,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Statement**](../Model/Statement.md)
+[**\Topal\Client\Model\Statement**](../Model/Statement.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ChartsApi(
+$apiInstance = new Topal\Client\Api\ChartsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COAViewsApi(
+$apiInstance = new Topal\Client\Api\COAViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -69,7 +69,7 @@ No authorization required
 ## `cOAViewsGet()`
 
 ```php
-cOAViewsGet($client_id): \OpenAPI\Client\Model\COAView[]
+cOAViewsGet($client_id): \Topal\Client\Model\COAView[]
 ```
 
 get list of coaViews
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COAViewsApi(
+$apiInstance = new Topal\Client\Api\COAViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COAView[]**](../Model/COAView.md)
+[**\Topal\Client\Model\COAView[]**](../Model/COAView.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `cOAViewsGet_0()`
 
 ```php
-cOAViewsGet_0($id, $client_id): \OpenAPI\Client\Model\COAView
+cOAViewsGet_0($id, $client_id): \Topal\Client\Model\COAView
 ```
 
 Get coaView by id
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COAViewsApi(
+$apiInstance = new Topal\Client\Api\COAViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -161,7 +161,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COAView**](../Model/COAView.md)
+[**\Topal\Client\Model\COAView**](../Model/COAView.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ## `cOAViewsPost()`
 
 ```php
-cOAViewsPost($client_id, $coa_view): \OpenAPI\Client\Model\COAView
+cOAViewsPost($client_id, $coa_view): \Topal\Client\Model\COAView
 ```
 
 Save coaView
@@ -192,13 +192,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\COAViewsApi(
+$apiInstance = new Topal\Client\Api\COAViewsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$coa_view = new \OpenAPI\Client\Model\COAView(); // \OpenAPI\Client\Model\COAView
+$coa_view = new \Topal\Client\Model\COAView(); // \Topal\Client\Model\COAView
 
 try {
     $result = $apiInstance->cOAViewsPost($client_id, $coa_view);
@@ -213,11 +213,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **coa_view** | [**\OpenAPI\Client\Model\COAView**](../Model/COAView.md)|  | |
+| **coa_view** | [**\Topal\Client\Model\COAView**](../Model/COAView.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\COAView**](../Model/COAView.md)
+[**\Topal\Client\Model\COAView**](../Model/COAView.md)
 
 ### Authorization
 

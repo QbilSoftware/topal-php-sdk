@@ -22,7 +22,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `transactionsCreatePosting()`
 
 ```php
-transactionsCreatePosting($client_id, $fiscal_year_id, $date, $account_code, $amount, $fc_amount, $exchange_rate, $vat_code, $is_inclusive): \OpenAPI\Client\Model\Posting
+transactionsCreatePosting($client_id, $fiscal_year_id, $date, $account_code, $amount, $fc_amount, $exchange_rate, $vat_code, $is_inclusive): \Topal\Client\Model\Posting
 ```
 
 create posting based on optinal parameters
@@ -35,7 +35,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -74,7 +74,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Posting**](../Model/Posting.md)
+[**\Topal\Client\Model\Posting**](../Model/Posting.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -165,7 +165,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -223,7 +223,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -268,7 +268,7 @@ No authorization required
 ## `transactionsGet()`
 
 ```php
-transactionsGet($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Transaction
+transactionsGet($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Transaction
 ```
 
 get transaction by id
@@ -281,7 +281,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -308,7 +308,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Transaction**](../Model/Transaction.md)
+[**\Topal\Client\Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -326,7 +326,7 @@ No authorization required
 ## `transactionsGetByDocNum()`
 
 ```php
-transactionsGetByDocNum($doc_num, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Transaction
+transactionsGetByDocNum($doc_num, $client_id, $fiscal_year_id): \Topal\Client\Model\Transaction
 ```
 
 get transaction by docNum
@@ -339,7 +339,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -366,7 +366,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Transaction**](../Model/Transaction.md)
+[**\Topal\Client\Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ No authorization required
 ## `transactionsGetPendingDocuments()`
 
 ```php
-transactionsGetPendingDocuments($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Document[]
+transactionsGetPendingDocuments($client_id, $fiscal_year_id): \Topal\Client\Model\Document[]
 ```
 
 get not procssed documents from dms
@@ -397,7 +397,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -422,7 +422,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Document[]**](../Model/Document.md)
+[**\Topal\Client\Model\Document[]**](../Model/Document.md)
 
 ### Authorization
 
@@ -440,7 +440,7 @@ No authorization required
 ## `transactionsGetVatPosting()`
 
 ```php
-transactionsGetVatPosting($vat_code, $gross_amount, $gross_fc_amount, $client_id, $fiscal_year_id, $is_inclusive): \OpenAPI\Client\Model\Posting
+transactionsGetVatPosting($vat_code, $gross_amount, $gross_fc_amount, $client_id, $fiscal_year_id, $is_inclusive): \Topal\Client\Model\Posting
 ```
 
 create posting with calculated vat amounts
@@ -453,7 +453,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -486,7 +486,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Posting**](../Model/Posting.md)
+[**\Topal\Client\Model\Posting**](../Model/Posting.md)
 
 ### Authorization
 
@@ -504,7 +504,7 @@ No authorization required
 ## `transactionsGet_0()`
 
 ```php
-transactionsGet_0($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Transaction[]
+transactionsGet_0($client_id, $fiscal_year_id): \Topal\Client\Model\Transaction[]
 ```
 
 get all transactions within fiscal year
@@ -517,7 +517,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -542,7 +542,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Transaction[]**](../Model/Transaction.md)
+[**\Topal\Client\Model\Transaction[]**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -573,7 +573,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -618,7 +618,7 @@ No authorization required
 ## `transactionsNew()`
 
 ```php
-transactionsNew($transaction_type, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Transaction
+transactionsNew($transaction_type, $client_id, $fiscal_year_id): \Topal\Client\Model\Transaction
 ```
 
 creates new transaction of given type
@@ -631,7 +631,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -658,7 +658,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Transaction**](../Model/Transaction.md)
+[**\Topal\Client\Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -676,7 +676,7 @@ No authorization required
 ## `transactionsPost()`
 
 ```php
-transactionsPost($client_id, $fiscal_year_id, $transaction): \OpenAPI\Client\Model\Transaction
+transactionsPost($client_id, $fiscal_year_id, $transaction): \Topal\Client\Model\Transaction
 ```
 
 saves transaction
@@ -689,14 +689,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
 $fiscal_year_id = 'fiscal_year_id_example'; // string
-$transaction = new \OpenAPI\Client\Model\Transaction(); // \OpenAPI\Client\Model\Transaction
+$transaction = new \Topal\Client\Model\Transaction(); // \Topal\Client\Model\Transaction
 
 try {
     $result = $apiInstance->transactionsPost($client_id, $fiscal_year_id, $transaction);
@@ -712,11 +712,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
 | **fiscal_year_id** | **string**|  | |
-| **transaction** | [**\OpenAPI\Client\Model\Transaction**](../Model/Transaction.md)|  | |
+| **transaction** | [**\Topal\Client\Model\Transaction**](../Model/Transaction.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Transaction**](../Model/Transaction.md)
+[**\Topal\Client\Model\Transaction**](../Model/Transaction.md)
 
 ### Authorization
 
@@ -747,7 +747,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
+$apiInstance = new Topal\Client\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

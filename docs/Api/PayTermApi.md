@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTermApi(
+$apiInstance = new Topal\Client\Api\PayTermApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -70,7 +70,7 @@ No authorization required
 ## `payTermGet()`
 
 ```php
-payTermGet($client_id): \OpenAPI\Client\Model\PayTerm[]
+payTermGet($client_id): \Topal\Client\Model\PayTerm[]
 ```
 
 Retreives list of payterms
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTermApi(
+$apiInstance = new Topal\Client\Api\PayTermApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayTerm[]**](../Model/PayTerm.md)
+[**\Topal\Client\Model\PayTerm[]**](../Model/PayTerm.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `payTermGetByCode()`
 
 ```php
-payTermGetByCode($code, $client_id): \OpenAPI\Client\Model\PayTerm
+payTermGetByCode($code, $client_id): \Topal\Client\Model\PayTerm
 ```
 
 Get payTerm by code
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTermApi(
+$apiInstance = new Topal\Client\Api\PayTermApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayTerm**](../Model/PayTerm.md)
+[**\Topal\Client\Model\PayTerm**](../Model/PayTerm.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `payTermGet_0()`
 
 ```php
-payTermGet_0($id, $client_id): \OpenAPI\Client\Model\PayTerm
+payTermGet_0($id, $client_id): \Topal\Client\Model\PayTerm
 ```
 
 Get payTerm by id
@@ -193,7 +193,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTermApi(
+$apiInstance = new Topal\Client\Api\PayTermApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -218,7 +218,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayTerm**](../Model/PayTerm.md)
+[**\Topal\Client\Model\PayTerm**](../Model/PayTerm.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ No authorization required
 ## `payTermPost()`
 
 ```php
-payTermPost($client_id, $pay_term): \OpenAPI\Client\Model\PayTerm
+payTermPost($client_id, $pay_term): \Topal\Client\Model\PayTerm
 ```
 
 Save payTerm
@@ -249,13 +249,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTermApi(
+$apiInstance = new Topal\Client\Api\PayTermApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$pay_term = new \OpenAPI\Client\Model\PayTerm(); // \OpenAPI\Client\Model\PayTerm
+$pay_term = new \Topal\Client\Model\PayTerm(); // \Topal\Client\Model\PayTerm
 
 try {
     $result = $apiInstance->payTermPost($client_id, $pay_term);
@@ -270,11 +270,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **pay_term** | [**\OpenAPI\Client\Model\PayTerm**](../Model/PayTerm.md)|  | |
+| **pay_term** | [**\Topal\Client\Model\PayTerm**](../Model/PayTerm.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayTerm**](../Model/PayTerm.md)
+[**\Topal\Client\Model\PayTerm**](../Model/PayTerm.md)
 
 ### Authorization
 

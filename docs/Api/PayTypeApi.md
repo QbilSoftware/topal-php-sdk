@@ -12,7 +12,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `payTypeGet()`
 
 ```php
-payTypeGet($client_id): \OpenAPI\Client\Model\PayType[]
+payTypeGet($client_id): \Topal\Client\Model\PayType[]
 ```
 
 Retreives list of payTypes
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTypeApi(
+$apiInstance = new Topal\Client\Api\PayTypeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -48,7 +48,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayType[]**](../Model/PayType.md)
+[**\Topal\Client\Model\PayType[]**](../Model/PayType.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 ## `payTypeGetByCode()`
 
 ```php
-payTypeGetByCode($name, $client_id): \OpenAPI\Client\Model\PayType
+payTypeGetByCode($name, $client_id): \Topal\Client\Model\PayType
 ```
 
 Get payType by name
@@ -79,7 +79,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTypeApi(
+$apiInstance = new Topal\Client\Api\PayTypeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -104,7 +104,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayType**](../Model/PayType.md)
+[**\Topal\Client\Model\PayType**](../Model/PayType.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 ## `payTypeGet_0()`
 
 ```php
-payTypeGet_0($id, $client_id): \OpenAPI\Client\Model\PayType
+payTypeGet_0($id, $client_id): \Topal\Client\Model\PayType
 ```
 
 Get payType by id
@@ -135,7 +135,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayTypeApi(
+$apiInstance = new Topal\Client\Api\PayTypeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -160,7 +160,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayType**](../Model/PayType.md)
+[**\Topal\Client\Model\PayType**](../Model/PayType.md)
 
 ### Authorization
 

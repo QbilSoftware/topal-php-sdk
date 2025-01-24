@@ -11,7 +11,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `userGroupGet()`
 
 ```php
-userGroupGet(): \OpenAPI\Client\Model\UserGroup[]
+userGroupGet(): \Topal\Client\Model\UserGroup[]
 ```
 
 Retreives list of user accounts
@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserGroupApi(
+$apiInstance = new Topal\Client\Api\UserGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserGroup[]**](../Model/UserGroup.md)
+[**\Topal\Client\Model\UserGroup[]**](../Model/UserGroup.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ No authorization required
 ## `userGroupGetDetail()`
 
 ```php
-userGroupGetDetail($name): \OpenAPI\Client\Model\UserGroup
+userGroupGetDetail($name): \Topal\Client\Model\UserGroup
 ```
 
 Retreives list of user accounts
@@ -75,7 +75,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserGroupApi(
+$apiInstance = new Topal\Client\Api\UserGroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -98,7 +98,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserGroup**](../Model/UserGroup.md)
+[**\Topal\Client\Model\UserGroup**](../Model/UserGroup.md)
 
 ### Authorization
 

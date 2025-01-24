@@ -29,12 +29,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$change_password = new \OpenAPI\Client\Model\ChangePassword(); // \OpenAPI\Client\Model\ChangePassword
+$change_password = new \Topal\Client\Model\ChangePassword(); // \Topal\Client\Model\ChangePassword
 
 try {
     $result = $apiInstance->userAccountChangePassword($change_password);
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **change_password** | [**\OpenAPI\Client\Model\ChangePassword**](../Model/ChangePassword.md)|  | |
+| **change_password** | [**\Topal\Client\Model\ChangePassword**](../Model/ChangePassword.md)|  | |
 
 ### Return type
 
@@ -70,7 +70,7 @@ No authorization required
 ## `userAccountGet()`
 
 ```php
-userAccountGet(): \OpenAPI\Client\Model\UserAccount[]
+userAccountGet(): \Topal\Client\Model\UserAccount[]
 ```
 
 Retreives list of user accounts
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAccount[]**](../Model/UserAccount.md)
+[**\Topal\Client\Model\UserAccount[]**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -185,7 +185,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -223,7 +223,7 @@ No authorization required
 ## `userAccountProfile()`
 
 ```php
-userAccountProfile(): \OpenAPI\Client\Model\UserAccount
+userAccountProfile(): \Topal\Client\Model\UserAccount
 ```
 
 Get user profile data
@@ -236,7 +236,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -256,7 +256,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAccount**](../Model/UserAccount.md)
+[**\Topal\Client\Model\UserAccount**](../Model/UserAccount.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -341,12 +341,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserAccountApi(
+$apiInstance = new Topal\Client\Api\UserAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$user_profile = new \OpenAPI\Client\Model\UserAccount(); // \OpenAPI\Client\Model\UserAccount
+$user_profile = new \Topal\Client\Model\UserAccount(); // \Topal\Client\Model\UserAccount
 
 try {
     $result = $apiInstance->userAccountSaveProfile($user_profile);
@@ -360,7 +360,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_profile** | [**\OpenAPI\Client\Model\UserAccount**](../Model/UserAccount.md)|  | |
+| **user_profile** | [**\Topal\Client\Model\UserAccount**](../Model/UserAccount.md)|  | |
 
 ### Return type
 

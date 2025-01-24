@@ -25,11 +25,11 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client\Test\Api;
+namespace Topal\Client\Test\Api;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \Topal\Client\Configuration;
+use \Topal\Client\ApiException;
+use \Topal\Client\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**

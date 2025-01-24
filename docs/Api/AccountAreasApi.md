@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountAreasApi
+# Topal\Client\AccountAreasApi
 
 All URIs are relative to https://topal.vitan.ch:9001, except if the operation defines another base path.
 
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountAreasApi(
+$apiInstance = new Topal\Client\Api\AccountAreasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -69,7 +69,7 @@ No authorization required
 ## `accountAreasGet()`
 
 ```php
-accountAreasGet($client_id): \OpenAPI\Client\Model\AccountArea[]
+accountAreasGet($client_id): \Topal\Client\Model\AccountArea[]
 ```
 
 get list of accountAreas
@@ -82,7 +82,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountAreasApi(
+$apiInstance = new Topal\Client\Api\AccountAreasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -105,7 +105,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountArea[]**](../Model/AccountArea.md)
+[**\Topal\Client\Model\AccountArea[]**](../Model/AccountArea.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `accountAreasGet_0()`
 
 ```php
-accountAreasGet_0($id, $client_id): \OpenAPI\Client\Model\AccountArea
+accountAreasGet_0($id, $client_id): \Topal\Client\Model\AccountArea
 ```
 
 Get accountArea by id
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountAreasApi(
+$apiInstance = new Topal\Client\Api\AccountAreasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -161,7 +161,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountArea**](../Model/AccountArea.md)
+[**\Topal\Client\Model\AccountArea**](../Model/AccountArea.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ No authorization required
 ## `accountAreasPost()`
 
 ```php
-accountAreasPost($client_id, $account_area): \OpenAPI\Client\Model\AccountArea
+accountAreasPost($client_id, $account_area): \Topal\Client\Model\AccountArea
 ```
 
 Save AccountArea
@@ -192,13 +192,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountAreasApi(
+$apiInstance = new Topal\Client\Api\AccountAreasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$account_area = new \OpenAPI\Client\Model\AccountArea(); // \OpenAPI\Client\Model\AccountArea
+$account_area = new \Topal\Client\Model\AccountArea(); // \Topal\Client\Model\AccountArea
 
 try {
     $result = $apiInstance->accountAreasPost($client_id, $account_area);
@@ -213,11 +213,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **account_area** | [**\OpenAPI\Client\Model\AccountArea**](../Model/AccountArea.md)|  | |
+| **account_area** | [**\Topal\Client\Model\AccountArea**](../Model/AccountArea.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountArea**](../Model/AccountArea.md)
+[**\Topal\Client\Model\AccountArea**](../Model/AccountArea.md)
 
 ### Authorization
 

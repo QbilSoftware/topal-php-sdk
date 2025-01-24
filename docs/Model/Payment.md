@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **party_short_name** | **string** |  | [optional]
 **free_party_num** | **string** |  | [optional]
 **invoice_count** | **int** |  | [optional]
-**payment_details** | [**\OpenAPI\Client\Model\PaymentDetail[]**](PaymentDetail.md) |  | [optional]
-**transaction** | [**\OpenAPI\Client\Model\Transaction**](Transaction.md) |  | [optional]
+**payment_details** | [**\Topal\Client\Model\PaymentDetail[]**](PaymentDetail.md) |  | [optional]
+**transaction** | [**\Topal\Client\Model\Transaction**](Transaction.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

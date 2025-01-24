@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -136,7 +136,7 @@ No authorization required
 ## `reportsGet()`
 
 ```php
-reportsGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\Report[]
+reportsGet($client_id, $fiscal_year_id): \Topal\Client\Model\Report[]
 ```
 
 get list of reports
@@ -149,7 +149,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -174,7 +174,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Report[]**](../Model/Report.md)
+[**\Topal\Client\Model\Report[]**](../Model/Report.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 ## `reportsGetReportFilter()`
 
 ```php
-reportsGetReportFilter($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\ReportFilter
+reportsGetReportFilter($id, $client_id, $fiscal_year_id): \Topal\Client\Model\ReportFilter
 ```
 
 gets report filter
@@ -205,7 +205,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -232,7 +232,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportFilter**](../Model/ReportFilter.md)
+[**\Topal\Client\Model\ReportFilter**](../Model/ReportFilter.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ No authorization required
 ## `reportsGet_0()`
 
 ```php
-reportsGet_0($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\Report
+reportsGet_0($id, $client_id, $fiscal_year_id): \Topal\Client\Model\Report
 ```
 
 get list of reports
@@ -263,7 +263,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -290,7 +290,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Report**](../Model/Report.md)
+[**\Topal\Client\Model\Report**](../Model/Report.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ No authorization required
 ## `reportsPostReportFilter()`
 
 ```php
-reportsPostReportFilter($id, $client_id, $fiscal_year_id, $report_filter): \OpenAPI\Client\Model\ReportFilter
+reportsPostReportFilter($id, $client_id, $fiscal_year_id, $report_filter): \Topal\Client\Model\ReportFilter
 ```
 
 gets report filter
@@ -321,7 +321,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -350,7 +350,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportFilter**](../Model/ReportFilter.md)
+[**\Topal\Client\Model\ReportFilter**](../Model/ReportFilter.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Topal\Client\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

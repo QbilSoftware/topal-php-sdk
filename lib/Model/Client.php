@@ -26,10 +26,10 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Topal\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Topal\Client\ObjectSerializer;
 
 /**
  * Client Class Doc Comment

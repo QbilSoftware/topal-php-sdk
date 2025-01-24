@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**period** | [**\OpenAPI\Client\Model\Period**](Period.md) |  | [optional]
+**period** | [**\Topal\Client\Model\Period**](Period.md) |  | [optional]
 **amount** | **float** |  | [optional]
 **accumulated_amount** | **float** |  | [optional]
 **message** | **string** |  | [optional]

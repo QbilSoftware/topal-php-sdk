@@ -16,7 +16,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `vATsGet()`
 
 ```php
-vATsGet($client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT[]
+vATsGet($client_id, $fiscal_year_id): \Topal\Client\Model\VAT[]
 ```
 
 Get list of VATs (depricated: use vats/bydate instead )
@@ -29,7 +29,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT[]**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT[]**](../Model/VAT.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 ## `vATsGetByCode()`
 
 ```php
-vATsGetByCode($code, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT
+vATsGetByCode($code, $client_id, $fiscal_year_id): \Topal\Client\Model\VAT
 ```
 
 Get VAT by code
@@ -85,7 +85,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -112,7 +112,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT**](../Model/VAT.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ No authorization required
 ## `vATsGetByCode_0()`
 
 ```php
-vATsGetByCode_0($vat_period_id, $code, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT
+vATsGetByCode_0($vat_period_id, $code, $client_id, $fiscal_year_id): \Topal\Client\Model\VAT
 ```
 
 Get VAT by code
@@ -143,7 +143,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -172,7 +172,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT**](../Model/VAT.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ No authorization required
 ## `vATsGetByVatPeriod()`
 
 ```php
-vATsGetByVatPeriod($vat_period_id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT[]
+vATsGetByVatPeriod($vat_period_id, $client_id, $fiscal_year_id): \Topal\Client\Model\VAT[]
 ```
 
 Get list of VATs by vatPeriodId
@@ -203,7 +203,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -230,7 +230,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT[]**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT[]**](../Model/VAT.md)
 
 ### Authorization
 
@@ -248,7 +248,7 @@ No authorization required
 ## `vATsGet_0()`
 
 ```php
-vATsGet_0($date, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT[]
+vATsGet_0($date, $client_id, $fiscal_year_id): \Topal\Client\Model\VAT[]
 ```
 
 Get list of VATs of period of given date
@@ -261,7 +261,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -288,7 +288,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT[]**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT[]**](../Model/VAT.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ No authorization required
 ## `vATsGet_1()`
 
 ```php
-vATsGet_1($id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT
+vATsGet_1($id, $client_id, $fiscal_year_id): \Topal\Client\Model\VAT
 ```
 
 Get VAT by id
@@ -319,7 +319,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -346,7 +346,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT**](../Model/VAT.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ No authorization required
 ## `vATsGet_2()`
 
 ```php
-vATsGet_2($vat_period_id, $id, $client_id, $fiscal_year_id): \OpenAPI\Client\Model\VAT
+vATsGet_2($vat_period_id, $id, $client_id, $fiscal_year_id): \Topal\Client\Model\VAT
 ```
 
 Get VAT by id
@@ -377,7 +377,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\VATsApi(
+$apiInstance = new Topal\Client\Api\VATsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -406,7 +406,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\VAT**](../Model/VAT.md)
+[**\Topal\Client\Model\VAT**](../Model/VAT.md)
 
 ### Authorization
 

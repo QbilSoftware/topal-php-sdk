@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CountriesApi(
+$apiInstance = new Topal\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -70,7 +70,7 @@ No authorization required
 ## `countriesGet()`
 
 ```php
-countriesGet($client_id): \OpenAPI\Client\Model\Country[]
+countriesGet($client_id): \Topal\Client\Model\Country[]
 ```
 
 Retreives list of countries
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CountriesApi(
+$apiInstance = new Topal\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Country[]**](../Model/Country.md)
+[**\Topal\Client\Model\Country[]**](../Model/Country.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `countriesGetByCode()`
 
 ```php
-countriesGetByCode($code, $client_id): \OpenAPI\Client\Model\Country
+countriesGetByCode($code, $client_id): \Topal\Client\Model\Country
 ```
 
 Get country by code
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CountriesApi(
+$apiInstance = new Topal\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -162,7 +162,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Country**](../Model/Country.md)
+[**\Topal\Client\Model\Country**](../Model/Country.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `countriesGet_0()`
 
 ```php
-countriesGet_0($id, $client_id): \OpenAPI\Client\Model\Country
+countriesGet_0($id, $client_id): \Topal\Client\Model\Country
 ```
 
 Get country by id
@@ -193,7 +193,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CountriesApi(
+$apiInstance = new Topal\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -218,7 +218,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Country**](../Model/Country.md)
+[**\Topal\Client\Model\Country**](../Model/Country.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ No authorization required
 ## `countriesPost()`
 
 ```php
-countriesPost($client_id, $country): \OpenAPI\Client\Model\Country
+countriesPost($client_id, $country): \Topal\Client\Model\Country
 ```
 
 Save country
@@ -249,13 +249,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CountriesApi(
+$apiInstance = new Topal\Client\Api\CountriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $client_id = 'client_id_example'; // string
-$country = new \OpenAPI\Client\Model\Country(); // \OpenAPI\Client\Model\Country
+$country = new \Topal\Client\Model\Country(); // \Topal\Client\Model\Country
 
 try {
     $result = $apiInstance->countriesPost($client_id, $country);
@@ -270,11 +270,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **client_id** | **string**|  | |
-| **country** | [**\OpenAPI\Client\Model\Country**](../Model/Country.md)|  | |
+| **country** | [**\Topal\Client\Model\Country**](../Model/Country.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Country**](../Model/Country.md)
+[**\Topal\Client\Model\Country**](../Model/Country.md)
 
 ### Authorization
 

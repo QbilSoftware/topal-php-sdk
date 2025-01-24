@@ -11,7 +11,7 @@ All URIs are relative to https://topal.vitan.ch:9001, except if the operation de
 ## `reportJobGet()`
 
 ```php
-reportJobGet($client_id): \OpenAPI\Client\Model\ReportJob[]
+reportJobGet($client_id): \Topal\Client\Model\ReportJob[]
 ```
 
 Retreives list of report jobs
@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportJobApi(
+$apiInstance = new Topal\Client\Api\ReportJobApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -47,7 +47,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportJob[]**](../Model/ReportJob.md)
+[**\Topal\Client\Model\ReportJob[]**](../Model/ReportJob.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 ## `reportJobGet_0()`
 
 ```php
-reportJobGet_0($id, $client_id): \OpenAPI\Client\Model\ReportJob
+reportJobGet_0($id, $client_id): \Topal\Client\Model\ReportJob
 ```
 
 get report job by id
@@ -78,7 +78,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportJobApi(
+$apiInstance = new Topal\Client\Api\ReportJobApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportJob**](../Model/ReportJob.md)
+[**\Topal\Client\Model\ReportJob**](../Model/ReportJob.md)
 
 ### Authorization
 

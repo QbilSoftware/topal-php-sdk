@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**account** | [**\OpenAPI\Client\Model\Account**](Account.md) |  | [optional]
+**account** | [**\Topal\Client\Model\Account**](Account.md) |  | [optional]
 **id** | **int** |  | [optional]
 **coa_fid** | **int** |  | [optional]
 **acc_area_fid** | **int** |  | [optional]
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **name2** | **string** |  | [optional]
 **remarks** | **string** |  | [optional]
-**children** | [**\OpenAPI\Client\Model\COATreeView[]**](COATreeView.md) |  | [optional]
+**children** | [**\Topal\Client\Model\COATreeView[]**](COATreeView.md) |  | [optional]
 **balance** | **float** |  | [optional]
 **prev_balance** | **float** |  | [optional]
 **balance_cf** | **float** |  | [optional]
