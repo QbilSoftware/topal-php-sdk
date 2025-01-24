@@ -90,7 +90,7 @@ class BalancePosting implements ModelInterface, ArrayAccess, \JsonSerializable
         'has_any_document' => 'bool',
         'posting_index' => 'int',
         'is_in_cost_center_transaction' => 'bool',
-        'contra_postings' => '\OpenAPI\Client\Model\BalancePosting[]'
+        'contra_postings' => '\Topal\Client\Model\BalancePosting[]'
     ];
 
     /**
@@ -1414,7 +1414,7 @@ class BalancePosting implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contra_postings
      *
-     * @return \OpenAPI\Client\Model\BalancePosting[]|null
+     * @return \Topal\Client\Model\BalancePosting[]|null
      */
     public function getContraPostings()
     {
@@ -1424,7 +1424,7 @@ class BalancePosting implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contra_postings
      *
-     * @param \OpenAPI\Client\Model\BalancePosting[]|null $contra_postings contra_postings
+     * @param \Topal\Client\Model\BalancePosting[]|null $contra_postings contra_postings
      *
      * @return self
      */

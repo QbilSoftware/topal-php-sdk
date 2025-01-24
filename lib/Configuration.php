@@ -429,7 +429,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (OpenAPI\Client) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Topal\Client) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 1.0' . PHP_EOL;

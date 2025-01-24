@@ -147,7 +147,7 @@ class PayTermApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -166,7 +166,7 @@ class PayTermApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -474,9 +474,9 @@ class PayTermApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayTerm[]
+     * @return \Topal\Client\Model\PayTerm[]
      */
     public function payTermGet($client_id, string $contentType = self::contentTypes['payTermGet'][0])
     {
@@ -492,9 +492,9 @@ class PayTermApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayTerm[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayTerm[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payTermGetWithHttpInfo($client_id, string $contentType = self::contentTypes['payTermGet'][0])
     {
@@ -525,11 +525,11 @@ class PayTermApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayTerm[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayTerm[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayTerm[]' !== 'string') {
+                        if ('\Topal\Client\Model\PayTerm[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -547,7 +547,7 @@ class PayTermApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayTerm[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayTerm[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -566,7 +566,7 @@ class PayTermApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayTerm[]';
+            $returnType = '\Topal\Client\Model\PayTerm[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -599,7 +599,7 @@ class PayTermApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayTerm[]',
+                        '\Topal\Client\Model\PayTerm[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -643,7 +643,7 @@ class PayTermApi
      */
     public function payTermGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['payTermGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayTerm[]';
+        $returnType = '\Topal\Client\Model\PayTerm[]';
         $request = $this->payTermGetRequest($client_id, $contentType);
 
         return $this->client
@@ -783,9 +783,9 @@ class PayTermApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayTerm
+     * @return \Topal\Client\Model\PayTerm
      */
     public function payTermGetByCode($code, $client_id, string $contentType = self::contentTypes['payTermGetByCode'][0])
     {
@@ -802,9 +802,9 @@ class PayTermApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayTerm, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayTerm, HTTP status code, HTTP response headers (array of strings)
      */
     public function payTermGetByCodeWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['payTermGetByCode'][0])
     {
@@ -835,11 +835,11 @@ class PayTermApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayTerm' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayTerm' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayTerm' !== 'string') {
+                        if ('\Topal\Client\Model\PayTerm' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -857,7 +857,7 @@ class PayTermApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayTerm', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayTerm', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -876,7 +876,7 @@ class PayTermApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayTerm';
+            $returnType = '\Topal\Client\Model\PayTerm';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -909,7 +909,7 @@ class PayTermApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayTerm',
+                        '\Topal\Client\Model\PayTerm',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class PayTermApi
      */
     public function payTermGetByCodeAsyncWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['payTermGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayTerm';
+        $returnType = '\Topal\Client\Model\PayTerm';
         $request = $this->payTermGetByCodeRequest($code, $client_id, $contentType);
 
         return $this->client
@@ -1111,9 +1111,9 @@ class PayTermApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayTerm
+     * @return \Topal\Client\Model\PayTerm
      */
     public function payTermGet_0($id, $client_id, string $contentType = self::contentTypes['payTermGet_0'][0])
     {
@@ -1130,9 +1130,9 @@ class PayTermApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayTerm, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayTerm, HTTP status code, HTTP response headers (array of strings)
      */
     public function payTermGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['payTermGet_0'][0])
     {
@@ -1163,11 +1163,11 @@ class PayTermApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayTerm' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayTerm' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayTerm' !== 'string') {
+                        if ('\Topal\Client\Model\PayTerm' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1185,7 +1185,7 @@ class PayTermApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayTerm', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayTerm', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1204,7 +1204,7 @@ class PayTermApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayTerm';
+            $returnType = '\Topal\Client\Model\PayTerm';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1237,7 +1237,7 @@ class PayTermApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayTerm',
+                        '\Topal\Client\Model\PayTerm',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1283,7 +1283,7 @@ class PayTermApi
      */
     public function payTermGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['payTermGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayTerm';
+        $returnType = '\Topal\Client\Model\PayTerm';
         $request = $this->payTermGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1436,12 +1436,12 @@ class PayTermApi
      * Save payTerm
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\PayTerm $pay_term pay_term (required)
+     * @param  \Topal\Client\Model\PayTerm $pay_term pay_term (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayTerm
+     * @return \Topal\Client\Model\PayTerm
      */
     public function payTermPost($client_id, $pay_term, string $contentType = self::contentTypes['payTermPost'][0])
     {
@@ -1455,12 +1455,12 @@ class PayTermApi
      * Save payTerm
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\PayTerm $pay_term (required)
+     * @param  \Topal\Client\Model\PayTerm $pay_term (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayTerm, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayTerm, HTTP status code, HTTP response headers (array of strings)
      */
     public function payTermPostWithHttpInfo($client_id, $pay_term, string $contentType = self::contentTypes['payTermPost'][0])
     {
@@ -1491,11 +1491,11 @@ class PayTermApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayTerm' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayTerm' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayTerm' !== 'string') {
+                        if ('\Topal\Client\Model\PayTerm' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1513,7 +1513,7 @@ class PayTermApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayTerm', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayTerm', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1532,7 +1532,7 @@ class PayTermApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayTerm';
+            $returnType = '\Topal\Client\Model\PayTerm';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1565,7 +1565,7 @@ class PayTermApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayTerm',
+                        '\Topal\Client\Model\PayTerm',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1581,7 +1581,7 @@ class PayTermApi
      * Save payTerm
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\PayTerm $pay_term (required)
+     * @param  \Topal\Client\Model\PayTerm $pay_term (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1603,7 +1603,7 @@ class PayTermApi
      * Save payTerm
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\PayTerm $pay_term (required)
+     * @param  \Topal\Client\Model\PayTerm $pay_term (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1611,7 +1611,7 @@ class PayTermApi
      */
     public function payTermPostAsyncWithHttpInfo($client_id, $pay_term, string $contentType = self::contentTypes['payTermPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayTerm';
+        $returnType = '\Topal\Client\Model\PayTerm';
         $request = $this->payTermPostRequest($client_id, $pay_term, $contentType);
 
         return $this->client
@@ -1654,7 +1654,7 @@ class PayTermApi
      * Create request for operation 'payTermPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\PayTerm $pay_term (required)
+     * @param  \Topal\Client\Model\PayTerm $pay_term (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTermPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -61,7 +61,7 @@ class PayTerm implements ModelInterface, ArrayAccess, \JsonSerializable
         'code' => 'string',
         'description' => 'string',
         'due_days' => 'int',
-        'details' => '\OpenAPI\Client\Model\PayTermDetail[]'
+        'details' => '\Topal\Client\Model\PayTermDetail[]'
     ];
 
     /**
@@ -428,7 +428,7 @@ class PayTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\PayTermDetail[]|null
+     * @return \Topal\Client\Model\PayTermDetail[]|null
      */
     public function getDetails()
     {
@@ -438,7 +438,7 @@ class PayTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\PayTermDetail[]|null $details details
+     * @param \Topal\Client\Model\PayTermDetail[]|null $details details
      *
      * @return self
      */

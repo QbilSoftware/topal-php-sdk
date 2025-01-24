@@ -68,8 +68,8 @@ class Creditor implements ModelInterface, ArrayAccess, \JsonSerializable
         'biller_id' => 'string',
         'vat_number' => 'string',
         'no_default_vat' => 'bool',
-        'person' => '\OpenAPI\Client\Model\Person',
-        'pay_methods' => '\OpenAPI\Client\Model\PayMethod[]'
+        'person' => '\Topal\Client\Model\Person',
+        'pay_methods' => '\Topal\Client\Model\PayMethod[]'
     ];
 
     /**
@@ -673,7 +673,7 @@ class Creditor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets person
      *
-     * @return \OpenAPI\Client\Model\Person|null
+     * @return \Topal\Client\Model\Person|null
      */
     public function getPerson()
     {
@@ -683,7 +683,7 @@ class Creditor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets person
      *
-     * @param \OpenAPI\Client\Model\Person|null $person person
+     * @param \Topal\Client\Model\Person|null $person person
      *
      * @return self
      */
@@ -700,7 +700,7 @@ class Creditor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets pay_methods
      *
-     * @return \OpenAPI\Client\Model\PayMethod[]|null
+     * @return \Topal\Client\Model\PayMethod[]|null
      */
     public function getPayMethods()
     {
@@ -710,7 +710,7 @@ class Creditor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pay_methods
      *
-     * @param \OpenAPI\Client\Model\PayMethod[]|null $pay_methods pay_methods
+     * @param \Topal\Client\Model\PayMethod[]|null $pay_methods pay_methods
      *
      * @return self
      */

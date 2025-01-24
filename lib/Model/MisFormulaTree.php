@@ -58,7 +58,7 @@ class MisFormulaTree implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'sub_items' => '\OpenAPI\Client\Model\MisTreeItem[]'
+        'sub_items' => '\Topal\Client\Model\MisTreeItem[]'
     ];
 
     /**
@@ -326,7 +326,7 @@ class MisFormulaTree implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sub_items
      *
-     * @return \OpenAPI\Client\Model\MisTreeItem[]|null
+     * @return \Topal\Client\Model\MisTreeItem[]|null
      */
     public function getSubItems()
     {
@@ -336,7 +336,7 @@ class MisFormulaTree implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sub_items
      *
-     * @param \OpenAPI\Client\Model\MisTreeItem[]|null $sub_items sub_items
+     * @param \Topal\Client\Model\MisTreeItem[]|null $sub_items sub_items
      *
      * @return self
      */

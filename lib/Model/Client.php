@@ -83,8 +83,8 @@ class Client implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_current' => 'bool',
         'is_password_protected' => 'bool',
         'currency_code' => 'string',
-        'fiscal_years' => '\OpenAPI\Client\Model\FiscalYear[]',
-        'vat_periods' => '\OpenAPI\Client\Model\VATPeriod[]'
+        'fiscal_years' => '\Topal\Client\Model\FiscalYear[]',
+        'vat_periods' => '\Topal\Client\Model\VATPeriod[]'
     ];
 
     /**
@@ -1183,7 +1183,7 @@ class Client implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fiscal_years
      *
-     * @return \OpenAPI\Client\Model\FiscalYear[]|null
+     * @return \Topal\Client\Model\FiscalYear[]|null
      */
     public function getFiscalYears()
     {
@@ -1193,7 +1193,7 @@ class Client implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fiscal_years
      *
-     * @param \OpenAPI\Client\Model\FiscalYear[]|null $fiscal_years fiscal_years
+     * @param \Topal\Client\Model\FiscalYear[]|null $fiscal_years fiscal_years
      *
      * @return self
      */
@@ -1210,7 +1210,7 @@ class Client implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets vat_periods
      *
-     * @return \OpenAPI\Client\Model\VATPeriod[]|null
+     * @return \Topal\Client\Model\VATPeriod[]|null
      */
     public function getVatPeriods()
     {
@@ -1220,7 +1220,7 @@ class Client implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets vat_periods
      *
-     * @param \OpenAPI\Client\Model\VATPeriod[]|null $vat_periods vat_periods
+     * @param \Topal\Client\Model\VATPeriod[]|null $vat_periods vat_periods
      *
      * @return self
      */

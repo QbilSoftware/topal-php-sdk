@@ -149,9 +149,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT[]
+     * @return \Topal\Client\Model\VAT[]
      * @deprecated
      */
     public function vATsGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet'][0])
@@ -169,9 +169,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT[], HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function vATsGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet'][0])
@@ -203,11 +203,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT[]' !== 'string') {
+                        if ('\Topal\Client\Model\VAT[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,7 +225,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -244,7 +244,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT[]';
+            $returnType = '\Topal\Client\Model\VAT[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -277,7 +277,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT[]',
+                        '\Topal\Client\Model\VAT[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class VATsApi
      */
     public function vATsGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT[]';
+        $returnType = '\Topal\Client\Model\VAT[]';
         $request = $this->vATsGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -483,9 +483,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT
+     * @return \Topal\Client\Model\VAT
      */
     public function vATsGetByCode($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByCode'][0])
     {
@@ -503,9 +503,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
      */
     public function vATsGetByCodeWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByCode'][0])
     {
@@ -536,11 +536,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT' !== 'string') {
+                        if ('\Topal\Client\Model\VAT' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -558,7 +558,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -577,7 +577,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT';
+            $returnType = '\Topal\Client\Model\VAT';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -610,7 +610,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT',
+                        '\Topal\Client\Model\VAT',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -658,7 +658,7 @@ class VATsApi
      */
     public function vATsGetByCodeAsyncWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT';
+        $returnType = '\Topal\Client\Model\VAT';
         $request = $this->vATsGetByCodeRequest($code, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -832,9 +832,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGetByCode_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT
+     * @return \Topal\Client\Model\VAT
      */
     public function vATsGetByCode_0($vat_period_id, $code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByCode_0'][0])
     {
@@ -853,9 +853,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGetByCode_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
      */
     public function vATsGetByCode_0WithHttpInfo($vat_period_id, $code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByCode_0'][0])
     {
@@ -886,11 +886,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT' !== 'string') {
+                        if ('\Topal\Client\Model\VAT' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -908,7 +908,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -927,7 +927,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT';
+            $returnType = '\Topal\Client\Model\VAT';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -960,7 +960,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT',
+                        '\Topal\Client\Model\VAT',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1010,7 +1010,7 @@ class VATsApi
      */
     public function vATsGetByCode_0AsyncWithHttpInfo($vat_period_id, $code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByCode_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT';
+        $returnType = '\Topal\Client\Model\VAT';
         $request = $this->vATsGetByCode_0Request($vat_period_id, $code, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1199,9 +1199,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGetByVatPeriod'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT[]
+     * @return \Topal\Client\Model\VAT[]
      */
     public function vATsGetByVatPeriod($vat_period_id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByVatPeriod'][0])
     {
@@ -1219,9 +1219,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGetByVatPeriod'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT[], HTTP status code, HTTP response headers (array of strings)
      */
     public function vATsGetByVatPeriodWithHttpInfo($vat_period_id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByVatPeriod'][0])
     {
@@ -1252,11 +1252,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT[]' !== 'string') {
+                        if ('\Topal\Client\Model\VAT[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1274,7 +1274,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1293,7 +1293,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT[]';
+            $returnType = '\Topal\Client\Model\VAT[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1326,7 +1326,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT[]',
+                        '\Topal\Client\Model\VAT[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1374,7 +1374,7 @@ class VATsApi
      */
     public function vATsGetByVatPeriodAsyncWithHttpInfo($vat_period_id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGetByVatPeriod'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT[]';
+        $returnType = '\Topal\Client\Model\VAT[]';
         $request = $this->vATsGetByVatPeriodRequest($vat_period_id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1547,9 +1547,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT[]
+     * @return \Topal\Client\Model\VAT[]
      */
     public function vATsGet_0($date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_0'][0])
     {
@@ -1567,9 +1567,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT[], HTTP status code, HTTP response headers (array of strings)
      */
     public function vATsGet_0WithHttpInfo($date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_0'][0])
     {
@@ -1600,11 +1600,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT[]' !== 'string') {
+                        if ('\Topal\Client\Model\VAT[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1622,7 +1622,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1641,7 +1641,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT[]';
+            $returnType = '\Topal\Client\Model\VAT[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1674,7 +1674,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT[]',
+                        '\Topal\Client\Model\VAT[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1722,7 +1722,7 @@ class VATsApi
      */
     public function vATsGet_0AsyncWithHttpInfo($date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT[]';
+        $returnType = '\Topal\Client\Model\VAT[]';
         $request = $this->vATsGet_0Request($date, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1896,9 +1896,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT
+     * @return \Topal\Client\Model\VAT
      */
     public function vATsGet_1($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_1'][0])
     {
@@ -1916,9 +1916,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
      */
     public function vATsGet_1WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_1'][0])
     {
@@ -1949,11 +1949,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT' !== 'string') {
+                        if ('\Topal\Client\Model\VAT' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1971,7 +1971,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1990,7 +1990,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT';
+            $returnType = '\Topal\Client\Model\VAT';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2023,7 +2023,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT',
+                        '\Topal\Client\Model\VAT',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2071,7 +2071,7 @@ class VATsApi
      */
     public function vATsGet_1AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT';
+        $returnType = '\Topal\Client\Model\VAT';
         $request = $this->vATsGet_1Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2245,9 +2245,9 @@ class VATsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet_2'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\VAT
+     * @return \Topal\Client\Model\VAT
      */
     public function vATsGet_2($vat_period_id, $id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_2'][0])
     {
@@ -2266,9 +2266,9 @@ class VATsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['vATsGet_2'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\VAT, HTTP status code, HTTP response headers (array of strings)
      */
     public function vATsGet_2WithHttpInfo($vat_period_id, $id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_2'][0])
     {
@@ -2299,11 +2299,11 @@ class VATsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\VAT' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\VAT' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\VAT' !== 'string') {
+                        if ('\Topal\Client\Model\VAT' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2321,7 +2321,7 @@ class VATsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\VAT', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\VAT', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2340,7 +2340,7 @@ class VATsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\VAT';
+            $returnType = '\Topal\Client\Model\VAT';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2373,7 +2373,7 @@ class VATsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\VAT',
+                        '\Topal\Client\Model\VAT',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2423,7 +2423,7 @@ class VATsApi
      */
     public function vATsGet_2AsyncWithHttpInfo($vat_period_id, $id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['vATsGet_2'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\VAT';
+        $returnType = '\Topal\Client\Model\VAT';
         $request = $this->vATsGet_2Request($vat_period_id, $id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client

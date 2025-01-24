@@ -134,7 +134,7 @@ class DocumentsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['documentsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -153,7 +153,7 @@ class DocumentsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['documentsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -463,7 +463,7 @@ class DocumentsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['documentsDownload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -482,7 +482,7 @@ class DocumentsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['documentsDownload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

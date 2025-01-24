@@ -134,9 +134,9 @@ class BudgetApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['budgetGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Budget[]
+     * @return \Topal\Client\Model\Budget[]
      */
     public function budgetGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['budgetGet'][0])
     {
@@ -153,9 +153,9 @@ class BudgetApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['budgetGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Budget[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Budget[], HTTP status code, HTTP response headers (array of strings)
      */
     public function budgetGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['budgetGet'][0])
     {
@@ -186,11 +186,11 @@ class BudgetApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Budget[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Budget[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Budget[]' !== 'string') {
+                        if ('\Topal\Client\Model\Budget[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -208,7 +208,7 @@ class BudgetApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Budget[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Budget[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -227,7 +227,7 @@ class BudgetApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Budget[]';
+            $returnType = '\Topal\Client\Model\Budget[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -260,7 +260,7 @@ class BudgetApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Budget[]',
+                        '\Topal\Client\Model\Budget[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -306,7 +306,7 @@ class BudgetApi
      */
     public function budgetGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['budgetGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Budget[]';
+        $returnType = '\Topal\Client\Model\Budget[]';
         $request = $this->budgetGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -463,9 +463,9 @@ class BudgetApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['budgetGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Budget
+     * @return \Topal\Client\Model\Budget
      */
     public function budgetGet_0($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['budgetGet_0'][0])
     {
@@ -483,9 +483,9 @@ class BudgetApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['budgetGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Budget, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Budget, HTTP status code, HTTP response headers (array of strings)
      */
     public function budgetGet_0WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['budgetGet_0'][0])
     {
@@ -516,11 +516,11 @@ class BudgetApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Budget' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Budget' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Budget' !== 'string') {
+                        if ('\Topal\Client\Model\Budget' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -538,7 +538,7 @@ class BudgetApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Budget', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Budget', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -557,7 +557,7 @@ class BudgetApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Budget';
+            $returnType = '\Topal\Client\Model\Budget';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -590,7 +590,7 @@ class BudgetApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Budget',
+                        '\Topal\Client\Model\Budget',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -638,7 +638,7 @@ class BudgetApi
      */
     public function budgetGet_0AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['budgetGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Budget';
+        $returnType = '\Topal\Client\Model\Budget';
         $request = $this->budgetGet_0Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client

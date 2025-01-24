@@ -131,9 +131,9 @@ class DefaultsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['defaultsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Defaults
+     * @return \Topal\Client\Model\Defaults
      */
     public function defaultsGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['defaultsGet'][0])
     {
@@ -150,9 +150,9 @@ class DefaultsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['defaultsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Defaults, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Defaults, HTTP status code, HTTP response headers (array of strings)
      */
     public function defaultsGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['defaultsGet'][0])
     {
@@ -183,11 +183,11 @@ class DefaultsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Defaults' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Defaults' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Defaults' !== 'string') {
+                        if ('\Topal\Client\Model\Defaults' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -205,7 +205,7 @@ class DefaultsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Defaults', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Defaults', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -224,7 +224,7 @@ class DefaultsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Defaults';
+            $returnType = '\Topal\Client\Model\Defaults';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -257,7 +257,7 @@ class DefaultsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Defaults',
+                        '\Topal\Client\Model\Defaults',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -303,7 +303,7 @@ class DefaultsApi
      */
     public function defaultsGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['defaultsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Defaults';
+        $returnType = '\Topal\Client\Model\Defaults';
         $request = $this->defaultsGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client

@@ -170,7 +170,7 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -189,7 +189,7 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -498,7 +498,7 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesDeleteCreditor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -517,7 +517,7 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesDeleteCreditor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -826,7 +826,7 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesDeleteDebtor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -845,7 +845,7 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesDeleteDebtor'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1153,9 +1153,9 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Party[]
+     * @return \Topal\Client\Model\Party[]
      */
     public function partiesGet($client_id, string $contentType = self::contentTypes['partiesGet'][0])
     {
@@ -1171,9 +1171,9 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Party[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Party[], HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesGetWithHttpInfo($client_id, string $contentType = self::contentTypes['partiesGet'][0])
     {
@@ -1204,11 +1204,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Party[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Party[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Party[]' !== 'string') {
+                        if ('\Topal\Client\Model\Party[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1226,7 +1226,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Party[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Party[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1245,7 +1245,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Party[]';
+            $returnType = '\Topal\Client\Model\Party[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1278,7 +1278,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Party[]',
+                        '\Topal\Client\Model\Party[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1322,7 +1322,7 @@ class PartiesApi
      */
     public function partiesGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['partiesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Party[]';
+        $returnType = '\Topal\Client\Model\Party[]';
         $request = $this->partiesGetRequest($client_id, $contentType);
 
         return $this->client
@@ -1462,9 +1462,9 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGetByFreeNumber'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Party
+     * @return \Topal\Client\Model\Party
      */
     public function partiesGetByFreeNumber($free_party_num, $client_id, string $contentType = self::contentTypes['partiesGetByFreeNumber'][0])
     {
@@ -1481,9 +1481,9 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGetByFreeNumber'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesGetByFreeNumberWithHttpInfo($free_party_num, $client_id, string $contentType = self::contentTypes['partiesGetByFreeNumber'][0])
     {
@@ -1514,11 +1514,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Party' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Party' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Party' !== 'string') {
+                        if ('\Topal\Client\Model\Party' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1536,7 +1536,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Party', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Party', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1555,7 +1555,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Party';
+            $returnType = '\Topal\Client\Model\Party';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1588,7 +1588,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Party',
+                        '\Topal\Client\Model\Party',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1634,7 +1634,7 @@ class PartiesApi
      */
     public function partiesGetByFreeNumberAsyncWithHttpInfo($free_party_num, $client_id, string $contentType = self::contentTypes['partiesGetByFreeNumber'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Party';
+        $returnType = '\Topal\Client\Model\Party';
         $request = $this->partiesGetByFreeNumberRequest($free_party_num, $client_id, $contentType);
 
         return $this->client
@@ -1790,9 +1790,9 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGetByNumber'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Party
+     * @return \Topal\Client\Model\Party
      */
     public function partiesGetByNumber($party_num, $client_id, string $contentType = self::contentTypes['partiesGetByNumber'][0])
     {
@@ -1809,9 +1809,9 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGetByNumber'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesGetByNumberWithHttpInfo($party_num, $client_id, string $contentType = self::contentTypes['partiesGetByNumber'][0])
     {
@@ -1842,11 +1842,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Party' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Party' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Party' !== 'string') {
+                        if ('\Topal\Client\Model\Party' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1864,7 +1864,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Party', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Party', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1883,7 +1883,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Party';
+            $returnType = '\Topal\Client\Model\Party';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1916,7 +1916,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Party',
+                        '\Topal\Client\Model\Party',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1962,7 +1962,7 @@ class PartiesApi
      */
     public function partiesGetByNumberAsyncWithHttpInfo($party_num, $client_id, string $contentType = self::contentTypes['partiesGetByNumber'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Party';
+        $returnType = '\Topal\Client\Model\Party';
         $request = $this->partiesGetByNumberRequest($party_num, $client_id, $contentType);
 
         return $this->client
@@ -2118,9 +2118,9 @@ class PartiesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Party
+     * @return \Topal\Client\Model\Party
      */
     public function partiesGet_0($id, $client_id, string $contentType = self::contentTypes['partiesGet_0'][0])
     {
@@ -2137,9 +2137,9 @@ class PartiesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['partiesGet_0'][0])
     {
@@ -2170,11 +2170,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Party' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Party' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Party' !== 'string') {
+                        if ('\Topal\Client\Model\Party' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2192,7 +2192,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Party', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Party', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2211,7 +2211,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Party';
+            $returnType = '\Topal\Client\Model\Party';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2244,7 +2244,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Party',
+                        '\Topal\Client\Model\Party',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2290,7 +2290,7 @@ class PartiesApi
      */
     public function partiesGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['partiesGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Party';
+        $returnType = '\Topal\Client\Model\Party';
         $request = $this->partiesGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -2443,12 +2443,12 @@ class PartiesApi
      * Save party
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\Party $party party (required)
+     * @param  \Topal\Client\Model\Party $party party (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Party
+     * @return \Topal\Client\Model\Party
      */
     public function partiesPost($client_id, $party, string $contentType = self::contentTypes['partiesPost'][0])
     {
@@ -2462,12 +2462,12 @@ class PartiesApi
      * Save party
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Party $party (required)
+     * @param  \Topal\Client\Model\Party $party (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Party, HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesPostWithHttpInfo($client_id, $party, string $contentType = self::contentTypes['partiesPost'][0])
     {
@@ -2498,11 +2498,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Party' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Party' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Party' !== 'string') {
+                        if ('\Topal\Client\Model\Party' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2520,7 +2520,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Party', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Party', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2539,7 +2539,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Party';
+            $returnType = '\Topal\Client\Model\Party';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2572,7 +2572,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Party',
+                        '\Topal\Client\Model\Party',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2588,7 +2588,7 @@ class PartiesApi
      * Save party
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Party $party (required)
+     * @param  \Topal\Client\Model\Party $party (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2610,7 +2610,7 @@ class PartiesApi
      * Save party
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Party $party (required)
+     * @param  \Topal\Client\Model\Party $party (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2618,7 +2618,7 @@ class PartiesApi
      */
     public function partiesPostAsyncWithHttpInfo($client_id, $party, string $contentType = self::contentTypes['partiesPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Party';
+        $returnType = '\Topal\Client\Model\Party';
         $request = $this->partiesPostRequest($client_id, $party, $contentType);
 
         return $this->client
@@ -2661,7 +2661,7 @@ class PartiesApi
      * Create request for operation 'partiesPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Party $party (required)
+     * @param  \Topal\Client\Model\Party $party (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2771,12 +2771,12 @@ class PartiesApi
      *
      * @param  int $id id (required)
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\Creditor $creditor creditor (required)
+     * @param  \Topal\Client\Model\Creditor $creditor creditor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Creditor
+     * @return \Topal\Client\Model\Creditor
      */
     public function partiesPost_0($id, $client_id, $creditor, string $contentType = self::contentTypes['partiesPost_0'][0])
     {
@@ -2791,12 +2791,12 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Creditor $creditor (required)
+     * @param  \Topal\Client\Model\Creditor $creditor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Creditor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Creditor, HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesPost_0WithHttpInfo($id, $client_id, $creditor, string $contentType = self::contentTypes['partiesPost_0'][0])
     {
@@ -2827,11 +2827,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Creditor' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Creditor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Creditor' !== 'string') {
+                        if ('\Topal\Client\Model\Creditor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2849,7 +2849,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Creditor', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Creditor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2868,7 +2868,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Creditor';
+            $returnType = '\Topal\Client\Model\Creditor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2901,7 +2901,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Creditor',
+                        '\Topal\Client\Model\Creditor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2918,7 +2918,7 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Creditor $creditor (required)
+     * @param  \Topal\Client\Model\Creditor $creditor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_0'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2941,7 +2941,7 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Creditor $creditor (required)
+     * @param  \Topal\Client\Model\Creditor $creditor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_0'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2949,7 +2949,7 @@ class PartiesApi
      */
     public function partiesPost_0AsyncWithHttpInfo($id, $client_id, $creditor, string $contentType = self::contentTypes['partiesPost_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Creditor';
+        $returnType = '\Topal\Client\Model\Creditor';
         $request = $this->partiesPost_0Request($id, $client_id, $creditor, $contentType);
 
         return $this->client
@@ -2993,7 +2993,7 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Creditor $creditor (required)
+     * @param  \Topal\Client\Model\Creditor $creditor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_0'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3118,12 +3118,12 @@ class PartiesApi
      *
      * @param  int $id id (required)
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\Debtor $debtor debtor (required)
+     * @param  \Topal\Client\Model\Debtor $debtor debtor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Debtor
+     * @return \Topal\Client\Model\Debtor
      */
     public function partiesPost_1($id, $client_id, $debtor, string $contentType = self::contentTypes['partiesPost_1'][0])
     {
@@ -3138,12 +3138,12 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Debtor $debtor (required)
+     * @param  \Topal\Client\Model\Debtor $debtor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Debtor, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Debtor, HTTP status code, HTTP response headers (array of strings)
      */
     public function partiesPost_1WithHttpInfo($id, $client_id, $debtor, string $contentType = self::contentTypes['partiesPost_1'][0])
     {
@@ -3174,11 +3174,11 @@ class PartiesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Debtor' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Debtor' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Debtor' !== 'string') {
+                        if ('\Topal\Client\Model\Debtor' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3196,7 +3196,7 @@ class PartiesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Debtor', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Debtor', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3215,7 +3215,7 @@ class PartiesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Debtor';
+            $returnType = '\Topal\Client\Model\Debtor';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3248,7 +3248,7 @@ class PartiesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Debtor',
+                        '\Topal\Client\Model\Debtor',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3265,7 +3265,7 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Debtor $debtor (required)
+     * @param  \Topal\Client\Model\Debtor $debtor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3288,7 +3288,7 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Debtor $debtor (required)
+     * @param  \Topal\Client\Model\Debtor $debtor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3296,7 +3296,7 @@ class PartiesApi
      */
     public function partiesPost_1AsyncWithHttpInfo($id, $client_id, $debtor, string $contentType = self::contentTypes['partiesPost_1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Debtor';
+        $returnType = '\Topal\Client\Model\Debtor';
         $request = $this->partiesPost_1Request($id, $client_id, $debtor, $contentType);
 
         return $this->client
@@ -3340,7 +3340,7 @@ class PartiesApi
      *
      * @param  int $id (required)
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Debtor $debtor (required)
+     * @param  \Topal\Client\Model\Debtor $debtor (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['partiesPost_1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

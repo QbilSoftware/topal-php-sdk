@@ -133,9 +133,9 @@ class RepLanguageApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['repLanguageGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RepLanguage[]
+     * @return \Topal\Client\Model\RepLanguage[]
      */
     public function repLanguageGet($client_id, string $contentType = self::contentTypes['repLanguageGet'][0])
     {
@@ -151,9 +151,9 @@ class RepLanguageApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['repLanguageGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RepLanguage[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\RepLanguage[], HTTP status code, HTTP response headers (array of strings)
      */
     public function repLanguageGetWithHttpInfo($client_id, string $contentType = self::contentTypes['repLanguageGet'][0])
     {
@@ -184,11 +184,11 @@ class RepLanguageApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RepLanguage[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\RepLanguage[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RepLanguage[]' !== 'string') {
+                        if ('\Topal\Client\Model\RepLanguage[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,7 +206,7 @@ class RepLanguageApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RepLanguage[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\RepLanguage[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -225,7 +225,7 @@ class RepLanguageApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\RepLanguage[]';
+            $returnType = '\Topal\Client\Model\RepLanguage[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +258,7 @@ class RepLanguageApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RepLanguage[]',
+                        '\Topal\Client\Model\RepLanguage[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -302,7 +302,7 @@ class RepLanguageApi
      */
     public function repLanguageGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['repLanguageGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\RepLanguage[]';
+        $returnType = '\Topal\Client\Model\RepLanguage[]';
         $request = $this->repLanguageGetRequest($client_id, $contentType);
 
         return $this->client
@@ -442,9 +442,9 @@ class RepLanguageApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['repLanguageGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RepLanguage
+     * @return \Topal\Client\Model\RepLanguage
      */
     public function repLanguageGet_0($id, $client_id, string $contentType = self::contentTypes['repLanguageGet_0'][0])
     {
@@ -461,9 +461,9 @@ class RepLanguageApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['repLanguageGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RepLanguage, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\RepLanguage, HTTP status code, HTTP response headers (array of strings)
      */
     public function repLanguageGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['repLanguageGet_0'][0])
     {
@@ -494,11 +494,11 @@ class RepLanguageApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RepLanguage' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\RepLanguage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RepLanguage' !== 'string') {
+                        if ('\Topal\Client\Model\RepLanguage' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -516,7 +516,7 @@ class RepLanguageApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RepLanguage', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\RepLanguage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -535,7 +535,7 @@ class RepLanguageApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\RepLanguage';
+            $returnType = '\Topal\Client\Model\RepLanguage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -568,7 +568,7 @@ class RepLanguageApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RepLanguage',
+                        '\Topal\Client\Model\RepLanguage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -614,7 +614,7 @@ class RepLanguageApi
      */
     public function repLanguageGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['repLanguageGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\RepLanguage';
+        $returnType = '\Topal\Client\Model\RepLanguage';
         $request = $this->repLanguageGet_0Request($id, $client_id, $contentType);
 
         return $this->client

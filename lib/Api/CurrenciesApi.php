@@ -140,9 +140,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Currency[]
+     * @return \Topal\Client\Model\Currency[]
      */
     public function currenciesGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet'][0])
     {
@@ -159,9 +159,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Currency[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Currency[], HTTP status code, HTTP response headers (array of strings)
      */
     public function currenciesGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet'][0])
     {
@@ -192,11 +192,11 @@ class CurrenciesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Currency[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Currency[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Currency[]' !== 'string') {
+                        if ('\Topal\Client\Model\Currency[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -214,7 +214,7 @@ class CurrenciesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Currency[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Currency[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -233,7 +233,7 @@ class CurrenciesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Currency[]';
+            $returnType = '\Topal\Client\Model\Currency[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -266,7 +266,7 @@ class CurrenciesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Currency[]',
+                        '\Topal\Client\Model\Currency[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -312,7 +312,7 @@ class CurrenciesApi
      */
     public function currenciesGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Currency[]';
+        $returnType = '\Topal\Client\Model\Currency[]';
         $request = $this->currenciesGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -469,9 +469,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Currency
+     * @return \Topal\Client\Model\Currency
      */
     public function currenciesGetByCode($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGetByCode'][0])
     {
@@ -489,9 +489,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Currency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Currency, HTTP status code, HTTP response headers (array of strings)
      */
     public function currenciesGetByCodeWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGetByCode'][0])
     {
@@ -522,11 +522,11 @@ class CurrenciesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Currency' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Currency' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Currency' !== 'string') {
+                        if ('\Topal\Client\Model\Currency' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -544,7 +544,7 @@ class CurrenciesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Currency', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Currency', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -563,7 +563,7 @@ class CurrenciesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Currency';
+            $returnType = '\Topal\Client\Model\Currency';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -596,7 +596,7 @@ class CurrenciesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Currency',
+                        '\Topal\Client\Model\Currency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,7 +644,7 @@ class CurrenciesApi
      */
     public function currenciesGetByCodeAsyncWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Currency';
+        $returnType = '\Topal\Client\Model\Currency';
         $request = $this->currenciesGetByCodeRequest($code, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -817,9 +817,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Currency[]
+     * @return \Topal\Client\Model\Currency[]
      */
     public function currenciesGet_0($date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet_0'][0])
     {
@@ -837,9 +837,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Currency[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Currency[], HTTP status code, HTTP response headers (array of strings)
      */
     public function currenciesGet_0WithHttpInfo($date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet_0'][0])
     {
@@ -870,11 +870,11 @@ class CurrenciesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Currency[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Currency[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Currency[]' !== 'string') {
+                        if ('\Topal\Client\Model\Currency[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -892,7 +892,7 @@ class CurrenciesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Currency[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Currency[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -911,7 +911,7 @@ class CurrenciesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Currency[]';
+            $returnType = '\Topal\Client\Model\Currency[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -944,7 +944,7 @@ class CurrenciesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Currency[]',
+                        '\Topal\Client\Model\Currency[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -992,7 +992,7 @@ class CurrenciesApi
      */
     public function currenciesGet_0AsyncWithHttpInfo($date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Currency[]';
+        $returnType = '\Topal\Client\Model\Currency[]';
         $request = $this->currenciesGet_0Request($date, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1165,9 +1165,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Currency
+     * @return \Topal\Client\Model\Currency
      */
     public function currenciesGet_1($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet_1'][0])
     {
@@ -1185,9 +1185,9 @@ class CurrenciesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['currenciesGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Currency, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Currency, HTTP status code, HTTP response headers (array of strings)
      */
     public function currenciesGet_1WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet_1'][0])
     {
@@ -1218,11 +1218,11 @@ class CurrenciesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Currency' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Currency' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Currency' !== 'string') {
+                        if ('\Topal\Client\Model\Currency' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1240,7 +1240,7 @@ class CurrenciesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Currency', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Currency', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1259,7 +1259,7 @@ class CurrenciesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Currency';
+            $returnType = '\Topal\Client\Model\Currency';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1292,7 +1292,7 @@ class CurrenciesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Currency',
+                        '\Topal\Client\Model\Currency',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1340,7 +1340,7 @@ class CurrenciesApi
      */
     public function currenciesGet_1AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['currenciesGet_1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Currency';
+        $returnType = '\Topal\Client\Model\Currency';
         $request = $this->currenciesGet_1Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client

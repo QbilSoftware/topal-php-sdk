@@ -144,7 +144,7 @@ class AccountAreasApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -163,7 +163,7 @@ class AccountAreasApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -471,9 +471,9 @@ class AccountAreasApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountArea[]
+     * @return \Topal\Client\Model\AccountArea[]
      */
     public function accountAreasGet($client_id, string $contentType = self::contentTypes['accountAreasGet'][0])
     {
@@ -489,9 +489,9 @@ class AccountAreasApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountArea[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\AccountArea[], HTTP status code, HTTP response headers (array of strings)
      */
     public function accountAreasGetWithHttpInfo($client_id, string $contentType = self::contentTypes['accountAreasGet'][0])
     {
@@ -522,11 +522,11 @@ class AccountAreasApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountArea[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\AccountArea[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountArea[]' !== 'string') {
+                        if ('\Topal\Client\Model\AccountArea[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -544,7 +544,7 @@ class AccountAreasApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountArea[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\AccountArea[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -563,7 +563,7 @@ class AccountAreasApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountArea[]';
+            $returnType = '\Topal\Client\Model\AccountArea[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -596,7 +596,7 @@ class AccountAreasApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountArea[]',
+                        '\Topal\Client\Model\AccountArea[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -640,7 +640,7 @@ class AccountAreasApi
      */
     public function accountAreasGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['accountAreasGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountArea[]';
+        $returnType = '\Topal\Client\Model\AccountArea[]';
         $request = $this->accountAreasGetRequest($client_id, $contentType);
 
         return $this->client
@@ -780,9 +780,9 @@ class AccountAreasApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountArea
+     * @return \Topal\Client\Model\AccountArea
      */
     public function accountAreasGet_0($id, $client_id, string $contentType = self::contentTypes['accountAreasGet_0'][0])
     {
@@ -799,9 +799,9 @@ class AccountAreasApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\AccountArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountAreasGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['accountAreasGet_0'][0])
     {
@@ -832,11 +832,11 @@ class AccountAreasApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountArea' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\AccountArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountArea' !== 'string') {
+                        if ('\Topal\Client\Model\AccountArea' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -854,7 +854,7 @@ class AccountAreasApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountArea', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\AccountArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -873,7 +873,7 @@ class AccountAreasApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountArea';
+            $returnType = '\Topal\Client\Model\AccountArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -906,7 +906,7 @@ class AccountAreasApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountArea',
+                        '\Topal\Client\Model\AccountArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class AccountAreasApi
      */
     public function accountAreasGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['accountAreasGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountArea';
+        $returnType = '\Topal\Client\Model\AccountArea';
         $request = $this->accountAreasGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1105,12 +1105,12 @@ class AccountAreasApi
      * Save AccountArea
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\AccountArea $account_area account_area (required)
+     * @param  \Topal\Client\Model\AccountArea $account_area account_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountArea
+     * @return \Topal\Client\Model\AccountArea
      */
     public function accountAreasPost($client_id, $account_area, string $contentType = self::contentTypes['accountAreasPost'][0])
     {
@@ -1124,12 +1124,12 @@ class AccountAreasApi
      * Save AccountArea
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\AccountArea $account_area (required)
+     * @param  \Topal\Client\Model\AccountArea $account_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountArea, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\AccountArea, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountAreasPostWithHttpInfo($client_id, $account_area, string $contentType = self::contentTypes['accountAreasPost'][0])
     {
@@ -1160,11 +1160,11 @@ class AccountAreasApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountArea' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\AccountArea' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountArea' !== 'string') {
+                        if ('\Topal\Client\Model\AccountArea' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1182,7 +1182,7 @@ class AccountAreasApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountArea', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\AccountArea', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1201,7 +1201,7 @@ class AccountAreasApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountArea';
+            $returnType = '\Topal\Client\Model\AccountArea';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1234,7 +1234,7 @@ class AccountAreasApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountArea',
+                        '\Topal\Client\Model\AccountArea',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1250,7 +1250,7 @@ class AccountAreasApi
      * Save AccountArea
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\AccountArea $account_area (required)
+     * @param  \Topal\Client\Model\AccountArea $account_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1272,7 +1272,7 @@ class AccountAreasApi
      * Save AccountArea
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\AccountArea $account_area (required)
+     * @param  \Topal\Client\Model\AccountArea $account_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1280,7 +1280,7 @@ class AccountAreasApi
      */
     public function accountAreasPostAsyncWithHttpInfo($client_id, $account_area, string $contentType = self::contentTypes['accountAreasPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountArea';
+        $returnType = '\Topal\Client\Model\AccountArea';
         $request = $this->accountAreasPostRequest($client_id, $account_area, $contentType);
 
         return $this->client
@@ -1323,7 +1323,7 @@ class AccountAreasApi
      * Create request for operation 'accountAreasPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\AccountArea $account_area (required)
+     * @param  \Topal\Client\Model\AccountArea $account_area (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountAreasPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

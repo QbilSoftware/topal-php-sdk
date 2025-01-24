@@ -136,9 +136,9 @@ class LanguagesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['languagesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Language[]
+     * @return \Topal\Client\Model\Language[]
      */
     public function languagesGet($client_id, string $contentType = self::contentTypes['languagesGet'][0])
     {
@@ -154,9 +154,9 @@ class LanguagesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['languagesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Language[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Language[], HTTP status code, HTTP response headers (array of strings)
      */
     public function languagesGetWithHttpInfo($client_id, string $contentType = self::contentTypes['languagesGet'][0])
     {
@@ -187,11 +187,11 @@ class LanguagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Language[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Language[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Language[]' !== 'string') {
+                        if ('\Topal\Client\Model\Language[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -209,7 +209,7 @@ class LanguagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Language[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Language[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -228,7 +228,7 @@ class LanguagesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Language[]';
+            $returnType = '\Topal\Client\Model\Language[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -261,7 +261,7 @@ class LanguagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Language[]',
+                        '\Topal\Client\Model\Language[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -305,7 +305,7 @@ class LanguagesApi
      */
     public function languagesGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['languagesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Language[]';
+        $returnType = '\Topal\Client\Model\Language[]';
         $request = $this->languagesGetRequest($client_id, $contentType);
 
         return $this->client
@@ -445,9 +445,9 @@ class LanguagesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['languagesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Language
+     * @return \Topal\Client\Model\Language
      */
     public function languagesGetByCode($code, $client_id, string $contentType = self::contentTypes['languagesGetByCode'][0])
     {
@@ -464,9 +464,9 @@ class LanguagesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['languagesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Language, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Language, HTTP status code, HTTP response headers (array of strings)
      */
     public function languagesGetByCodeWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['languagesGetByCode'][0])
     {
@@ -497,11 +497,11 @@ class LanguagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Language' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Language' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Language' !== 'string') {
+                        if ('\Topal\Client\Model\Language' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -519,7 +519,7 @@ class LanguagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Language', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Language', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -538,7 +538,7 @@ class LanguagesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Language';
+            $returnType = '\Topal\Client\Model\Language';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -571,7 +571,7 @@ class LanguagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Language',
+                        '\Topal\Client\Model\Language',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -617,7 +617,7 @@ class LanguagesApi
      */
     public function languagesGetByCodeAsyncWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['languagesGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Language';
+        $returnType = '\Topal\Client\Model\Language';
         $request = $this->languagesGetByCodeRequest($code, $client_id, $contentType);
 
         return $this->client
@@ -773,9 +773,9 @@ class LanguagesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['languagesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Language
+     * @return \Topal\Client\Model\Language
      */
     public function languagesGet_0($id, $client_id, string $contentType = self::contentTypes['languagesGet_0'][0])
     {
@@ -792,9 +792,9 @@ class LanguagesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['languagesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Language, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Language, HTTP status code, HTTP response headers (array of strings)
      */
     public function languagesGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['languagesGet_0'][0])
     {
@@ -825,11 +825,11 @@ class LanguagesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Language' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Language' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Language' !== 'string') {
+                        if ('\Topal\Client\Model\Language' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class LanguagesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Language', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Language', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class LanguagesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Language';
+            $returnType = '\Topal\Client\Model\Language';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class LanguagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Language',
+                        '\Topal\Client\Model\Language',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -945,7 +945,7 @@ class LanguagesApi
      */
     public function languagesGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['languagesGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Language';
+        $returnType = '\Topal\Client\Model\Language';
         $request = $this->languagesGet_0Request($id, $client_id, $contentType);
 
         return $this->client

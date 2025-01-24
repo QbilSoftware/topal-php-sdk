@@ -90,8 +90,8 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
         'current_reminder_level' => 'int',
         'has_document' => 'int',
         'current_reminder_date' => '\DateTime',
-        'payment_postings' => '\OpenAPI\Client\Model\Posting[]',
-        'transaction' => '\OpenAPI\Client\Model\Transaction'
+        'payment_postings' => '\Topal\Client\Model\Posting[]',
+        'transaction' => '\Topal\Client\Model\Transaction'
     ];
 
     /**
@@ -1464,7 +1464,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_postings
      *
-     * @return \OpenAPI\Client\Model\Posting[]|null
+     * @return \Topal\Client\Model\Posting[]|null
      */
     public function getPaymentPostings()
     {
@@ -1474,7 +1474,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_postings
      *
-     * @param \OpenAPI\Client\Model\Posting[]|null $payment_postings payment_postings
+     * @param \Topal\Client\Model\Posting[]|null $payment_postings payment_postings
      *
      * @return self
      */
@@ -1491,7 +1491,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets transaction
      *
-     * @return \OpenAPI\Client\Model\Transaction|null
+     * @return \Topal\Client\Model\Transaction|null
      */
     public function getTransaction()
     {
@@ -1501,7 +1501,7 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param \OpenAPI\Client\Model\Transaction|null $transaction transaction
+     * @param \Topal\Client\Model\Transaction|null $transaction transaction
      *
      * @return self
      */

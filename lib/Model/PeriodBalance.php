@@ -57,8 +57,8 @@ class PeriodBalance implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'period' => '\OpenAPI\Client\Model\Period',
-        'sub_items' => '\OpenAPI\Client\Model\StatementItem[]',
+        'period' => '\Topal\Client\Model\Period',
+        'sub_items' => '\Topal\Client\Model\StatementItem[]',
         'name' => 'string',
         'code' => 'string',
         'amount' => 'float'
@@ -320,7 +320,7 @@ class PeriodBalance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets period
      *
-     * @return \OpenAPI\Client\Model\Period|null
+     * @return \Topal\Client\Model\Period|null
      */
     public function getPeriod()
     {
@@ -330,7 +330,7 @@ class PeriodBalance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets period
      *
-     * @param \OpenAPI\Client\Model\Period|null $period period
+     * @param \Topal\Client\Model\Period|null $period period
      *
      * @return self
      */
@@ -347,7 +347,7 @@ class PeriodBalance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets sub_items
      *
-     * @return \OpenAPI\Client\Model\StatementItem[]|null
+     * @return \Topal\Client\Model\StatementItem[]|null
      */
     public function getSubItems()
     {
@@ -357,7 +357,7 @@ class PeriodBalance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sub_items
      *
-     * @param \OpenAPI\Client\Model\StatementItem[]|null $sub_items sub_items
+     * @param \Topal\Client\Model\StatementItem[]|null $sub_items sub_items
      *
      * @return self
      */

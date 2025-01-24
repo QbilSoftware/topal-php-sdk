@@ -150,9 +150,9 @@ class AccountsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Account[]
+     * @return \Topal\Client\Model\Account[]
      */
     public function accountsGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGet'][0])
     {
@@ -169,9 +169,9 @@ class AccountsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Account[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Account[], HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGet'][0])
     {
@@ -202,11 +202,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Account[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Account[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Account[]' !== 'string') {
+                        if ('\Topal\Client\Model\Account[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,7 +224,7 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Account[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Account[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -243,7 +243,7 @@ class AccountsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Account[]';
+            $returnType = '\Topal\Client\Model\Account[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -276,7 +276,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Account[]',
+                        '\Topal\Client\Model\Account[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -322,7 +322,7 @@ class AccountsApi
      */
     public function accountsGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Account[]';
+        $returnType = '\Topal\Client\Model\Account[]';
         $request = $this->accountsGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -479,9 +479,9 @@ class AccountsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Account
+     * @return \Topal\Client\Model\Account
      */
     public function accountsGetByCode($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGetByCode'][0])
     {
@@ -499,9 +499,9 @@ class AccountsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsGetByCodeWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGetByCode'][0])
     {
@@ -532,11 +532,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Account' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Account' !== 'string') {
+                        if ('\Topal\Client\Model\Account' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -554,7 +554,7 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -573,7 +573,7 @@ class AccountsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Account';
+            $returnType = '\Topal\Client\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -606,7 +606,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Account',
+                        '\Topal\Client\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -654,7 +654,7 @@ class AccountsApi
      */
     public function accountsGetByCodeAsyncWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Account';
+        $returnType = '\Topal\Client\Model\Account';
         $request = $this->accountsGetByCodeRequest($code, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -830,9 +830,9 @@ class AccountsApi
      * @param  bool $select_contra_postings select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BalancePosting[]
+     * @return \Topal\Client\Model\BalancePosting[]
      */
     public function accountsGetStatement($id, $date_from, $date_until, $client_id, $fiscal_year_id, $select_contra_postings = null, string $contentType = self::contentTypes['accountsGetStatement'][0])
     {
@@ -853,9 +853,9 @@ class AccountsApi
      * @param  bool $select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BalancePosting[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\BalancePosting[], HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsGetStatementWithHttpInfo($id, $date_from, $date_until, $client_id, $fiscal_year_id, $select_contra_postings = null, string $contentType = self::contentTypes['accountsGetStatement'][0])
     {
@@ -886,11 +886,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BalancePosting[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\BalancePosting[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BalancePosting[]' !== 'string') {
+                        if ('\Topal\Client\Model\BalancePosting[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -908,7 +908,7 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BalancePosting[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\BalancePosting[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -927,7 +927,7 @@ class AccountsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\BalancePosting[]';
+            $returnType = '\Topal\Client\Model\BalancePosting[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -960,7 +960,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BalancePosting[]',
+                        '\Topal\Client\Model\BalancePosting[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1014,7 +1014,7 @@ class AccountsApi
      */
     public function accountsGetStatementAsyncWithHttpInfo($id, $date_from, $date_until, $client_id, $fiscal_year_id, $select_contra_postings = null, string $contentType = self::contentTypes['accountsGetStatement'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BalancePosting[]';
+        $returnType = '\Topal\Client\Model\BalancePosting[]';
         $request = $this->accountsGetStatementRequest($id, $date_from, $date_until, $client_id, $fiscal_year_id, $select_contra_postings, $contentType);
 
         return $this->client
@@ -1232,13 +1232,13 @@ class AccountsApi
      * @param  \DateTime $date_until date_until (required)
      * @param  string $client_id client_id (required)
      * @param  string $fiscal_year_id fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\DataViewBalancePosting $data_view data_view (required)
+     * @param  \Topal\Client\Model\DataViewBalancePosting $data_view data_view (required)
      * @param  bool $select_contra_postings select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatementDataView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DataViewBalancePosting
+     * @return \Topal\Client\Model\DataViewBalancePosting
      */
     public function accountsGetStatementDataView($id, $date_from, $date_until, $client_id, $fiscal_year_id, $data_view, $select_contra_postings = null, string $contentType = self::contentTypes['accountsGetStatementDataView'][0])
     {
@@ -1256,13 +1256,13 @@ class AccountsApi
      * @param  \DateTime $date_until (required)
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\DataViewBalancePosting $data_view (required)
+     * @param  \Topal\Client\Model\DataViewBalancePosting $data_view (required)
      * @param  bool $select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatementDataView'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DataViewBalancePosting, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\DataViewBalancePosting, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsGetStatementDataViewWithHttpInfo($id, $date_from, $date_until, $client_id, $fiscal_year_id, $data_view, $select_contra_postings = null, string $contentType = self::contentTypes['accountsGetStatementDataView'][0])
     {
@@ -1293,11 +1293,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DataViewBalancePosting' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\DataViewBalancePosting' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DataViewBalancePosting' !== 'string') {
+                        if ('\Topal\Client\Model\DataViewBalancePosting' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1315,7 +1315,7 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DataViewBalancePosting', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\DataViewBalancePosting', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1334,7 +1334,7 @@ class AccountsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\DataViewBalancePosting';
+            $returnType = '\Topal\Client\Model\DataViewBalancePosting';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1367,7 +1367,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DataViewBalancePosting',
+                        '\Topal\Client\Model\DataViewBalancePosting',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1387,7 +1387,7 @@ class AccountsApi
      * @param  \DateTime $date_until (required)
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\DataViewBalancePosting $data_view (required)
+     * @param  \Topal\Client\Model\DataViewBalancePosting $data_view (required)
      * @param  bool $select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatementDataView'] to see the possible values for this operation
      *
@@ -1414,7 +1414,7 @@ class AccountsApi
      * @param  \DateTime $date_until (required)
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\DataViewBalancePosting $data_view (required)
+     * @param  \Topal\Client\Model\DataViewBalancePosting $data_view (required)
      * @param  bool $select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatementDataView'] to see the possible values for this operation
      *
@@ -1423,7 +1423,7 @@ class AccountsApi
      */
     public function accountsGetStatementDataViewAsyncWithHttpInfo($id, $date_from, $date_until, $client_id, $fiscal_year_id, $data_view, $select_contra_postings = null, string $contentType = self::contentTypes['accountsGetStatementDataView'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DataViewBalancePosting';
+        $returnType = '\Topal\Client\Model\DataViewBalancePosting';
         $request = $this->accountsGetStatementDataViewRequest($id, $date_from, $date_until, $client_id, $fiscal_year_id, $data_view, $select_contra_postings, $contentType);
 
         return $this->client
@@ -1470,7 +1470,7 @@ class AccountsApi
      * @param  \DateTime $date_until (required)
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\DataViewBalancePosting $data_view (required)
+     * @param  \Topal\Client\Model\DataViewBalancePosting $data_view (required)
      * @param  bool $select_contra_postings (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetStatementDataView'] to see the possible values for this operation
      *
@@ -1658,9 +1658,9 @@ class AccountsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountSummary
+     * @return \Topal\Client\Model\AccountSummary
      */
     public function accountsGetSummary($id, $date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGetSummary'][0])
     {
@@ -1680,9 +1680,9 @@ class AccountsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGetSummary'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\AccountSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsGetSummaryWithHttpInfo($id, $date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGetSummary'][0])
     {
@@ -1713,11 +1713,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountSummary' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\AccountSummary' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountSummary' !== 'string') {
+                        if ('\Topal\Client\Model\AccountSummary' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1735,7 +1735,7 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountSummary', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\AccountSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1754,7 +1754,7 @@ class AccountsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountSummary';
+            $returnType = '\Topal\Client\Model\AccountSummary';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1787,7 +1787,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountSummary',
+                        '\Topal\Client\Model\AccountSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1839,7 +1839,7 @@ class AccountsApi
      */
     public function accountsGetSummaryAsyncWithHttpInfo($id, $date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGetSummary'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AccountSummary';
+        $returnType = '\Topal\Client\Model\AccountSummary';
         $request = $this->accountsGetSummaryRequest($id, $date_from, $date_until, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2046,9 +2046,9 @@ class AccountsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Account
+     * @return \Topal\Client\Model\Account
      */
     public function accountsGet_0($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGet_0'][0])
     {
@@ -2066,9 +2066,9 @@ class AccountsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['accountsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Account, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsGet_0WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGet_0'][0])
     {
@@ -2099,11 +2099,11 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Account' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Account' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Account' !== 'string') {
+                        if ('\Topal\Client\Model\Account' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2121,7 +2121,7 @@ class AccountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Account', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Account', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2140,7 +2140,7 @@ class AccountsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Account';
+            $returnType = '\Topal\Client\Model\Account';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2173,7 +2173,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Account',
+                        '\Topal\Client\Model\Account',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2221,7 +2221,7 @@ class AccountsApi
      */
     public function accountsGet_0AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['accountsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Account';
+        $returnType = '\Topal\Client\Model\Account';
         $request = $this->accountsGet_0Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client

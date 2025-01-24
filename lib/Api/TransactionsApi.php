@@ -178,9 +178,9 @@ class TransactionsApi
      * @param  bool $is_inclusive is_inclusive (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsCreatePosting'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Posting
+     * @return \Topal\Client\Model\Posting
      */
     public function transactionsCreatePosting($client_id, $fiscal_year_id, $date = null, $account_code = null, $amount = null, $fc_amount = null, $exchange_rate = null, $vat_code = null, $is_inclusive = null, string $contentType = self::contentTypes['transactionsCreatePosting'][0])
     {
@@ -204,9 +204,9 @@ class TransactionsApi
      * @param  bool $is_inclusive (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsCreatePosting'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Posting, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Posting, HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsCreatePostingWithHttpInfo($client_id, $fiscal_year_id, $date = null, $account_code = null, $amount = null, $fc_amount = null, $exchange_rate = null, $vat_code = null, $is_inclusive = null, string $contentType = self::contentTypes['transactionsCreatePosting'][0])
     {
@@ -237,11 +237,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Posting' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Posting' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Posting' !== 'string') {
+                        if ('\Topal\Client\Model\Posting' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -259,7 +259,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Posting', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Posting', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -278,7 +278,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Posting';
+            $returnType = '\Topal\Client\Model\Posting';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -311,7 +311,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Posting',
+                        '\Topal\Client\Model\Posting',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -371,7 +371,7 @@ class TransactionsApi
      */
     public function transactionsCreatePostingAsyncWithHttpInfo($client_id, $fiscal_year_id, $date = null, $account_code = null, $amount = null, $fc_amount = null, $exchange_rate = null, $vat_code = null, $is_inclusive = null, string $contentType = self::contentTypes['transactionsCreatePosting'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Posting';
+        $returnType = '\Topal\Client\Model\Posting';
         $request = $this->transactionsCreatePostingRequest($client_id, $fiscal_year_id, $date, $account_code, $amount, $fc_amount, $exchange_rate, $vat_code, $is_inclusive, $contentType);
 
         return $this->client
@@ -606,7 +606,7 @@ class TransactionsApi
      * @param  bool $delete_doc when not set and transaction has linked document return error (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -627,7 +627,7 @@ class TransactionsApi
      * @param  bool $delete_doc when not set and transaction has linked document return error (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -968,7 +968,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsDeleteDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -988,7 +988,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsDeleteDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1316,7 +1316,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsDownloadDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1336,7 +1336,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsDownloadDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1664,9 +1664,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Transaction
+     * @return \Topal\Client\Model\Transaction
      */
     public function transactionsGet($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGet'][0])
     {
@@ -1684,9 +1684,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsGetWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGet'][0])
     {
@@ -1717,11 +1717,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Transaction' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Transaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Transaction' !== 'string') {
+                        if ('\Topal\Client\Model\Transaction' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1739,7 +1739,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Transaction', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Transaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1758,7 +1758,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Transaction';
+            $returnType = '\Topal\Client\Model\Transaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1791,7 +1791,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Transaction',
+                        '\Topal\Client\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1839,7 +1839,7 @@ class TransactionsApi
      */
     public function transactionsGetAsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Transaction';
+        $returnType = '\Topal\Client\Model\Transaction';
         $request = $this->transactionsGetRequest($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2012,9 +2012,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGetByDocNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Transaction
+     * @return \Topal\Client\Model\Transaction
      */
     public function transactionsGetByDocNum($doc_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGetByDocNum'][0])
     {
@@ -2032,9 +2032,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGetByDocNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsGetByDocNumWithHttpInfo($doc_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGetByDocNum'][0])
     {
@@ -2065,11 +2065,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Transaction' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Transaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Transaction' !== 'string') {
+                        if ('\Topal\Client\Model\Transaction' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2087,7 +2087,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Transaction', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Transaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2106,7 +2106,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Transaction';
+            $returnType = '\Topal\Client\Model\Transaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2139,7 +2139,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Transaction',
+                        '\Topal\Client\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2187,7 +2187,7 @@ class TransactionsApi
      */
     public function transactionsGetByDocNumAsyncWithHttpInfo($doc_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGetByDocNum'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Transaction';
+        $returnType = '\Topal\Client\Model\Transaction';
         $request = $this->transactionsGetByDocNumRequest($doc_num, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2359,9 +2359,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGetPendingDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Document[]
+     * @return \Topal\Client\Model\Document[]
      */
     public function transactionsGetPendingDocuments($client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGetPendingDocuments'][0])
     {
@@ -2378,9 +2378,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGetPendingDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsGetPendingDocumentsWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGetPendingDocuments'][0])
     {
@@ -2411,11 +2411,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Document[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Document[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Document[]' !== 'string') {
+                        if ('\Topal\Client\Model\Document[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2433,7 +2433,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Document[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Document[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2452,7 +2452,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Document[]';
+            $returnType = '\Topal\Client\Model\Document[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2485,7 +2485,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Document[]',
+                        '\Topal\Client\Model\Document[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2531,7 +2531,7 @@ class TransactionsApi
      */
     public function transactionsGetPendingDocumentsAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGetPendingDocuments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Document[]';
+        $returnType = '\Topal\Client\Model\Document[]';
         $request = $this->transactionsGetPendingDocumentsRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2691,9 +2691,9 @@ class TransactionsApi
      * @param  bool $is_inclusive is_inclusive (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGetVatPosting'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Posting
+     * @return \Topal\Client\Model\Posting
      */
     public function transactionsGetVatPosting($vat_code, $gross_amount, $gross_fc_amount, $client_id, $fiscal_year_id, $is_inclusive = null, string $contentType = self::contentTypes['transactionsGetVatPosting'][0])
     {
@@ -2714,9 +2714,9 @@ class TransactionsApi
      * @param  bool $is_inclusive (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGetVatPosting'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Posting, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Posting, HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsGetVatPostingWithHttpInfo($vat_code, $gross_amount, $gross_fc_amount, $client_id, $fiscal_year_id, $is_inclusive = null, string $contentType = self::contentTypes['transactionsGetVatPosting'][0])
     {
@@ -2747,11 +2747,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Posting' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Posting' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Posting' !== 'string') {
+                        if ('\Topal\Client\Model\Posting' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2769,7 +2769,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Posting', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Posting', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2788,7 +2788,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Posting';
+            $returnType = '\Topal\Client\Model\Posting';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2821,7 +2821,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Posting',
+                        '\Topal\Client\Model\Posting',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2875,7 +2875,7 @@ class TransactionsApi
      */
     public function transactionsGetVatPostingAsyncWithHttpInfo($vat_code, $gross_amount, $gross_fc_amount, $client_id, $fiscal_year_id, $is_inclusive = null, string $contentType = self::contentTypes['transactionsGetVatPosting'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Posting';
+        $returnType = '\Topal\Client\Model\Posting';
         $request = $this->transactionsGetVatPostingRequest($vat_code, $gross_amount, $gross_fc_amount, $client_id, $fiscal_year_id, $is_inclusive, $contentType);
 
         return $this->client
@@ -3093,9 +3093,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Transaction[]
+     * @return \Topal\Client\Model\Transaction[]
      */
     public function transactionsGet_0($client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGet_0'][0])
     {
@@ -3112,9 +3112,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Transaction[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Transaction[], HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsGet_0WithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGet_0'][0])
     {
@@ -3145,11 +3145,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Transaction[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Transaction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Transaction[]' !== 'string') {
+                        if ('\Topal\Client\Model\Transaction[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3167,7 +3167,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Transaction[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Transaction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3186,7 +3186,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Transaction[]';
+            $returnType = '\Topal\Client\Model\Transaction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3219,7 +3219,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Transaction[]',
+                        '\Topal\Client\Model\Transaction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3265,7 +3265,7 @@ class TransactionsApi
      */
     public function transactionsGet_0AsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Transaction[]';
+        $returnType = '\Topal\Client\Model\Transaction[]';
         $request = $this->transactionsGet_0Request($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -3422,7 +3422,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsLinkDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3442,7 +3442,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsLinkDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3770,9 +3770,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsNew'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Transaction
+     * @return \Topal\Client\Model\Transaction
      */
     public function transactionsNew($transaction_type, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsNew'][0])
     {
@@ -3790,9 +3790,9 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsNew'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsNewWithHttpInfo($transaction_type, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsNew'][0])
     {
@@ -3823,11 +3823,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Transaction' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Transaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Transaction' !== 'string') {
+                        if ('\Topal\Client\Model\Transaction' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3845,7 +3845,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Transaction', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Transaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3864,7 +3864,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Transaction';
+            $returnType = '\Topal\Client\Model\Transaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3897,7 +3897,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Transaction',
+                        '\Topal\Client\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3945,7 +3945,7 @@ class TransactionsApi
      */
     public function transactionsNewAsyncWithHttpInfo($transaction_type, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['transactionsNew'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Transaction';
+        $returnType = '\Topal\Client\Model\Transaction';
         $request = $this->transactionsNewRequest($transaction_type, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -4115,12 +4115,12 @@ class TransactionsApi
      *
      * @param  string $client_id client_id (required)
      * @param  string $fiscal_year_id fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Transaction $transaction transaction (required)
+     * @param  \Topal\Client\Model\Transaction $transaction transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Transaction
+     * @return \Topal\Client\Model\Transaction
      */
     public function transactionsPost($client_id, $fiscal_year_id, $transaction, string $contentType = self::contentTypes['transactionsPost'][0])
     {
@@ -4135,12 +4135,12 @@ class TransactionsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Transaction $transaction (required)
+     * @param  \Topal\Client\Model\Transaction $transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Transaction, HTTP status code, HTTP response headers (array of strings)
      */
     public function transactionsPostWithHttpInfo($client_id, $fiscal_year_id, $transaction, string $contentType = self::contentTypes['transactionsPost'][0])
     {
@@ -4171,11 +4171,11 @@ class TransactionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Transaction' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Transaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Transaction' !== 'string') {
+                        if ('\Topal\Client\Model\Transaction' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4193,7 +4193,7 @@ class TransactionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Transaction', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Transaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4212,7 +4212,7 @@ class TransactionsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Transaction';
+            $returnType = '\Topal\Client\Model\Transaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4245,7 +4245,7 @@ class TransactionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Transaction',
+                        '\Topal\Client\Model\Transaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4262,7 +4262,7 @@ class TransactionsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Transaction $transaction (required)
+     * @param  \Topal\Client\Model\Transaction $transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4285,7 +4285,7 @@ class TransactionsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Transaction $transaction (required)
+     * @param  \Topal\Client\Model\Transaction $transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4293,7 +4293,7 @@ class TransactionsApi
      */
     public function transactionsPostAsyncWithHttpInfo($client_id, $fiscal_year_id, $transaction, string $contentType = self::contentTypes['transactionsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Transaction';
+        $returnType = '\Topal\Client\Model\Transaction';
         $request = $this->transactionsPostRequest($client_id, $fiscal_year_id, $transaction, $contentType);
 
         return $this->client
@@ -4337,7 +4337,7 @@ class TransactionsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Transaction $transaction (required)
+     * @param  \Topal\Client\Model\Transaction $transaction (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4464,7 +4464,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsUpload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4483,7 +4483,7 @@ class TransactionsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transactionsUpload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

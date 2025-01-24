@@ -67,8 +67,8 @@ class Debtor implements ModelInterface, ArrayAccess, \JsonSerializable
         'no_reminders_fee' => 'bool',
         'credit_line' => 'float',
         'max_reminder_level' => 'int',
-        'person' => '\OpenAPI\Client\Model\Person',
-        'pay_methods' => '\OpenAPI\Client\Model\PayMethod[]'
+        'person' => '\Topal\Client\Model\Person',
+        'pay_methods' => '\Topal\Client\Model\PayMethod[]'
     ];
 
     /**
@@ -639,7 +639,7 @@ class Debtor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets person
      *
-     * @return \OpenAPI\Client\Model\Person|null
+     * @return \Topal\Client\Model\Person|null
      */
     public function getPerson()
     {
@@ -649,7 +649,7 @@ class Debtor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets person
      *
-     * @param \OpenAPI\Client\Model\Person|null $person person
+     * @param \Topal\Client\Model\Person|null $person person
      *
      * @return self
      */
@@ -666,7 +666,7 @@ class Debtor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets pay_methods
      *
-     * @return \OpenAPI\Client\Model\PayMethod[]|null
+     * @return \Topal\Client\Model\PayMethod[]|null
      */
     public function getPayMethods()
     {
@@ -676,7 +676,7 @@ class Debtor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets pay_methods
      *
-     * @param \OpenAPI\Client\Model\PayMethod[]|null $pay_methods pay_methods
+     * @param \Topal\Client\Model\PayMethod[]|null $pay_methods pay_methods
      *
      * @return self
      */

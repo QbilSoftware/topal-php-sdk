@@ -147,7 +147,7 @@ class BankAccountApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -166,7 +166,7 @@ class BankAccountApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -474,9 +474,9 @@ class BankAccountApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BankAccount[]
+     * @return \Topal\Client\Model\BankAccount[]
      */
     public function bankAccountGet($client_id, string $contentType = self::contentTypes['bankAccountGet'][0])
     {
@@ -492,9 +492,9 @@ class BankAccountApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BankAccount[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\BankAccount[], HTTP status code, HTTP response headers (array of strings)
      */
     public function bankAccountGetWithHttpInfo($client_id, string $contentType = self::contentTypes['bankAccountGet'][0])
     {
@@ -525,11 +525,11 @@ class BankAccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BankAccount[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\BankAccount[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BankAccount[]' !== 'string') {
+                        if ('\Topal\Client\Model\BankAccount[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -547,7 +547,7 @@ class BankAccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BankAccount[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\BankAccount[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -566,7 +566,7 @@ class BankAccountApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\BankAccount[]';
+            $returnType = '\Topal\Client\Model\BankAccount[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -599,7 +599,7 @@ class BankAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BankAccount[]',
+                        '\Topal\Client\Model\BankAccount[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -643,7 +643,7 @@ class BankAccountApi
      */
     public function bankAccountGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['bankAccountGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BankAccount[]';
+        $returnType = '\Topal\Client\Model\BankAccount[]';
         $request = $this->bankAccountGetRequest($client_id, $contentType);
 
         return $this->client
@@ -783,9 +783,9 @@ class BankAccountApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BankAccount
+     * @return \Topal\Client\Model\BankAccount
      */
     public function bankAccountGet_0($id, $client_id, string $contentType = self::contentTypes['bankAccountGet_0'][0])
     {
@@ -802,9 +802,9 @@ class BankAccountApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BankAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\BankAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function bankAccountGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['bankAccountGet_0'][0])
     {
@@ -835,11 +835,11 @@ class BankAccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BankAccount' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\BankAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BankAccount' !== 'string') {
+                        if ('\Topal\Client\Model\BankAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -857,7 +857,7 @@ class BankAccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BankAccount', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\BankAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -876,7 +876,7 @@ class BankAccountApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\BankAccount';
+            $returnType = '\Topal\Client\Model\BankAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -909,7 +909,7 @@ class BankAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BankAccount',
+                        '\Topal\Client\Model\BankAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class BankAccountApi
      */
     public function bankAccountGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['bankAccountGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BankAccount';
+        $returnType = '\Topal\Client\Model\BankAccount';
         $request = $this->bankAccountGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1111,9 +1111,9 @@ class BankAccountApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BankAccount
+     * @return \Topal\Client\Model\BankAccount
      */
     public function bankAccountGet_1($name, $client_id, string $contentType = self::contentTypes['bankAccountGet_1'][0])
     {
@@ -1130,9 +1130,9 @@ class BankAccountApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BankAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\BankAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function bankAccountGet_1WithHttpInfo($name, $client_id, string $contentType = self::contentTypes['bankAccountGet_1'][0])
     {
@@ -1163,11 +1163,11 @@ class BankAccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BankAccount' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\BankAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BankAccount' !== 'string') {
+                        if ('\Topal\Client\Model\BankAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1185,7 +1185,7 @@ class BankAccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BankAccount', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\BankAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1204,7 +1204,7 @@ class BankAccountApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\BankAccount';
+            $returnType = '\Topal\Client\Model\BankAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1237,7 +1237,7 @@ class BankAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BankAccount',
+                        '\Topal\Client\Model\BankAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1283,7 +1283,7 @@ class BankAccountApi
      */
     public function bankAccountGet_1AsyncWithHttpInfo($name, $client_id, string $contentType = self::contentTypes['bankAccountGet_1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BankAccount';
+        $returnType = '\Topal\Client\Model\BankAccount';
         $request = $this->bankAccountGet_1Request($name, $client_id, $contentType);
 
         return $this->client
@@ -1436,12 +1436,12 @@ class BankAccountApi
      * Save bankAccount
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\BankAccount $bank_account bank_account (required)
+     * @param  \Topal\Client\Model\BankAccount $bank_account bank_account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BankAccount
+     * @return \Topal\Client\Model\BankAccount
      */
     public function bankAccountPost($client_id, $bank_account, string $contentType = self::contentTypes['bankAccountPost'][0])
     {
@@ -1455,12 +1455,12 @@ class BankAccountApi
      * Save bankAccount
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\BankAccount $bank_account (required)
+     * @param  \Topal\Client\Model\BankAccount $bank_account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BankAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\BankAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function bankAccountPostWithHttpInfo($client_id, $bank_account, string $contentType = self::contentTypes['bankAccountPost'][0])
     {
@@ -1491,11 +1491,11 @@ class BankAccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BankAccount' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\BankAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BankAccount' !== 'string') {
+                        if ('\Topal\Client\Model\BankAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1513,7 +1513,7 @@ class BankAccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BankAccount', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\BankAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1532,7 +1532,7 @@ class BankAccountApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\BankAccount';
+            $returnType = '\Topal\Client\Model\BankAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1565,7 +1565,7 @@ class BankAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BankAccount',
+                        '\Topal\Client\Model\BankAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1581,7 +1581,7 @@ class BankAccountApi
      * Save bankAccount
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\BankAccount $bank_account (required)
+     * @param  \Topal\Client\Model\BankAccount $bank_account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1603,7 +1603,7 @@ class BankAccountApi
      * Save bankAccount
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\BankAccount $bank_account (required)
+     * @param  \Topal\Client\Model\BankAccount $bank_account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1611,7 +1611,7 @@ class BankAccountApi
      */
     public function bankAccountPostAsyncWithHttpInfo($client_id, $bank_account, string $contentType = self::contentTypes['bankAccountPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BankAccount';
+        $returnType = '\Topal\Client\Model\BankAccount';
         $request = $this->bankAccountPostRequest($client_id, $bank_account, $contentType);
 
         return $this->client
@@ -1654,7 +1654,7 @@ class BankAccountApi
      * Create request for operation 'bankAccountPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\BankAccount $bank_account (required)
+     * @param  \Topal\Client\Model\BankAccount $bank_account (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bankAccountPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

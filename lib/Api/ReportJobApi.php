@@ -133,9 +133,9 @@ class ReportJobApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportJobGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportJob[]
+     * @return \Topal\Client\Model\ReportJob[]
      */
     public function reportJobGet($client_id, string $contentType = self::contentTypes['reportJobGet'][0])
     {
@@ -151,9 +151,9 @@ class ReportJobApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportJobGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportJob[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\ReportJob[], HTTP status code, HTTP response headers (array of strings)
      */
     public function reportJobGetWithHttpInfo($client_id, string $contentType = self::contentTypes['reportJobGet'][0])
     {
@@ -184,11 +184,11 @@ class ReportJobApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportJob[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\ReportJob[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportJob[]' !== 'string') {
+                        if ('\Topal\Client\Model\ReportJob[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,7 +206,7 @@ class ReportJobApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportJob[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\ReportJob[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -225,7 +225,7 @@ class ReportJobApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportJob[]';
+            $returnType = '\Topal\Client\Model\ReportJob[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +258,7 @@ class ReportJobApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportJob[]',
+                        '\Topal\Client\Model\ReportJob[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -302,7 +302,7 @@ class ReportJobApi
      */
     public function reportJobGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['reportJobGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReportJob[]';
+        $returnType = '\Topal\Client\Model\ReportJob[]';
         $request = $this->reportJobGetRequest($client_id, $contentType);
 
         return $this->client
@@ -442,9 +442,9 @@ class ReportJobApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportJobGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportJob
+     * @return \Topal\Client\Model\ReportJob
      */
     public function reportJobGet_0($id, $client_id, string $contentType = self::contentTypes['reportJobGet_0'][0])
     {
@@ -461,9 +461,9 @@ class ReportJobApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportJobGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportJob, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\ReportJob, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportJobGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['reportJobGet_0'][0])
     {
@@ -494,11 +494,11 @@ class ReportJobApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportJob' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\ReportJob' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportJob' !== 'string') {
+                        if ('\Topal\Client\Model\ReportJob' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -516,7 +516,7 @@ class ReportJobApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportJob', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\ReportJob', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -535,7 +535,7 @@ class ReportJobApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportJob';
+            $returnType = '\Topal\Client\Model\ReportJob';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -568,7 +568,7 @@ class ReportJobApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportJob',
+                        '\Topal\Client\Model\ReportJob',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -614,7 +614,7 @@ class ReportJobApi
      */
     public function reportJobGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['reportJobGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReportJob';
+        $returnType = '\Topal\Client\Model\ReportJob';
         $request = $this->reportJobGet_0Request($id, $client_id, $contentType);
 
         return $this->client

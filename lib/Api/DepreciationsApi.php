@@ -133,9 +133,9 @@ class DepreciationsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depreciationsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Depreciation[]
+     * @return \Topal\Client\Model\Depreciation[]
      */
     public function depreciationsGet($client_id, string $contentType = self::contentTypes['depreciationsGet'][0])
     {
@@ -151,9 +151,9 @@ class DepreciationsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depreciationsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Depreciation[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Depreciation[], HTTP status code, HTTP response headers (array of strings)
      */
     public function depreciationsGetWithHttpInfo($client_id, string $contentType = self::contentTypes['depreciationsGet'][0])
     {
@@ -184,11 +184,11 @@ class DepreciationsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Depreciation[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Depreciation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Depreciation[]' !== 'string') {
+                        if ('\Topal\Client\Model\Depreciation[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,7 +206,7 @@ class DepreciationsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Depreciation[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Depreciation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -225,7 +225,7 @@ class DepreciationsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Depreciation[]';
+            $returnType = '\Topal\Client\Model\Depreciation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +258,7 @@ class DepreciationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Depreciation[]',
+                        '\Topal\Client\Model\Depreciation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -302,7 +302,7 @@ class DepreciationsApi
      */
     public function depreciationsGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['depreciationsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Depreciation[]';
+        $returnType = '\Topal\Client\Model\Depreciation[]';
         $request = $this->depreciationsGetRequest($client_id, $contentType);
 
         return $this->client
@@ -442,9 +442,9 @@ class DepreciationsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depreciationsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Depreciation
+     * @return \Topal\Client\Model\Depreciation
      */
     public function depreciationsGet_0($id, $client_id, string $contentType = self::contentTypes['depreciationsGet_0'][0])
     {
@@ -461,9 +461,9 @@ class DepreciationsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['depreciationsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Depreciation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Depreciation, HTTP status code, HTTP response headers (array of strings)
      */
     public function depreciationsGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['depreciationsGet_0'][0])
     {
@@ -494,11 +494,11 @@ class DepreciationsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Depreciation' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Depreciation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Depreciation' !== 'string') {
+                        if ('\Topal\Client\Model\Depreciation' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -516,7 +516,7 @@ class DepreciationsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Depreciation', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Depreciation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -535,7 +535,7 @@ class DepreciationsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Depreciation';
+            $returnType = '\Topal\Client\Model\Depreciation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -568,7 +568,7 @@ class DepreciationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Depreciation',
+                        '\Topal\Client\Model\Depreciation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -614,7 +614,7 @@ class DepreciationsApi
      */
     public function depreciationsGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['depreciationsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Depreciation';
+        $returnType = '\Topal\Client\Model\Depreciation';
         $request = $this->depreciationsGet_0Request($id, $client_id, $contentType);
 
         return $this->client

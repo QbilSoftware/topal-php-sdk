@@ -64,7 +64,7 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
         'unit' => 'float',
         'profit_account_fid' => 'int',
         'loss_account_fid' => 'int',
-        'daily_rates' => '\OpenAPI\Client\Model\CurrencyRate[]'
+        'daily_rates' => '\Topal\Client\Model\CurrencyRate[]'
     ];
 
     /**
@@ -530,7 +530,7 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets daily_rates
      *
-     * @return \OpenAPI\Client\Model\CurrencyRate[]|null
+     * @return \Topal\Client\Model\CurrencyRate[]|null
      */
     public function getDailyRates()
     {
@@ -540,7 +540,7 @@ class Currency implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets daily_rates
      *
-     * @param \OpenAPI\Client\Model\CurrencyRate[]|null $daily_rates daily_rates
+     * @param \Topal\Client\Model\CurrencyRate[]|null $daily_rates daily_rates
      *
      * @return self
      */

@@ -147,9 +147,9 @@ class ChartsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetCCStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Statement
+     * @return \Topal\Client\Model\Statement
      */
     public function chartsGetCCStatement($account_code, $cost_center_code, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetCCStatement'][0])
     {
@@ -170,9 +170,9 @@ class ChartsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetCCStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Statement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Statement, HTTP status code, HTTP response headers (array of strings)
      */
     public function chartsGetCCStatementWithHttpInfo($account_code, $cost_center_code, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetCCStatement'][0])
     {
@@ -203,11 +203,11 @@ class ChartsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Statement' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Statement' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Statement' !== 'string') {
+                        if ('\Topal\Client\Model\Statement' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,7 +225,7 @@ class ChartsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Statement', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Statement', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -244,7 +244,7 @@ class ChartsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Statement';
+            $returnType = '\Topal\Client\Model\Statement';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -277,7 +277,7 @@ class ChartsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Statement',
+                        '\Topal\Client\Model\Statement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class ChartsApi
      */
     public function chartsGetCCStatementAsyncWithHttpInfo($account_code, $cost_center_code, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetCCStatement'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Statement';
+        $returnType = '\Topal\Client\Model\Statement';
         $request = $this->chartsGetCCStatementRequest($account_code, $cost_center_code, $date, $period_name, $periods_count, $client_id, $contentType);
 
         return $this->client
@@ -555,9 +555,9 @@ class ChartsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetFormulaList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MisFormulaTree[]
+     * @return \Topal\Client\Model\MisFormulaTree[]
      */
     public function chartsGetFormulaList($client_id, string $contentType = self::contentTypes['chartsGetFormulaList'][0])
     {
@@ -573,9 +573,9 @@ class ChartsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetFormulaList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MisFormulaTree[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\MisFormulaTree[], HTTP status code, HTTP response headers (array of strings)
      */
     public function chartsGetFormulaListWithHttpInfo($client_id, string $contentType = self::contentTypes['chartsGetFormulaList'][0])
     {
@@ -606,11 +606,11 @@ class ChartsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MisFormulaTree[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\MisFormulaTree[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MisFormulaTree[]' !== 'string') {
+                        if ('\Topal\Client\Model\MisFormulaTree[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -628,7 +628,7 @@ class ChartsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MisFormulaTree[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\MisFormulaTree[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -647,7 +647,7 @@ class ChartsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\MisFormulaTree[]';
+            $returnType = '\Topal\Client\Model\MisFormulaTree[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -680,7 +680,7 @@ class ChartsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MisFormulaTree[]',
+                        '\Topal\Client\Model\MisFormulaTree[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -724,7 +724,7 @@ class ChartsApi
      */
     public function chartsGetFormulaListAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['chartsGetFormulaList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MisFormulaTree[]';
+        $returnType = '\Topal\Client\Model\MisFormulaTree[]';
         $request = $this->chartsGetFormulaListRequest($client_id, $contentType);
 
         return $this->client
@@ -867,9 +867,9 @@ class ChartsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetFormulaStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FormulaStatement
+     * @return \Topal\Client\Model\FormulaStatement
      */
     public function chartsGetFormulaStatement($formula, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetFormulaStatement'][0])
     {
@@ -889,9 +889,9 @@ class ChartsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetFormulaStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FormulaStatement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\FormulaStatement, HTTP status code, HTTP response headers (array of strings)
      */
     public function chartsGetFormulaStatementWithHttpInfo($formula, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetFormulaStatement'][0])
     {
@@ -922,11 +922,11 @@ class ChartsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FormulaStatement' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\FormulaStatement' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FormulaStatement' !== 'string') {
+                        if ('\Topal\Client\Model\FormulaStatement' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -944,7 +944,7 @@ class ChartsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FormulaStatement', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\FormulaStatement', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -963,7 +963,7 @@ class ChartsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\FormulaStatement';
+            $returnType = '\Topal\Client\Model\FormulaStatement';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -996,7 +996,7 @@ class ChartsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FormulaStatement',
+                        '\Topal\Client\Model\FormulaStatement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1048,7 +1048,7 @@ class ChartsApi
      */
     public function chartsGetFormulaStatementAsyncWithHttpInfo($formula, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetFormulaStatement'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FormulaStatement';
+        $returnType = '\Topal\Client\Model\FormulaStatement';
         $request = $this->chartsGetFormulaStatementRequest($formula, $date, $period_name, $periods_count, $client_id, $contentType);
 
         return $this->client
@@ -1259,9 +1259,9 @@ class ChartsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Statement
+     * @return \Topal\Client\Model\Statement
      */
     public function chartsGetStatement($code, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetStatement'][0])
     {
@@ -1281,9 +1281,9 @@ class ChartsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsGetStatement'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Statement, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Statement, HTTP status code, HTTP response headers (array of strings)
      */
     public function chartsGetStatementWithHttpInfo($code, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetStatement'][0])
     {
@@ -1314,11 +1314,11 @@ class ChartsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Statement' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Statement' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Statement' !== 'string') {
+                        if ('\Topal\Client\Model\Statement' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1336,7 +1336,7 @@ class ChartsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Statement', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Statement', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1355,7 +1355,7 @@ class ChartsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Statement';
+            $returnType = '\Topal\Client\Model\Statement';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1388,7 +1388,7 @@ class ChartsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Statement',
+                        '\Topal\Client\Model\Statement',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1440,7 +1440,7 @@ class ChartsApi
      */
     public function chartsGetStatementAsyncWithHttpInfo($code, $date, $period_name, $periods_count, $client_id, string $contentType = self::contentTypes['chartsGetStatement'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Statement';
+        $returnType = '\Topal\Client\Model\Statement';
         $request = $this->chartsGetStatementRequest($code, $date, $period_name, $periods_count, $client_id, $contentType);
 
         return $this->client
@@ -1648,7 +1648,7 @@ class ChartsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsValidateFormula'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1667,7 +1667,7 @@ class ChartsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chartsValidateFormula'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */

@@ -136,9 +136,9 @@ class PayTypeApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTypeGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayType[]
+     * @return \Topal\Client\Model\PayType[]
      */
     public function payTypeGet($client_id, string $contentType = self::contentTypes['payTypeGet'][0])
     {
@@ -154,9 +154,9 @@ class PayTypeApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTypeGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payTypeGetWithHttpInfo($client_id, string $contentType = self::contentTypes['payTypeGet'][0])
     {
@@ -187,11 +187,11 @@ class PayTypeApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayType[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayType[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayType[]' !== 'string') {
+                        if ('\Topal\Client\Model\PayType[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -209,7 +209,7 @@ class PayTypeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayType[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayType[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -228,7 +228,7 @@ class PayTypeApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayType[]';
+            $returnType = '\Topal\Client\Model\PayType[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -261,7 +261,7 @@ class PayTypeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayType[]',
+                        '\Topal\Client\Model\PayType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -305,7 +305,7 @@ class PayTypeApi
      */
     public function payTypeGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['payTypeGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayType[]';
+        $returnType = '\Topal\Client\Model\PayType[]';
         $request = $this->payTypeGetRequest($client_id, $contentType);
 
         return $this->client
@@ -445,9 +445,9 @@ class PayTypeApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTypeGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayType
+     * @return \Topal\Client\Model\PayType
      */
     public function payTypeGetByCode($name, $client_id, string $contentType = self::contentTypes['payTypeGetByCode'][0])
     {
@@ -464,9 +464,9 @@ class PayTypeApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTypeGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayType, HTTP status code, HTTP response headers (array of strings)
      */
     public function payTypeGetByCodeWithHttpInfo($name, $client_id, string $contentType = self::contentTypes['payTypeGetByCode'][0])
     {
@@ -497,11 +497,11 @@ class PayTypeApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayType' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayType' !== 'string') {
+                        if ('\Topal\Client\Model\PayType' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -519,7 +519,7 @@ class PayTypeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayType', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -538,7 +538,7 @@ class PayTypeApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayType';
+            $returnType = '\Topal\Client\Model\PayType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -571,7 +571,7 @@ class PayTypeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayType',
+                        '\Topal\Client\Model\PayType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -617,7 +617,7 @@ class PayTypeApi
      */
     public function payTypeGetByCodeAsyncWithHttpInfo($name, $client_id, string $contentType = self::contentTypes['payTypeGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayType';
+        $returnType = '\Topal\Client\Model\PayType';
         $request = $this->payTypeGetByCodeRequest($name, $client_id, $contentType);
 
         return $this->client
@@ -773,9 +773,9 @@ class PayTypeApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTypeGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PayType
+     * @return \Topal\Client\Model\PayType
      */
     public function payTypeGet_0($id, $client_id, string $contentType = self::contentTypes['payTypeGet_0'][0])
     {
@@ -792,9 +792,9 @@ class PayTypeApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payTypeGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PayType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\PayType, HTTP status code, HTTP response headers (array of strings)
      */
     public function payTypeGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['payTypeGet_0'][0])
     {
@@ -825,11 +825,11 @@ class PayTypeApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PayType' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\PayType' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PayType' !== 'string') {
+                        if ('\Topal\Client\Model\PayType' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -847,7 +847,7 @@ class PayTypeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PayType', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\PayType', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -866,7 +866,7 @@ class PayTypeApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\PayType';
+            $returnType = '\Topal\Client\Model\PayType';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -899,7 +899,7 @@ class PayTypeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PayType',
+                        '\Topal\Client\Model\PayType',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -945,7 +945,7 @@ class PayTypeApi
      */
     public function payTypeGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['payTypeGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PayType';
+        $returnType = '\Topal\Client\Model\PayType';
         $request = $this->payTypeGet_0Request($id, $client_id, $contentType);
 
         return $this->client

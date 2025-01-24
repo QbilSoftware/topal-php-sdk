@@ -76,8 +76,8 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
         'party_short_name' => 'string',
         'free_party_num' => 'string',
         'invoice_count' => 'int',
-        'payment_details' => '\OpenAPI\Client\Model\PaymentDetail[]',
-        'transaction' => '\OpenAPI\Client\Model\Transaction'
+        'payment_details' => '\Topal\Client\Model\PaymentDetail[]',
+        'transaction' => '\Topal\Client\Model\Transaction'
     ];
 
     /**
@@ -954,7 +954,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_details
      *
-     * @return \OpenAPI\Client\Model\PaymentDetail[]|null
+     * @return \Topal\Client\Model\PaymentDetail[]|null
      */
     public function getPaymentDetails()
     {
@@ -964,7 +964,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_details
      *
-     * @param \OpenAPI\Client\Model\PaymentDetail[]|null $payment_details payment_details
+     * @param \Topal\Client\Model\PaymentDetail[]|null $payment_details payment_details
      *
      * @return self
      */
@@ -981,7 +981,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets transaction
      *
-     * @return \OpenAPI\Client\Model\Transaction|null
+     * @return \Topal\Client\Model\Transaction|null
      */
     public function getTransaction()
     {
@@ -991,7 +991,7 @@ class Payment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transaction
      *
-     * @param \OpenAPI\Client\Model\Transaction|null $transaction transaction
+     * @param \Topal\Client\Model\Transaction|null $transaction transaction
      *
      * @return self
      */

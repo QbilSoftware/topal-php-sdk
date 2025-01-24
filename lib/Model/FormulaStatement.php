@@ -57,7 +57,7 @@ class FormulaStatement implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'periods' => '\OpenAPI\Client\Model\PeriodFormula[]'
+        'periods' => '\Topal\Client\Model\PeriodFormula[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class FormulaStatement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets periods
      *
-     * @return \OpenAPI\Client\Model\PeriodFormula[]|null
+     * @return \Topal\Client\Model\PeriodFormula[]|null
      */
     public function getPeriods()
     {
@@ -302,7 +302,7 @@ class FormulaStatement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets periods
      *
-     * @param \OpenAPI\Client\Model\PeriodFormula[]|null $periods periods
+     * @param \Topal\Client\Model\PeriodFormula[]|null $periods periods
      *
      * @return self
      */

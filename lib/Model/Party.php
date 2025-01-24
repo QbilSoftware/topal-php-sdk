@@ -81,9 +81,9 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
         'country_code' => 'string',
         'language_code' => 'string',
         'zip' => 'string',
-        'person' => '\OpenAPI\Client\Model\Person',
-        'debtor' => '\OpenAPI\Client\Model\Debtor',
-        'creditor' => '\OpenAPI\Client\Model\Creditor',
+        'person' => '\Topal\Client\Model\Person',
+        'debtor' => '\Topal\Client\Model\Debtor',
+        'creditor' => '\Topal\Client\Model\Creditor',
         'uid' => 'int'
     ];
 
@@ -1129,7 +1129,7 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets person
      *
-     * @return \OpenAPI\Client\Model\Person|null
+     * @return \Topal\Client\Model\Person|null
      */
     public function getPerson()
     {
@@ -1139,7 +1139,7 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets person
      *
-     * @param \OpenAPI\Client\Model\Person|null $person person
+     * @param \Topal\Client\Model\Person|null $person person
      *
      * @return self
      */
@@ -1156,7 +1156,7 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets debtor
      *
-     * @return \OpenAPI\Client\Model\Debtor|null
+     * @return \Topal\Client\Model\Debtor|null
      */
     public function getDebtor()
     {
@@ -1166,7 +1166,7 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets debtor
      *
-     * @param \OpenAPI\Client\Model\Debtor|null $debtor debtor
+     * @param \Topal\Client\Model\Debtor|null $debtor debtor
      *
      * @return self
      */
@@ -1183,7 +1183,7 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets creditor
      *
-     * @return \OpenAPI\Client\Model\Creditor|null
+     * @return \Topal\Client\Model\Creditor|null
      */
     public function getCreditor()
     {
@@ -1193,7 +1193,7 @@ class Party implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets creditor
      *
-     * @param \OpenAPI\Client\Model\Creditor|null $creditor creditor
+     * @param \Topal\Client\Model\Creditor|null $creditor creditor
      *
      * @return self
      */

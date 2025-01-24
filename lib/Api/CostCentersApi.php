@@ -143,9 +143,9 @@ class CostCentersApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenter[]
+     * @return \Topal\Client\Model\CostCenter[]
      */
     public function costCentersGet($client_id, string $contentType = self::contentTypes['costCentersGet'][0])
     {
@@ -161,9 +161,9 @@ class CostCentersApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenter[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\CostCenter[], HTTP status code, HTTP response headers (array of strings)
      */
     public function costCentersGetWithHttpInfo($client_id, string $contentType = self::contentTypes['costCentersGet'][0])
     {
@@ -194,11 +194,11 @@ class CostCentersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenter[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\CostCenter[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenter[]' !== 'string') {
+                        if ('\Topal\Client\Model\CostCenter[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -216,7 +216,7 @@ class CostCentersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenter[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\CostCenter[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -235,7 +235,7 @@ class CostCentersApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenter[]';
+            $returnType = '\Topal\Client\Model\CostCenter[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -268,7 +268,7 @@ class CostCentersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenter[]',
+                        '\Topal\Client\Model\CostCenter[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -312,7 +312,7 @@ class CostCentersApi
      */
     public function costCentersGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['costCentersGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenter[]';
+        $returnType = '\Topal\Client\Model\CostCenter[]';
         $request = $this->costCentersGetRequest($client_id, $contentType);
 
         return $this->client
@@ -452,9 +452,9 @@ class CostCentersApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenter
+     * @return \Topal\Client\Model\CostCenter
      */
     public function costCentersGetByCode($code, $client_id, string $contentType = self::contentTypes['costCentersGetByCode'][0])
     {
@@ -471,9 +471,9 @@ class CostCentersApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenter, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\CostCenter, HTTP status code, HTTP response headers (array of strings)
      */
     public function costCentersGetByCodeWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['costCentersGetByCode'][0])
     {
@@ -504,11 +504,11 @@ class CostCentersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenter' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\CostCenter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenter' !== 'string') {
+                        if ('\Topal\Client\Model\CostCenter' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -526,7 +526,7 @@ class CostCentersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenter', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\CostCenter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -545,7 +545,7 @@ class CostCentersApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenter';
+            $returnType = '\Topal\Client\Model\CostCenter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -578,7 +578,7 @@ class CostCentersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenter',
+                        '\Topal\Client\Model\CostCenter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -624,7 +624,7 @@ class CostCentersApi
      */
     public function costCentersGetByCodeAsyncWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['costCentersGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenter';
+        $returnType = '\Topal\Client\Model\CostCenter';
         $request = $this->costCentersGetByCodeRequest($code, $client_id, $contentType);
 
         return $this->client
@@ -780,9 +780,9 @@ class CostCentersApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenter
+     * @return \Topal\Client\Model\CostCenter
      */
     public function costCentersGet_0($id, $client_id, string $contentType = self::contentTypes['costCentersGet_0'][0])
     {
@@ -799,9 +799,9 @@ class CostCentersApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenter, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\CostCenter, HTTP status code, HTTP response headers (array of strings)
      */
     public function costCentersGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['costCentersGet_0'][0])
     {
@@ -832,11 +832,11 @@ class CostCentersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenter' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\CostCenter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenter' !== 'string') {
+                        if ('\Topal\Client\Model\CostCenter' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -854,7 +854,7 @@ class CostCentersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenter', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\CostCenter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -873,7 +873,7 @@ class CostCentersApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenter';
+            $returnType = '\Topal\Client\Model\CostCenter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -906,7 +906,7 @@ class CostCentersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenter',
+                        '\Topal\Client\Model\CostCenter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class CostCentersApi
      */
     public function costCentersGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['costCentersGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenter';
+        $returnType = '\Topal\Client\Model\CostCenter';
         $request = $this->costCentersGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1105,12 +1105,12 @@ class CostCentersApi
      * Save costCenter
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\CostCenter $cost_center cost_center (required)
+     * @param  \Topal\Client\Model\CostCenter $cost_center cost_center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CostCenter
+     * @return \Topal\Client\Model\CostCenter
      */
     public function costCentersPost($client_id, $cost_center, string $contentType = self::contentTypes['costCentersPost'][0])
     {
@@ -1124,12 +1124,12 @@ class CostCentersApi
      * Save costCenter
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\CostCenter $cost_center (required)
+     * @param  \Topal\Client\Model\CostCenter $cost_center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CostCenter, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\CostCenter, HTTP status code, HTTP response headers (array of strings)
      */
     public function costCentersPostWithHttpInfo($client_id, $cost_center, string $contentType = self::contentTypes['costCentersPost'][0])
     {
@@ -1160,11 +1160,11 @@ class CostCentersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CostCenter' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\CostCenter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CostCenter' !== 'string') {
+                        if ('\Topal\Client\Model\CostCenter' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1182,7 +1182,7 @@ class CostCentersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CostCenter', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\CostCenter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1201,7 +1201,7 @@ class CostCentersApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\CostCenter';
+            $returnType = '\Topal\Client\Model\CostCenter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1234,7 +1234,7 @@ class CostCentersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CostCenter',
+                        '\Topal\Client\Model\CostCenter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1250,7 +1250,7 @@ class CostCentersApi
      * Save costCenter
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\CostCenter $cost_center (required)
+     * @param  \Topal\Client\Model\CostCenter $cost_center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1272,7 +1272,7 @@ class CostCentersApi
      * Save costCenter
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\CostCenter $cost_center (required)
+     * @param  \Topal\Client\Model\CostCenter $cost_center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1280,7 +1280,7 @@ class CostCentersApi
      */
     public function costCentersPostAsyncWithHttpInfo($client_id, $cost_center, string $contentType = self::contentTypes['costCentersPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CostCenter';
+        $returnType = '\Topal\Client\Model\CostCenter';
         $request = $this->costCentersPostRequest($client_id, $cost_center, $contentType);
 
         return $this->client
@@ -1323,7 +1323,7 @@ class CostCentersApi
      * Create request for operation 'costCentersPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\CostCenter $cost_center (required)
+     * @param  \Topal\Client\Model\CostCenter $cost_center (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['costCentersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

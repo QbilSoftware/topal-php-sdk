@@ -141,7 +141,7 @@ class CustomSettingsApi
      * @param  string $name name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -159,7 +159,7 @@ class CustomSettingsApi
      * @param  string $name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -449,7 +449,7 @@ class CustomSettingsApi
      * @param  string $name name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -467,7 +467,7 @@ class CustomSettingsApi
      * @param  string $name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -756,7 +756,7 @@ class CustomSettingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -773,7 +773,7 @@ class CustomSettingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1046,7 +1046,7 @@ class CustomSettingsApi
      * @param  object $settings settings (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1065,7 +1065,7 @@ class CustomSettingsApi
      * @param  object $settings (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['customSettingsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

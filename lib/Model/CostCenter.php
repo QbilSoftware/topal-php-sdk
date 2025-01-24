@@ -68,7 +68,7 @@ class CostCenter implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => '\DateTime',
         'parent_id' => 'int',
         'group_id' => 'int',
-        'methods' => '\OpenAPI\Client\Model\CostCenterMethod[]'
+        'methods' => '\Topal\Client\Model\CostCenterMethod[]'
     ];
 
     /**
@@ -702,7 +702,7 @@ class CostCenter implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets methods
      *
-     * @return \OpenAPI\Client\Model\CostCenterMethod[]|null
+     * @return \Topal\Client\Model\CostCenterMethod[]|null
      */
     public function getMethods()
     {
@@ -712,7 +712,7 @@ class CostCenter implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets methods
      *
-     * @param \OpenAPI\Client\Model\CostCenterMethod[]|null $methods methods
+     * @param \Topal\Client\Model\CostCenterMethod[]|null $methods methods
      *
      * @return self
      */

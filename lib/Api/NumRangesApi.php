@@ -137,9 +137,9 @@ class NumRangesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['numRangesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NumRange[]
+     * @return \Topal\Client\Model\NumRange[]
      */
     public function numRangesGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGet'][0])
     {
@@ -156,9 +156,9 @@ class NumRangesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['numRangesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NumRange[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\NumRange[], HTTP status code, HTTP response headers (array of strings)
      */
     public function numRangesGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGet'][0])
     {
@@ -189,11 +189,11 @@ class NumRangesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NumRange[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\NumRange[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NumRange[]' !== 'string') {
+                        if ('\Topal\Client\Model\NumRange[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -211,7 +211,7 @@ class NumRangesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NumRange[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\NumRange[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -230,7 +230,7 @@ class NumRangesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\NumRange[]';
+            $returnType = '\Topal\Client\Model\NumRange[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -263,7 +263,7 @@ class NumRangesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NumRange[]',
+                        '\Topal\Client\Model\NumRange[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -309,7 +309,7 @@ class NumRangesApi
      */
     public function numRangesGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NumRange[]';
+        $returnType = '\Topal\Client\Model\NumRange[]';
         $request = $this->numRangesGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -466,9 +466,9 @@ class NumRangesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['numRangesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NumRange
+     * @return \Topal\Client\Model\NumRange
      */
     public function numRangesGetByCode($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGetByCode'][0])
     {
@@ -486,9 +486,9 @@ class NumRangesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['numRangesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NumRange, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\NumRange, HTTP status code, HTTP response headers (array of strings)
      */
     public function numRangesGetByCodeWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGetByCode'][0])
     {
@@ -519,11 +519,11 @@ class NumRangesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NumRange' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\NumRange' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NumRange' !== 'string') {
+                        if ('\Topal\Client\Model\NumRange' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -541,7 +541,7 @@ class NumRangesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NumRange', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\NumRange', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -560,7 +560,7 @@ class NumRangesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\NumRange';
+            $returnType = '\Topal\Client\Model\NumRange';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -593,7 +593,7 @@ class NumRangesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NumRange',
+                        '\Topal\Client\Model\NumRange',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -641,7 +641,7 @@ class NumRangesApi
      */
     public function numRangesGetByCodeAsyncWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NumRange';
+        $returnType = '\Topal\Client\Model\NumRange';
         $request = $this->numRangesGetByCodeRequest($code, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -814,9 +814,9 @@ class NumRangesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['numRangesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NumRange
+     * @return \Topal\Client\Model\NumRange
      */
     public function numRangesGet_0($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGet_0'][0])
     {
@@ -834,9 +834,9 @@ class NumRangesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['numRangesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NumRange, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\NumRange, HTTP status code, HTTP response headers (array of strings)
      */
     public function numRangesGet_0WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGet_0'][0])
     {
@@ -867,11 +867,11 @@ class NumRangesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NumRange' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\NumRange' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NumRange' !== 'string') {
+                        if ('\Topal\Client\Model\NumRange' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -889,7 +889,7 @@ class NumRangesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NumRange', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\NumRange', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -908,7 +908,7 @@ class NumRangesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\NumRange';
+            $returnType = '\Topal\Client\Model\NumRange';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -941,7 +941,7 @@ class NumRangesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NumRange',
+                        '\Topal\Client\Model\NumRange',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -989,7 +989,7 @@ class NumRangesApi
      */
     public function numRangesGet_0AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['numRangesGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NumRange';
+        $returnType = '\Topal\Client\Model\NumRange';
         $request = $this->numRangesGet_0Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client

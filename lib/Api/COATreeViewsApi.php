@@ -151,7 +151,7 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -171,7 +171,7 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -498,9 +498,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COATreeView[]
+     * @return \Topal\Client\Model\COATreeView[]
      */
     public function cOATreeViewsGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet'][0])
     {
@@ -517,9 +517,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COATreeView[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COATreeView[], HTTP status code, HTTP response headers (array of strings)
      */
     public function cOATreeViewsGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet'][0])
     {
@@ -550,11 +550,11 @@ class COATreeViewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COATreeView[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COATreeView[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COATreeView[]' !== 'string') {
+                        if ('\Topal\Client\Model\COATreeView[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -572,7 +572,7 @@ class COATreeViewsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COATreeView[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COATreeView[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -591,7 +591,7 @@ class COATreeViewsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COATreeView[]';
+            $returnType = '\Topal\Client\Model\COATreeView[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -624,7 +624,7 @@ class COATreeViewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COATreeView[]',
+                        '\Topal\Client\Model\COATreeView[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -670,7 +670,7 @@ class COATreeViewsApi
      */
     public function cOATreeViewsGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COATreeView[]';
+        $returnType = '\Topal\Client\Model\COATreeView[]';
         $request = $this->cOATreeViewsGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -827,9 +827,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGetByCOA'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COATreeView[]
+     * @return \Topal\Client\Model\COATreeView[]
      */
     public function cOATreeViewsGetByCOA($coa_id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGetByCOA'][0])
     {
@@ -847,9 +847,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGetByCOA'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COATreeView[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COATreeView[], HTTP status code, HTTP response headers (array of strings)
      */
     public function cOATreeViewsGetByCOAWithHttpInfo($coa_id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGetByCOA'][0])
     {
@@ -880,11 +880,11 @@ class COATreeViewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COATreeView[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COATreeView[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COATreeView[]' !== 'string') {
+                        if ('\Topal\Client\Model\COATreeView[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -902,7 +902,7 @@ class COATreeViewsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COATreeView[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COATreeView[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -921,7 +921,7 @@ class COATreeViewsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COATreeView[]';
+            $returnType = '\Topal\Client\Model\COATreeView[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -954,7 +954,7 @@ class COATreeViewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COATreeView[]',
+                        '\Topal\Client\Model\COATreeView[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1002,7 +1002,7 @@ class COATreeViewsApi
      */
     public function cOATreeViewsGetByCOAAsyncWithHttpInfo($coa_id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGetByCOA'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COATreeView[]';
+        $returnType = '\Topal\Client\Model\COATreeView[]';
         $request = $this->cOATreeViewsGetByCOARequest($coa_id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1175,9 +1175,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COATreeView
+     * @return \Topal\Client\Model\COATreeView
      */
     public function cOATreeViewsGet_0($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet_0'][0])
     {
@@ -1195,9 +1195,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COATreeView, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COATreeView, HTTP status code, HTTP response headers (array of strings)
      */
     public function cOATreeViewsGet_0WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet_0'][0])
     {
@@ -1228,11 +1228,11 @@ class COATreeViewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COATreeView' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COATreeView' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COATreeView' !== 'string') {
+                        if ('\Topal\Client\Model\COATreeView' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1250,7 +1250,7 @@ class COATreeViewsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COATreeView', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COATreeView', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1269,7 +1269,7 @@ class COATreeViewsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COATreeView';
+            $returnType = '\Topal\Client\Model\COATreeView';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1302,7 +1302,7 @@ class COATreeViewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COATreeView',
+                        '\Topal\Client\Model\COATreeView',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1350,7 +1350,7 @@ class COATreeViewsApi
      */
     public function cOATreeViewsGet_0AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COATreeView';
+        $returnType = '\Topal\Client\Model\COATreeView';
         $request = $this->cOATreeViewsGet_0Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1523,9 +1523,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COATreeView
+     * @return \Topal\Client\Model\COATreeView
      */
     public function cOATreeViewsGet_1($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet_1'][0])
     {
@@ -1543,9 +1543,9 @@ class COATreeViewsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsGet_1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COATreeView, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COATreeView, HTTP status code, HTTP response headers (array of strings)
      */
     public function cOATreeViewsGet_1WithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet_1'][0])
     {
@@ -1576,11 +1576,11 @@ class COATreeViewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COATreeView' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COATreeView' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COATreeView' !== 'string') {
+                        if ('\Topal\Client\Model\COATreeView' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1598,7 +1598,7 @@ class COATreeViewsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COATreeView', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COATreeView', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1617,7 +1617,7 @@ class COATreeViewsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COATreeView';
+            $returnType = '\Topal\Client\Model\COATreeView';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1650,7 +1650,7 @@ class COATreeViewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COATreeView',
+                        '\Topal\Client\Model\COATreeView',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1698,7 +1698,7 @@ class COATreeViewsApi
      */
     public function cOATreeViewsGet_1AsyncWithHttpInfo($code, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['cOATreeViewsGet_1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COATreeView';
+        $returnType = '\Topal\Client\Model\COATreeView';
         $request = $this->cOATreeViewsGet_1Request($code, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1868,13 +1868,13 @@ class COATreeViewsApi
      *
      * @param  string $client_id client_id (required)
      * @param  string $fiscal_year_id fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\COATreeView $coa_tree_view coa_tree_view (required)
+     * @param  \Topal\Client\Model\COATreeView $coa_tree_view coa_tree_view (required)
      * @param  string $parent_group_code parent group (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COATreeView
+     * @return \Topal\Client\Model\COATreeView
      */
     public function cOATreeViewsPost($client_id, $fiscal_year_id, $coa_tree_view, $parent_group_code = null, string $contentType = self::contentTypes['cOATreeViewsPost'][0])
     {
@@ -1889,13 +1889,13 @@ class COATreeViewsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\COATreeView $coa_tree_view (required)
+     * @param  \Topal\Client\Model\COATreeView $coa_tree_view (required)
      * @param  string $parent_group_code parent group (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COATreeView, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COATreeView, HTTP status code, HTTP response headers (array of strings)
      */
     public function cOATreeViewsPostWithHttpInfo($client_id, $fiscal_year_id, $coa_tree_view, $parent_group_code = null, string $contentType = self::contentTypes['cOATreeViewsPost'][0])
     {
@@ -1926,11 +1926,11 @@ class COATreeViewsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COATreeView' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COATreeView' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COATreeView' !== 'string') {
+                        if ('\Topal\Client\Model\COATreeView' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1948,7 +1948,7 @@ class COATreeViewsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COATreeView', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COATreeView', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1967,7 +1967,7 @@ class COATreeViewsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COATreeView';
+            $returnType = '\Topal\Client\Model\COATreeView';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2000,7 +2000,7 @@ class COATreeViewsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COATreeView',
+                        '\Topal\Client\Model\COATreeView',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2017,7 +2017,7 @@ class COATreeViewsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\COATreeView $coa_tree_view (required)
+     * @param  \Topal\Client\Model\COATreeView $coa_tree_view (required)
      * @param  string $parent_group_code parent group (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsPost'] to see the possible values for this operation
      *
@@ -2041,7 +2041,7 @@ class COATreeViewsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\COATreeView $coa_tree_view (required)
+     * @param  \Topal\Client\Model\COATreeView $coa_tree_view (required)
      * @param  string $parent_group_code parent group (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsPost'] to see the possible values for this operation
      *
@@ -2050,7 +2050,7 @@ class COATreeViewsApi
      */
     public function cOATreeViewsPostAsyncWithHttpInfo($client_id, $fiscal_year_id, $coa_tree_view, $parent_group_code = null, string $contentType = self::contentTypes['cOATreeViewsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COATreeView';
+        $returnType = '\Topal\Client\Model\COATreeView';
         $request = $this->cOATreeViewsPostRequest($client_id, $fiscal_year_id, $coa_tree_view, $parent_group_code, $contentType);
 
         return $this->client
@@ -2094,7 +2094,7 @@ class COATreeViewsApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\COATreeView $coa_tree_view (required)
+     * @param  \Topal\Client\Model\COATreeView $coa_tree_view (required)
      * @param  string $parent_group_code parent group (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOATreeViewsPost'] to see the possible values for this operation
      *

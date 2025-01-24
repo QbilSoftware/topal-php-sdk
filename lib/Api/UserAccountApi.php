@@ -153,10 +153,10 @@ class UserAccountApi
      *
      * Change user password
      *
-     * @param  \OpenAPI\Client\Model\ChangePassword $change_password change_password (required)
+     * @param  \Topal\Client\Model\ChangePassword $change_password change_password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountChangePassword'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -171,10 +171,10 @@ class UserAccountApi
      *
      * Change user password
      *
-     * @param  \OpenAPI\Client\Model\ChangePassword $change_password (required)
+     * @param  \Topal\Client\Model\ChangePassword $change_password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountChangePassword'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -296,7 +296,7 @@ class UserAccountApi
      *
      * Change user password
      *
-     * @param  \OpenAPI\Client\Model\ChangePassword $change_password (required)
+     * @param  \Topal\Client\Model\ChangePassword $change_password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountChangePassword'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -317,7 +317,7 @@ class UserAccountApi
      *
      * Change user password
      *
-     * @param  \OpenAPI\Client\Model\ChangePassword $change_password (required)
+     * @param  \Topal\Client\Model\ChangePassword $change_password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountChangePassword'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -367,7 +367,7 @@ class UserAccountApi
     /**
      * Create request for operation 'userAccountChangePassword'
      *
-     * @param  \OpenAPI\Client\Model\ChangePassword $change_password (required)
+     * @param  \Topal\Client\Model\ChangePassword $change_password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountChangePassword'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -462,9 +462,9 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserAccount[]
+     * @return \Topal\Client\Model\UserAccount[]
      */
     public function userAccountGet(string $contentType = self::contentTypes['userAccountGet'][0])
     {
@@ -479,9 +479,9 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserAccount[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\UserAccount[], HTTP status code, HTTP response headers (array of strings)
      */
     public function userAccountGetWithHttpInfo(string $contentType = self::contentTypes['userAccountGet'][0])
     {
@@ -512,11 +512,11 @@ class UserAccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserAccount[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\UserAccount[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserAccount[]' !== 'string') {
+                        if ('\Topal\Client\Model\UserAccount[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -534,7 +534,7 @@ class UserAccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserAccount[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\UserAccount[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -553,7 +553,7 @@ class UserAccountApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserAccount[]';
+            $returnType = '\Topal\Client\Model\UserAccount[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -586,7 +586,7 @@ class UserAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserAccount[]',
+                        '\Topal\Client\Model\UserAccount[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -628,7 +628,7 @@ class UserAccountApi
      */
     public function userAccountGetAsyncWithHttpInfo(string $contentType = self::contentTypes['userAccountGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserAccount[]';
+        $returnType = '\Topal\Client\Model\UserAccount[]';
         $request = $this->userAccountGetRequest($contentType);
 
         return $this->client
@@ -750,7 +750,7 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountGetLocalization'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -767,7 +767,7 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountGetLocalization'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1038,7 +1038,7 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountLogout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1055,7 +1055,7 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountLogout'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1326,9 +1326,9 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserAccount
+     * @return \Topal\Client\Model\UserAccount
      */
     public function userAccountProfile(string $contentType = self::contentTypes['userAccountProfile'][0])
     {
@@ -1343,9 +1343,9 @@ class UserAccountApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\UserAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function userAccountProfileWithHttpInfo(string $contentType = self::contentTypes['userAccountProfile'][0])
     {
@@ -1376,11 +1376,11 @@ class UserAccountApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserAccount' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\UserAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserAccount' !== 'string') {
+                        if ('\Topal\Client\Model\UserAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1398,7 +1398,7 @@ class UserAccountApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserAccount', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\UserAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1417,7 +1417,7 @@ class UserAccountApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserAccount';
+            $returnType = '\Topal\Client\Model\UserAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1450,7 +1450,7 @@ class UserAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserAccount',
+                        '\Topal\Client\Model\UserAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1492,7 +1492,7 @@ class UserAccountApi
      */
     public function userAccountProfileAsyncWithHttpInfo(string $contentType = self::contentTypes['userAccountProfile'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserAccount';
+        $returnType = '\Topal\Client\Model\UserAccount';
         $request = $this->userAccountProfileRequest($contentType);
 
         return $this->client
@@ -1615,7 +1615,7 @@ class UserAccountApi
      * @param  string $localization localization (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveLocalization'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1633,7 +1633,7 @@ class UserAccountApi
      * @param  string $localization (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveLocalization'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1920,10 +1920,10 @@ class UserAccountApi
      *
      * Save user profile data
      *
-     * @param  \OpenAPI\Client\Model\UserAccount $user_profile user_profile (required)
+     * @param  \Topal\Client\Model\UserAccount $user_profile user_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1938,10 +1938,10 @@ class UserAccountApi
      *
      * Save user profile data
      *
-     * @param  \OpenAPI\Client\Model\UserAccount $user_profile (required)
+     * @param  \Topal\Client\Model\UserAccount $user_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveProfile'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2063,7 +2063,7 @@ class UserAccountApi
      *
      * Save user profile data
      *
-     * @param  \OpenAPI\Client\Model\UserAccount $user_profile (required)
+     * @param  \Topal\Client\Model\UserAccount $user_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2084,7 +2084,7 @@ class UserAccountApi
      *
      * Save user profile data
      *
-     * @param  \OpenAPI\Client\Model\UserAccount $user_profile (required)
+     * @param  \Topal\Client\Model\UserAccount $user_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2134,7 +2134,7 @@ class UserAccountApi
     /**
      * Create request for operation 'userAccountSaveProfile'
      *
-     * @param  \OpenAPI\Client\Model\UserAccount $user_profile (required)
+     * @param  \Topal\Client\Model\UserAccount $user_profile (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['userAccountSaveProfile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

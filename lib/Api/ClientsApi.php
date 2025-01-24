@@ -146,9 +146,9 @@ class ClientsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Client[]
+     * @return \Topal\Client\Model\Client[]
      */
     public function clientsGet(string $contentType = self::contentTypes['clientsGet'][0])
     {
@@ -163,9 +163,9 @@ class ClientsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Client[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Client[], HTTP status code, HTTP response headers (array of strings)
      */
     public function clientsGetWithHttpInfo(string $contentType = self::contentTypes['clientsGet'][0])
     {
@@ -196,11 +196,11 @@ class ClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Client[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Client[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Client[]' !== 'string') {
+                        if ('\Topal\Client\Model\Client[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -218,7 +218,7 @@ class ClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Client[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Client[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -237,7 +237,7 @@ class ClientsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Client[]';
+            $returnType = '\Topal\Client\Model\Client[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -270,7 +270,7 @@ class ClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Client[]',
+                        '\Topal\Client\Model\Client[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -312,7 +312,7 @@ class ClientsApi
      */
     public function clientsGetAsyncWithHttpInfo(string $contentType = self::contentTypes['clientsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Client[]';
+        $returnType = '\Topal\Client\Model\Client[]';
         $request = $this->clientsGetRequest($contentType);
 
         return $this->client
@@ -435,9 +435,9 @@ class ClientsApi
      * @param  string $id The uniue id of the client to retrieve (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Client
+     * @return \Topal\Client\Model\Client
      */
     public function clientsGet_0($id, string $contentType = self::contentTypes['clientsGet_0'][0])
     {
@@ -453,9 +453,9 @@ class ClientsApi
      * @param  string $id The uniue id of the client to retrieve (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Client, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Client, HTTP status code, HTTP response headers (array of strings)
      */
     public function clientsGet_0WithHttpInfo($id, string $contentType = self::contentTypes['clientsGet_0'][0])
     {
@@ -486,11 +486,11 @@ class ClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Client' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Client' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Client' !== 'string') {
+                        if ('\Topal\Client\Model\Client' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -508,7 +508,7 @@ class ClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Client', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Client', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -527,7 +527,7 @@ class ClientsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Client';
+            $returnType = '\Topal\Client\Model\Client';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -560,7 +560,7 @@ class ClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Client',
+                        '\Topal\Client\Model\Client',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -604,7 +604,7 @@ class ClientsApi
      */
     public function clientsGet_0AsyncWithHttpInfo($id, string $contentType = self::contentTypes['clientsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Client';
+        $returnType = '\Topal\Client\Model\Client';
         $request = $this->clientsGet_0Request($id, $contentType);
 
         return $this->client
@@ -740,12 +740,12 @@ class ClientsApi
      *
      * Save client
      *
-     * @param  \OpenAPI\Client\Model\Client $client client (required)
+     * @param  \Topal\Client\Model\Client $client client (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Client
+     * @return \Topal\Client\Model\Client
      */
     public function clientsPost($client, string $contentType = self::contentTypes['clientsPost'][0])
     {
@@ -758,12 +758,12 @@ class ClientsApi
      *
      * Save client
      *
-     * @param  \OpenAPI\Client\Model\Client $client (required)
+     * @param  \Topal\Client\Model\Client $client (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Client, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Client, HTTP status code, HTTP response headers (array of strings)
      */
     public function clientsPostWithHttpInfo($client, string $contentType = self::contentTypes['clientsPost'][0])
     {
@@ -794,11 +794,11 @@ class ClientsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Client' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Client' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Client' !== 'string') {
+                        if ('\Topal\Client\Model\Client' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -816,7 +816,7 @@ class ClientsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Client', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Client', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -835,7 +835,7 @@ class ClientsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Client';
+            $returnType = '\Topal\Client\Model\Client';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -868,7 +868,7 @@ class ClientsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Client',
+                        '\Topal\Client\Model\Client',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -883,7 +883,7 @@ class ClientsApi
      *
      * Save client
      *
-     * @param  \OpenAPI\Client\Model\Client $client (required)
+     * @param  \Topal\Client\Model\Client $client (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -904,7 +904,7 @@ class ClientsApi
      *
      * Save client
      *
-     * @param  \OpenAPI\Client\Model\Client $client (required)
+     * @param  \Topal\Client\Model\Client $client (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -912,7 +912,7 @@ class ClientsApi
      */
     public function clientsPostAsyncWithHttpInfo($client, string $contentType = self::contentTypes['clientsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Client';
+        $returnType = '\Topal\Client\Model\Client';
         $request = $this->clientsPostRequest($client, $contentType);
 
         return $this->client
@@ -954,7 +954,7 @@ class ClientsApi
     /**
      * Create request for operation 'clientsPost'
      *
-     * @param  \OpenAPI\Client\Model\Client $client (required)
+     * @param  \Topal\Client\Model\Client $client (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1051,7 +1051,7 @@ class ClientsApi
      * @param  string $password password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsUnprotect'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1070,7 +1070,7 @@ class ClientsApi
      * @param  string $password password (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['clientsUnprotect'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

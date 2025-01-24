@@ -57,7 +57,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'period_balances' => '\OpenAPI\Client\Model\PeriodBalance[]'
+        'period_balances' => '\Topal\Client\Model\PeriodBalance[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets period_balances
      *
-     * @return \OpenAPI\Client\Model\PeriodBalance[]|null
+     * @return \Topal\Client\Model\PeriodBalance[]|null
      */
     public function getPeriodBalances()
     {
@@ -302,7 +302,7 @@ class Statement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets period_balances
      *
-     * @param \OpenAPI\Client\Model\PeriodBalance[]|null $period_balances period_balances
+     * @param \Topal\Client\Model\PeriodBalance[]|null $period_balances period_balances
      *
      * @return self
      */

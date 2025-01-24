@@ -57,7 +57,7 @@ class COATreeView implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account' => '\OpenAPI\Client\Model\Account',
+        'account' => '\Topal\Client\Model\Account',
         'id' => 'int',
         'coa_fid' => 'int',
         'acc_area_fid' => 'int',
@@ -70,7 +70,7 @@ class COATreeView implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'name2' => 'string',
         'remarks' => 'string',
-        'children' => '\OpenAPI\Client\Model\COATreeView[]',
+        'children' => '\Topal\Client\Model\COATreeView[]',
         'balance' => 'float',
         'prev_balance' => 'float',
         'balance_cf' => 'float',
@@ -488,7 +488,7 @@ class COATreeView implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets account
      *
-     * @return \OpenAPI\Client\Model\Account|null
+     * @return \Topal\Client\Model\Account|null
      */
     public function getAccount()
     {
@@ -498,7 +498,7 @@ class COATreeView implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets account
      *
-     * @param \OpenAPI\Client\Model\Account|null $account account
+     * @param \Topal\Client\Model\Account|null $account account
      *
      * @return self
      */
@@ -839,7 +839,7 @@ class COATreeView implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets children
      *
-     * @return \OpenAPI\Client\Model\COATreeView[]|null
+     * @return \Topal\Client\Model\COATreeView[]|null
      */
     public function getChildren()
     {
@@ -849,7 +849,7 @@ class COATreeView implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets children
      *
-     * @param \OpenAPI\Client\Model\COATreeView[]|null $children children
+     * @param \Topal\Client\Model\COATreeView[]|null $children children
      *
      * @return self
      */

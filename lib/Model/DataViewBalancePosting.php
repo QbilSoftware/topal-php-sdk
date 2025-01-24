@@ -57,9 +57,9 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'filter_fields' => '\OpenAPI\Client\Model\FilterField[]',
-        'order_fields' => '\OpenAPI\Client\Model\OrderField[]',
-        'data' => '\OpenAPI\Client\Model\BalancePosting[]',
+        'filter_fields' => '\Topal\Client\Model\FilterField[]',
+        'order_fields' => '\Topal\Client\Model\OrderField[]',
+        'data' => '\Topal\Client\Model\BalancePosting[]',
         'items_count' => 'int',
         'total_items_count' => 'int',
         'start_index' => 'int'
@@ -327,7 +327,7 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets filter_fields
      *
-     * @return \OpenAPI\Client\Model\FilterField[]|null
+     * @return \Topal\Client\Model\FilterField[]|null
      */
     public function getFilterFields()
     {
@@ -337,7 +337,7 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets filter_fields
      *
-     * @param \OpenAPI\Client\Model\FilterField[]|null $filter_fields filter_fields
+     * @param \Topal\Client\Model\FilterField[]|null $filter_fields filter_fields
      *
      * @return self
      */
@@ -354,7 +354,7 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets order_fields
      *
-     * @return \OpenAPI\Client\Model\OrderField[]|null
+     * @return \Topal\Client\Model\OrderField[]|null
      */
     public function getOrderFields()
     {
@@ -364,7 +364,7 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets order_fields
      *
-     * @param \OpenAPI\Client\Model\OrderField[]|null $order_fields order_fields
+     * @param \Topal\Client\Model\OrderField[]|null $order_fields order_fields
      *
      * @return self
      */
@@ -381,7 +381,7 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\BalancePosting[]|null
+     * @return \Topal\Client\Model\BalancePosting[]|null
      */
     public function getData()
     {
@@ -391,7 +391,7 @@ class DataViewBalancePosting implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\BalancePosting[]|null $data data
+     * @param \Topal\Client\Model\BalancePosting[]|null $data data
      *
      * @return self
      */

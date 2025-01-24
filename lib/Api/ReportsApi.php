@@ -154,7 +154,7 @@ class ReportsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsDownload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -174,7 +174,7 @@ class ReportsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsDownload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -504,7 +504,7 @@ class ReportsApi
      * @param  bool $save_filter wether to save filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsDownloadWithFilter'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -526,7 +526,7 @@ class ReportsApi
      * @param  bool $save_filter wether to save filter (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsDownloadWithFilter'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -883,9 +883,9 @@ class ReportsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Report[]
+     * @return \Topal\Client\Model\Report[]
      */
     public function reportsGet($client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGet'][0])
     {
@@ -902,9 +902,9 @@ class ReportsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Report[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Report[], HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsGetWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGet'][0])
     {
@@ -935,11 +935,11 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Report[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Report[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Report[]' !== 'string') {
+                        if ('\Topal\Client\Model\Report[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -957,7 +957,7 @@ class ReportsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Report[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Report[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -976,7 +976,7 @@ class ReportsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Report[]';
+            $returnType = '\Topal\Client\Model\Report[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1009,7 +1009,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Report[]',
+                        '\Topal\Client\Model\Report[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1055,7 +1055,7 @@ class ReportsApi
      */
     public function reportsGetAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Report[]';
+        $returnType = '\Topal\Client\Model\Report[]';
         $request = $this->reportsGetRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1212,9 +1212,9 @@ class ReportsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsGetReportFilter'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportFilter
+     * @return \Topal\Client\Model\ReportFilter
      */
     public function reportsGetReportFilter($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGetReportFilter'][0])
     {
@@ -1232,9 +1232,9 @@ class ReportsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsGetReportFilter'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportFilter, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\ReportFilter, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsGetReportFilterWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGetReportFilter'][0])
     {
@@ -1265,11 +1265,11 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportFilter' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\ReportFilter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportFilter' !== 'string') {
+                        if ('\Topal\Client\Model\ReportFilter' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1287,7 +1287,7 @@ class ReportsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportFilter', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\ReportFilter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1306,7 +1306,7 @@ class ReportsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportFilter';
+            $returnType = '\Topal\Client\Model\ReportFilter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1339,7 +1339,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportFilter',
+                        '\Topal\Client\Model\ReportFilter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1387,7 +1387,7 @@ class ReportsApi
      */
     public function reportsGetReportFilterAsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGetReportFilter'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReportFilter';
+        $returnType = '\Topal\Client\Model\ReportFilter';
         $request = $this->reportsGetReportFilterRequest($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1560,9 +1560,9 @@ class ReportsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Report
+     * @return \Topal\Client\Model\Report
      */
     public function reportsGet_0($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGet_0'][0])
     {
@@ -1580,9 +1580,9 @@ class ReportsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Report, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Report, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsGet_0WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGet_0'][0])
     {
@@ -1613,11 +1613,11 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Report' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Report' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Report' !== 'string') {
+                        if ('\Topal\Client\Model\Report' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1635,7 +1635,7 @@ class ReportsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Report', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Report', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1654,7 +1654,7 @@ class ReportsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Report';
+            $returnType = '\Topal\Client\Model\Report';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1687,7 +1687,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Report',
+                        '\Topal\Client\Model\Report',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1735,7 +1735,7 @@ class ReportsApi
      */
     public function reportsGet_0AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['reportsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Report';
+        $returnType = '\Topal\Client\Model\Report';
         $request = $this->reportsGet_0Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1909,9 +1909,9 @@ class ReportsApi
      * @param  object $report_filter report_filter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsPostReportFilter'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportFilter
+     * @return \Topal\Client\Model\ReportFilter
      */
     public function reportsPostReportFilter($id, $client_id, $fiscal_year_id, $report_filter, string $contentType = self::contentTypes['reportsPostReportFilter'][0])
     {
@@ -1930,9 +1930,9 @@ class ReportsApi
      * @param  object $report_filter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsPostReportFilter'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportFilter, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\ReportFilter, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsPostReportFilterWithHttpInfo($id, $client_id, $fiscal_year_id, $report_filter, string $contentType = self::contentTypes['reportsPostReportFilter'][0])
     {
@@ -1963,11 +1963,11 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportFilter' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\ReportFilter' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportFilter' !== 'string') {
+                        if ('\Topal\Client\Model\ReportFilter' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1985,7 +1985,7 @@ class ReportsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportFilter', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\ReportFilter', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2004,7 +2004,7 @@ class ReportsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportFilter';
+            $returnType = '\Topal\Client\Model\ReportFilter';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2037,7 +2037,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportFilter',
+                        '\Topal\Client\Model\ReportFilter',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2087,7 +2087,7 @@ class ReportsApi
      */
     public function reportsPostReportFilterAsyncWithHttpInfo($id, $client_id, $fiscal_year_id, $report_filter, string $contentType = self::contentTypes['reportsPostReportFilter'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ReportFilter';
+        $returnType = '\Topal\Client\Model\ReportFilter';
         $request = $this->reportsPostReportFilterRequest($id, $client_id, $fiscal_year_id, $report_filter, $contentType);
 
         return $this->client
@@ -2275,7 +2275,7 @@ class ReportsApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsPreview'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2295,7 +2295,7 @@ class ReportsApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reportsPreview'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

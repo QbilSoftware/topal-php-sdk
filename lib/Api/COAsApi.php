@@ -144,7 +144,7 @@ class COAsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -163,7 +163,7 @@ class COAsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -471,9 +471,9 @@ class COAsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COA[]
+     * @return \Topal\Client\Model\COA[]
      */
     public function cOAsGet($client_id, string $contentType = self::contentTypes['cOAsGet'][0])
     {
@@ -489,9 +489,9 @@ class COAsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COA[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COA[], HTTP status code, HTTP response headers (array of strings)
      */
     public function cOAsGetWithHttpInfo($client_id, string $contentType = self::contentTypes['cOAsGet'][0])
     {
@@ -522,11 +522,11 @@ class COAsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COA[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COA[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COA[]' !== 'string') {
+                        if ('\Topal\Client\Model\COA[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -544,7 +544,7 @@ class COAsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COA[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COA[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -563,7 +563,7 @@ class COAsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COA[]';
+            $returnType = '\Topal\Client\Model\COA[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -596,7 +596,7 @@ class COAsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COA[]',
+                        '\Topal\Client\Model\COA[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -640,7 +640,7 @@ class COAsApi
      */
     public function cOAsGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['cOAsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COA[]';
+        $returnType = '\Topal\Client\Model\COA[]';
         $request = $this->cOAsGetRequest($client_id, $contentType);
 
         return $this->client
@@ -780,9 +780,9 @@ class COAsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COA
+     * @return \Topal\Client\Model\COA
      */
     public function cOAsGet_0($id, $client_id, string $contentType = self::contentTypes['cOAsGet_0'][0])
     {
@@ -799,9 +799,9 @@ class COAsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COA, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COA, HTTP status code, HTTP response headers (array of strings)
      */
     public function cOAsGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['cOAsGet_0'][0])
     {
@@ -832,11 +832,11 @@ class COAsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COA' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COA' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COA' !== 'string') {
+                        if ('\Topal\Client\Model\COA' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -854,7 +854,7 @@ class COAsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COA', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COA', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -873,7 +873,7 @@ class COAsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COA';
+            $returnType = '\Topal\Client\Model\COA';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -906,7 +906,7 @@ class COAsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COA',
+                        '\Topal\Client\Model\COA',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class COAsApi
      */
     public function cOAsGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['cOAsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COA';
+        $returnType = '\Topal\Client\Model\COA';
         $request = $this->cOAsGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1105,12 +1105,12 @@ class COAsApi
      * Save coa
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\COA $coa coa (required)
+     * @param  \Topal\Client\Model\COA $coa coa (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\COA
+     * @return \Topal\Client\Model\COA
      */
     public function cOAsPost($client_id, $coa, string $contentType = self::contentTypes['cOAsPost'][0])
     {
@@ -1124,12 +1124,12 @@ class COAsApi
      * Save coa
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\COA $coa (required)
+     * @param  \Topal\Client\Model\COA $coa (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\COA, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\COA, HTTP status code, HTTP response headers (array of strings)
      */
     public function cOAsPostWithHttpInfo($client_id, $coa, string $contentType = self::contentTypes['cOAsPost'][0])
     {
@@ -1160,11 +1160,11 @@ class COAsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\COA' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\COA' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\COA' !== 'string') {
+                        if ('\Topal\Client\Model\COA' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1182,7 +1182,7 @@ class COAsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\COA', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\COA', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1201,7 +1201,7 @@ class COAsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\COA';
+            $returnType = '\Topal\Client\Model\COA';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1234,7 +1234,7 @@ class COAsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\COA',
+                        '\Topal\Client\Model\COA',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1250,7 +1250,7 @@ class COAsApi
      * Save coa
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\COA $coa (required)
+     * @param  \Topal\Client\Model\COA $coa (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1272,7 +1272,7 @@ class COAsApi
      * Save coa
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\COA $coa (required)
+     * @param  \Topal\Client\Model\COA $coa (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1280,7 +1280,7 @@ class COAsApi
      */
     public function cOAsPostAsyncWithHttpInfo($client_id, $coa, string $contentType = self::contentTypes['cOAsPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\COA';
+        $returnType = '\Topal\Client\Model\COA';
         $request = $this->cOAsPostRequest($client_id, $coa, $contentType);
 
         return $this->client
@@ -1323,7 +1323,7 @@ class COAsApi
      * Create request for operation 'cOAsPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\COA $coa (required)
+     * @param  \Topal\Client\Model\COA $coa (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cOAsPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

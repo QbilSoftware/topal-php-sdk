@@ -147,7 +147,7 @@ class CountriesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -166,7 +166,7 @@ class CountriesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -474,9 +474,9 @@ class CountriesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Country[]
+     * @return \Topal\Client\Model\Country[]
      */
     public function countriesGet($client_id, string $contentType = self::contentTypes['countriesGet'][0])
     {
@@ -492,9 +492,9 @@ class CountriesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Country[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Country[], HTTP status code, HTTP response headers (array of strings)
      */
     public function countriesGetWithHttpInfo($client_id, string $contentType = self::contentTypes['countriesGet'][0])
     {
@@ -525,11 +525,11 @@ class CountriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Country[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Country[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Country[]' !== 'string') {
+                        if ('\Topal\Client\Model\Country[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -547,7 +547,7 @@ class CountriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Country[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Country[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -566,7 +566,7 @@ class CountriesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Country[]';
+            $returnType = '\Topal\Client\Model\Country[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -599,7 +599,7 @@ class CountriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Country[]',
+                        '\Topal\Client\Model\Country[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -643,7 +643,7 @@ class CountriesApi
      */
     public function countriesGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['countriesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Country[]';
+        $returnType = '\Topal\Client\Model\Country[]';
         $request = $this->countriesGetRequest($client_id, $contentType);
 
         return $this->client
@@ -783,9 +783,9 @@ class CountriesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Country
+     * @return \Topal\Client\Model\Country
      */
     public function countriesGetByCode($code, $client_id, string $contentType = self::contentTypes['countriesGetByCode'][0])
     {
@@ -802,9 +802,9 @@ class CountriesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesGetByCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
      */
     public function countriesGetByCodeWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['countriesGetByCode'][0])
     {
@@ -835,11 +835,11 @@ class CountriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Country' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Country' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Country' !== 'string') {
+                        if ('\Topal\Client\Model\Country' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -857,7 +857,7 @@ class CountriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Country', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Country', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -876,7 +876,7 @@ class CountriesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Country';
+            $returnType = '\Topal\Client\Model\Country';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -909,7 +909,7 @@ class CountriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Country',
+                        '\Topal\Client\Model\Country',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -955,7 +955,7 @@ class CountriesApi
      */
     public function countriesGetByCodeAsyncWithHttpInfo($code, $client_id, string $contentType = self::contentTypes['countriesGetByCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Country';
+        $returnType = '\Topal\Client\Model\Country';
         $request = $this->countriesGetByCodeRequest($code, $client_id, $contentType);
 
         return $this->client
@@ -1111,9 +1111,9 @@ class CountriesApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Country
+     * @return \Topal\Client\Model\Country
      */
     public function countriesGet_0($id, $client_id, string $contentType = self::contentTypes['countriesGet_0'][0])
     {
@@ -1130,9 +1130,9 @@ class CountriesApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
      */
     public function countriesGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['countriesGet_0'][0])
     {
@@ -1163,11 +1163,11 @@ class CountriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Country' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Country' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Country' !== 'string') {
+                        if ('\Topal\Client\Model\Country' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1185,7 +1185,7 @@ class CountriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Country', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Country', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1204,7 +1204,7 @@ class CountriesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Country';
+            $returnType = '\Topal\Client\Model\Country';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1237,7 +1237,7 @@ class CountriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Country',
+                        '\Topal\Client\Model\Country',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1283,7 +1283,7 @@ class CountriesApi
      */
     public function countriesGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['countriesGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Country';
+        $returnType = '\Topal\Client\Model\Country';
         $request = $this->countriesGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1436,12 +1436,12 @@ class CountriesApi
      * Save country
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\Country $country country (required)
+     * @param  \Topal\Client\Model\Country $country country (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Country
+     * @return \Topal\Client\Model\Country
      */
     public function countriesPost($client_id, $country, string $contentType = self::contentTypes['countriesPost'][0])
     {
@@ -1455,12 +1455,12 @@ class CountriesApi
      * Save country
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Country $country (required)
+     * @param  \Topal\Client\Model\Country $country (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Country, HTTP status code, HTTP response headers (array of strings)
      */
     public function countriesPostWithHttpInfo($client_id, $country, string $contentType = self::contentTypes['countriesPost'][0])
     {
@@ -1491,11 +1491,11 @@ class CountriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Country' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Country' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Country' !== 'string') {
+                        if ('\Topal\Client\Model\Country' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1513,7 +1513,7 @@ class CountriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Country', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Country', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1532,7 +1532,7 @@ class CountriesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Country';
+            $returnType = '\Topal\Client\Model\Country';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1565,7 +1565,7 @@ class CountriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Country',
+                        '\Topal\Client\Model\Country',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1581,7 +1581,7 @@ class CountriesApi
      * Save country
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Country $country (required)
+     * @param  \Topal\Client\Model\Country $country (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1603,7 +1603,7 @@ class CountriesApi
      * Save country
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Country $country (required)
+     * @param  \Topal\Client\Model\Country $country (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1611,7 +1611,7 @@ class CountriesApi
      */
     public function countriesPostAsyncWithHttpInfo($client_id, $country, string $contentType = self::contentTypes['countriesPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Country';
+        $returnType = '\Topal\Client\Model\Country';
         $request = $this->countriesPostRequest($client_id, $country, $contentType);
 
         return $this->client
@@ -1654,7 +1654,7 @@ class CountriesApi
      * Create request for operation 'countriesPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\Country $country (required)
+     * @param  \Topal\Client\Model\Country $country (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['countriesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

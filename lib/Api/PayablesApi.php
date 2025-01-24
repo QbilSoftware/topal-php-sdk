@@ -225,7 +225,7 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -245,7 +245,7 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -573,7 +573,7 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDeleteDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -593,7 +593,7 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDeleteDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -921,7 +921,7 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDeleteManualPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -941,7 +941,7 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDeleteManualPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1269,7 +1269,7 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDownloadDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1289,7 +1289,7 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesDownloadDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1617,9 +1617,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGet($only_open, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGet'][0])
     {
@@ -1637,9 +1637,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetWithHttpInfo($only_open, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGet'][0])
     {
@@ -1670,11 +1670,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1692,7 +1692,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1711,7 +1711,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1744,7 +1744,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1792,7 +1792,7 @@ class PayablesApi
      */
     public function payablesGetAsyncWithHttpInfo($only_open, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetRequest($only_open, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -1965,9 +1965,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetAll'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetAll($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetAll'][0])
     {
@@ -1984,9 +1984,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetAll'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetAllWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetAll'][0])
     {
@@ -2017,11 +2017,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2039,7 +2039,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2058,7 +2058,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2091,7 +2091,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2137,7 +2137,7 @@ class PayablesApi
      */
     public function payablesGetAllAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetAll'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetAllRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2294,9 +2294,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetAllPartyInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetAllPartyInvoices($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetAllPartyInvoices'][0])
     {
@@ -2314,9 +2314,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetAllPartyInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetAllPartyInvoicesWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetAllPartyInvoices'][0])
     {
@@ -2347,11 +2347,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2369,7 +2369,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2388,7 +2388,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2421,7 +2421,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2469,7 +2469,7 @@ class PayablesApi
      */
     public function payablesGetAllPartyInvoicesAsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetAllPartyInvoices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetAllPartyInvoicesRequest($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2642,9 +2642,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetByFreeInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesGetByFreeInvoiceNum($free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByFreeInvoiceNum'][0])
     {
@@ -2662,9 +2662,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetByFreeInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetByFreeInvoiceNumWithHttpInfo($free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByFreeInvoiceNum'][0])
     {
@@ -2695,11 +2695,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2717,7 +2717,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2736,7 +2736,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2769,7 +2769,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2817,7 +2817,7 @@ class PayablesApi
      */
     public function payablesGetByFreeInvoiceNumAsyncWithHttpInfo($free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByFreeInvoiceNum'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesGetByFreeInvoiceNumRequest($free_invoice_num, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -2990,9 +2990,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetByFreeInvoicesNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetByFreeInvoicesNum($free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByFreeInvoicesNum'][0])
     {
@@ -3010,9 +3010,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetByFreeInvoicesNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetByFreeInvoicesNumWithHttpInfo($free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByFreeInvoicesNum'][0])
     {
@@ -3043,11 +3043,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3065,7 +3065,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3084,7 +3084,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3117,7 +3117,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3165,7 +3165,7 @@ class PayablesApi
      */
     public function payablesGetByFreeInvoicesNumAsyncWithHttpInfo($free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByFreeInvoicesNum'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetByFreeInvoicesNumRequest($free_invoice_num, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -3338,9 +3338,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetByInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesGetByInvoiceNum($invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByInvoiceNum'][0])
     {
@@ -3358,9 +3358,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetByInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetByInvoiceNumWithHttpInfo($invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByInvoiceNum'][0])
     {
@@ -3391,11 +3391,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3413,7 +3413,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3432,7 +3432,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3465,7 +3465,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3513,7 +3513,7 @@ class PayablesApi
      */
     public function payablesGetByInvoiceNumAsyncWithHttpInfo($invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetByInvoiceNum'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesGetByInvoiceNumRequest($invoice_num, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -3687,9 +3687,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetInvoicesByPeriod'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetInvoicesByPeriod($date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetInvoicesByPeriod'][0])
     {
@@ -3708,9 +3708,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetInvoicesByPeriod'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetInvoicesByPeriodWithHttpInfo($date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetInvoicesByPeriod'][0])
     {
@@ -3741,11 +3741,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3763,7 +3763,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -3782,7 +3782,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3815,7 +3815,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3865,7 +3865,7 @@ class PayablesApi
      */
     public function payablesGetInvoicesByPeriodAsyncWithHttpInfo($date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetInvoicesByPeriod'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetInvoicesByPeriodRequest($date_from, $date_until, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -4056,9 +4056,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetManualPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Payment
+     * @return \Topal\Client\Model\Payment
      */
     public function payablesGetManualPayment($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetManualPayment'][0])
     {
@@ -4076,9 +4076,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetManualPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetManualPaymentWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetManualPayment'][0])
     {
@@ -4109,11 +4109,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Payment' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Payment' !== 'string') {
+                        if ('\Topal\Client\Model\Payment' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4131,7 +4131,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4150,7 +4150,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Payment';
+            $returnType = '\Topal\Client\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4183,7 +4183,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Payment',
+                        '\Topal\Client\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4231,7 +4231,7 @@ class PayablesApi
      */
     public function payablesGetManualPaymentAsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetManualPayment'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Payment';
+        $returnType = '\Topal\Client\Model\Payment';
         $request = $this->payablesGetManualPaymentRequest($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -4403,9 +4403,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetManualPayments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Payment[]
+     * @return \Topal\Client\Model\Payment[]
      */
     public function payablesGetManualPayments($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetManualPayments'][0])
     {
@@ -4422,9 +4422,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetManualPayments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Payment[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetManualPaymentsWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetManualPayments'][0])
     {
@@ -4455,11 +4455,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Payment[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Payment[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Payment[]' !== 'string') {
+                        if ('\Topal\Client\Model\Payment[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4477,7 +4477,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Payment[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Payment[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4496,7 +4496,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Payment[]';
+            $returnType = '\Topal\Client\Model\Payment[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4529,7 +4529,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Payment[]',
+                        '\Topal\Client\Model\Payment[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4575,7 +4575,7 @@ class PayablesApi
      */
     public function payablesGetManualPaymentsAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetManualPayments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Payment[]';
+        $returnType = '\Topal\Client\Model\Payment[]';
         $request = $this->payablesGetManualPaymentsRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -4731,9 +4731,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetOpen'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetOpen($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpen'][0])
     {
@@ -4750,9 +4750,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetOpen'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetOpenWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpen'][0])
     {
@@ -4783,11 +4783,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4805,7 +4805,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4824,7 +4824,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4857,7 +4857,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4903,7 +4903,7 @@ class PayablesApi
      */
     public function payablesGetOpenAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpen'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetOpenRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -5061,9 +5061,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetOpenInvoicesByPeriod'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetOpenInvoicesByPeriod($date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpenInvoicesByPeriod'][0])
     {
@@ -5082,9 +5082,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetOpenInvoicesByPeriod'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetOpenInvoicesByPeriodWithHttpInfo($date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpenInvoicesByPeriod'][0])
     {
@@ -5115,11 +5115,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5137,7 +5137,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5156,7 +5156,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5189,7 +5189,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5239,7 +5239,7 @@ class PayablesApi
      */
     public function payablesGetOpenInvoicesByPeriodAsyncWithHttpInfo($date_from, $date_until, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpenInvoicesByPeriod'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetOpenInvoicesByPeriodRequest($date_from, $date_until, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -5430,9 +5430,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetOpenPartyInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetOpenPartyInvoices($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpenPartyInvoices'][0])
     {
@@ -5450,9 +5450,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetOpenPartyInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetOpenPartyInvoicesWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpenPartyInvoices'][0])
     {
@@ -5483,11 +5483,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5505,7 +5505,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5524,7 +5524,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5557,7 +5557,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5605,7 +5605,7 @@ class PayablesApi
      */
     public function payablesGetOpenPartyInvoicesAsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetOpenPartyInvoices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetOpenPartyInvoicesRequest($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -5779,9 +5779,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPartyInvoiceByFreeInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesGetPartyInvoiceByFreeInvoiceNum($party_id, $free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoiceByFreeInvoiceNum'][0])
     {
@@ -5800,9 +5800,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPartyInvoiceByFreeInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetPartyInvoiceByFreeInvoiceNumWithHttpInfo($party_id, $free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoiceByFreeInvoiceNum'][0])
     {
@@ -5833,11 +5833,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5855,7 +5855,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5874,7 +5874,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5907,7 +5907,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5957,7 +5957,7 @@ class PayablesApi
      */
     public function payablesGetPartyInvoiceByFreeInvoiceNumAsyncWithHttpInfo($party_id, $free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoiceByFreeInvoiceNum'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesGetPartyInvoiceByFreeInvoiceNumRequest($party_id, $free_invoice_num, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -6147,9 +6147,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPartyInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetPartyInvoices($id, $only_open, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoices'][0])
     {
@@ -6168,9 +6168,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPartyInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetPartyInvoicesWithHttpInfo($id, $only_open, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoices'][0])
     {
@@ -6201,11 +6201,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6223,7 +6223,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6242,7 +6242,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6275,7 +6275,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6325,7 +6325,7 @@ class PayablesApi
      */
     public function payablesGetPartyInvoicesAsyncWithHttpInfo($id, $only_open, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetPartyInvoicesRequest($id, $only_open, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -6516,9 +6516,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPartyInvoicesByFreeInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice[]
+     * @return \Topal\Client\Model\Invoice[]
      */
     public function payablesGetPartyInvoicesByFreeInvoiceNum($party_id, $free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoicesByFreeInvoiceNum'][0])
     {
@@ -6537,9 +6537,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPartyInvoicesByFreeInvoiceNum'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetPartyInvoicesByFreeInvoiceNumWithHttpInfo($party_id, $free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoicesByFreeInvoiceNum'][0])
     {
@@ -6570,11 +6570,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice[]' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6592,7 +6592,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6611,7 +6611,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice[]';
+            $returnType = '\Topal\Client\Model\Invoice[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6644,7 +6644,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice[]',
+                        '\Topal\Client\Model\Invoice[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6694,7 +6694,7 @@ class PayablesApi
      */
     public function payablesGetPartyInvoicesByFreeInvoiceNumAsyncWithHttpInfo($party_id, $free_invoice_num, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPartyInvoicesByFreeInvoiceNum'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice[]';
+        $returnType = '\Topal\Client\Model\Invoice[]';
         $request = $this->payablesGetPartyInvoicesByFreeInvoiceNumRequest($party_id, $free_invoice_num, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -6882,9 +6882,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPendingDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Document[]
+     * @return \Topal\Client\Model\Document[]
      */
     public function payablesGetPendingDocuments($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPendingDocuments'][0])
     {
@@ -6901,9 +6901,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGetPendingDocuments'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Document[], HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGetPendingDocumentsWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPendingDocuments'][0])
     {
@@ -6934,11 +6934,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Document[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Document[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Document[]' !== 'string') {
+                        if ('\Topal\Client\Model\Document[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -6956,7 +6956,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Document[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Document[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -6975,7 +6975,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Document[]';
+            $returnType = '\Topal\Client\Model\Document[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7008,7 +7008,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Document[]',
+                        '\Topal\Client\Model\Document[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7054,7 +7054,7 @@ class PayablesApi
      */
     public function payablesGetPendingDocumentsAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGetPendingDocuments'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Document[]';
+        $returnType = '\Topal\Client\Model\Document[]';
         $request = $this->payablesGetPendingDocumentsRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -7211,9 +7211,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesGet_0($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGet_0'][0])
     {
@@ -7231,9 +7231,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesGet_0WithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGet_0'][0])
     {
@@ -7264,11 +7264,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -7286,7 +7286,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -7305,7 +7305,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7338,7 +7338,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7386,7 +7386,7 @@ class PayablesApi
      */
     public function payablesGet_0AsyncWithHttpInfo($id, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesGet_0Request($id, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -7559,7 +7559,7 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesLinkDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -7579,7 +7579,7 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesLinkDocument'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7906,9 +7906,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesNew'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesNew($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesNew'][0])
     {
@@ -7925,9 +7925,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesNew'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesNewWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesNew'][0])
     {
@@ -7958,11 +7958,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -7980,7 +7980,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -7999,7 +7999,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8032,7 +8032,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8078,7 +8078,7 @@ class PayablesApi
      */
     public function payablesNewAsyncWithHttpInfo($client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesNew'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesNewRequest($client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -8236,9 +8236,9 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPayInvoice'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Payment
+     * @return \Topal\Client\Model\Payment
      */
     public function payablesPayInvoice($id, $date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesPayInvoice'][0])
     {
@@ -8257,9 +8257,9 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPayInvoice'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesPayInvoiceWithHttpInfo($id, $date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesPayInvoice'][0])
     {
@@ -8290,11 +8290,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Payment' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Payment' !== 'string') {
+                        if ('\Topal\Client\Model\Payment' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -8312,7 +8312,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -8331,7 +8331,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Payment';
+            $returnType = '\Topal\Client\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8364,7 +8364,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Payment',
+                        '\Topal\Client\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8414,7 +8414,7 @@ class PayablesApi
      */
     public function payablesPayInvoiceAsyncWithHttpInfo($id, $date, $client_id, $fiscal_year_id, string $contentType = self::contentTypes['payablesPayInvoice'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Payment';
+        $returnType = '\Topal\Client\Model\Payment';
         $request = $this->payablesPayInvoiceRequest($id, $date, $client_id, $fiscal_year_id, $contentType);
 
         return $this->client
@@ -8601,12 +8601,12 @@ class PayablesApi
      *
      * @param  string $client_id client_id (required)
      * @param  string $fiscal_year_id fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Invoice $invoice invoice (required)
+     * @param  \Topal\Client\Model\Invoice $invoice invoice (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesPost($client_id, $fiscal_year_id, $invoice, string $contentType = self::contentTypes['payablesPost'][0])
     {
@@ -8621,12 +8621,12 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Invoice $invoice (required)
+     * @param  \Topal\Client\Model\Invoice $invoice (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesPostWithHttpInfo($client_id, $fiscal_year_id, $invoice, string $contentType = self::contentTypes['payablesPost'][0])
     {
@@ -8657,11 +8657,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -8679,7 +8679,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -8698,7 +8698,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8731,7 +8731,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8748,7 +8748,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Invoice $invoice (required)
+     * @param  \Topal\Client\Model\Invoice $invoice (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -8771,7 +8771,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Invoice $invoice (required)
+     * @param  \Topal\Client\Model\Invoice $invoice (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -8779,7 +8779,7 @@ class PayablesApi
      */
     public function payablesPostAsyncWithHttpInfo($client_id, $fiscal_year_id, $invoice, string $contentType = self::contentTypes['payablesPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesPostRequest($client_id, $fiscal_year_id, $invoice, $contentType);
 
         return $this->client
@@ -8823,7 +8823,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Invoice $invoice (required)
+     * @param  \Topal\Client\Model\Invoice $invoice (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -8948,12 +8948,12 @@ class PayablesApi
      *
      * @param  string $client_id client_id (required)
      * @param  string $fiscal_year_id fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\QrBill $qr_bill qr_bill (required)
+     * @param  \Topal\Client\Model\QrBill $qr_bill qr_bill (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostFromQrBill'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice
+     * @return \Topal\Client\Model\Invoice
      */
     public function payablesPostFromQrBill($client_id, $fiscal_year_id, $qr_bill, string $contentType = self::contentTypes['payablesPostFromQrBill'][0])
     {
@@ -8968,12 +8968,12 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\QrBill $qr_bill (required)
+     * @param  \Topal\Client\Model\QrBill $qr_bill (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostFromQrBill'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Invoice, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesPostFromQrBillWithHttpInfo($client_id, $fiscal_year_id, $qr_bill, string $contentType = self::contentTypes['payablesPostFromQrBill'][0])
     {
@@ -9004,11 +9004,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Topal\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -9026,7 +9026,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -9045,7 +9045,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Topal\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9078,7 +9078,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Topal\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9095,7 +9095,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\QrBill $qr_bill (required)
+     * @param  \Topal\Client\Model\QrBill $qr_bill (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostFromQrBill'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -9118,7 +9118,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\QrBill $qr_bill (required)
+     * @param  \Topal\Client\Model\QrBill $qr_bill (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostFromQrBill'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -9126,7 +9126,7 @@ class PayablesApi
      */
     public function payablesPostFromQrBillAsyncWithHttpInfo($client_id, $fiscal_year_id, $qr_bill, string $contentType = self::contentTypes['payablesPostFromQrBill'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Topal\Client\Model\Invoice';
         $request = $this->payablesPostFromQrBillRequest($client_id, $fiscal_year_id, $qr_bill, $contentType);
 
         return $this->client
@@ -9170,7 +9170,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\QrBill $qr_bill (required)
+     * @param  \Topal\Client\Model\QrBill $qr_bill (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostFromQrBill'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -9295,12 +9295,12 @@ class PayablesApi
      *
      * @param  string $client_id client_id (required)
      * @param  string $fiscal_year_id fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Payment $payment payment (required)
+     * @param  \Topal\Client\Model\Payment $payment payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostManualPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Payment
+     * @return \Topal\Client\Model\Payment
      */
     public function payablesPostManualPayment($client_id, $fiscal_year_id, $payment, string $contentType = self::contentTypes['payablesPostManualPayment'][0])
     {
@@ -9315,12 +9315,12 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Payment $payment (required)
+     * @param  \Topal\Client\Model\Payment $payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostManualPayment'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Payment, HTTP status code, HTTP response headers (array of strings)
      */
     public function payablesPostManualPaymentWithHttpInfo($client_id, $fiscal_year_id, $payment, string $contentType = self::contentTypes['payablesPostManualPayment'][0])
     {
@@ -9351,11 +9351,11 @@ class PayablesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Payment' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Payment' !== 'string') {
+                        if ('\Topal\Client\Model\Payment' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -9373,7 +9373,7 @@ class PayablesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -9392,7 +9392,7 @@ class PayablesApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Payment';
+            $returnType = '\Topal\Client\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9425,7 +9425,7 @@ class PayablesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Payment',
+                        '\Topal\Client\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9442,7 +9442,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Payment $payment (required)
+     * @param  \Topal\Client\Model\Payment $payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostManualPayment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -9465,7 +9465,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Payment $payment (required)
+     * @param  \Topal\Client\Model\Payment $payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostManualPayment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -9473,7 +9473,7 @@ class PayablesApi
      */
     public function payablesPostManualPaymentAsyncWithHttpInfo($client_id, $fiscal_year_id, $payment, string $contentType = self::contentTypes['payablesPostManualPayment'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Payment';
+        $returnType = '\Topal\Client\Model\Payment';
         $request = $this->payablesPostManualPaymentRequest($client_id, $fiscal_year_id, $payment, $contentType);
 
         return $this->client
@@ -9517,7 +9517,7 @@ class PayablesApi
      *
      * @param  string $client_id (required)
      * @param  string $fiscal_year_id (required)
-     * @param  \OpenAPI\Client\Model\Payment $payment (required)
+     * @param  \Topal\Client\Model\Payment $payment (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesPostManualPayment'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -9644,7 +9644,7 @@ class PayablesApi
      * @param  string $fiscal_year_id fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesUpload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -9663,7 +9663,7 @@ class PayablesApi
      * @param  string $fiscal_year_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['payablesUpload'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

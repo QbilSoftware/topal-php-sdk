@@ -133,9 +133,9 @@ class InterestsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['interestsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Interest[]
+     * @return \Topal\Client\Model\Interest[]
      */
     public function interestsGet($client_id, string $contentType = self::contentTypes['interestsGet'][0])
     {
@@ -151,9 +151,9 @@ class InterestsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['interestsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Interest[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Interest[], HTTP status code, HTTP response headers (array of strings)
      */
     public function interestsGetWithHttpInfo($client_id, string $contentType = self::contentTypes['interestsGet'][0])
     {
@@ -184,11 +184,11 @@ class InterestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Interest[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Interest[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Interest[]' !== 'string') {
+                        if ('\Topal\Client\Model\Interest[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -206,7 +206,7 @@ class InterestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Interest[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Interest[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -225,7 +225,7 @@ class InterestsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Interest[]';
+            $returnType = '\Topal\Client\Model\Interest[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -258,7 +258,7 @@ class InterestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Interest[]',
+                        '\Topal\Client\Model\Interest[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -302,7 +302,7 @@ class InterestsApi
      */
     public function interestsGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['interestsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Interest[]';
+        $returnType = '\Topal\Client\Model\Interest[]';
         $request = $this->interestsGetRequest($client_id, $contentType);
 
         return $this->client
@@ -442,9 +442,9 @@ class InterestsApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['interestsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Interest
+     * @return \Topal\Client\Model\Interest
      */
     public function interestsGet_0($id, $client_id, string $contentType = self::contentTypes['interestsGet_0'][0])
     {
@@ -461,9 +461,9 @@ class InterestsApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['interestsGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Interest, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\Interest, HTTP status code, HTTP response headers (array of strings)
      */
     public function interestsGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['interestsGet_0'][0])
     {
@@ -494,11 +494,11 @@ class InterestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Interest' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\Interest' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Interest' !== 'string') {
+                        if ('\Topal\Client\Model\Interest' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -516,7 +516,7 @@ class InterestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Interest', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\Interest', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -535,7 +535,7 @@ class InterestsApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\Interest';
+            $returnType = '\Topal\Client\Model\Interest';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -568,7 +568,7 @@ class InterestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Interest',
+                        '\Topal\Client\Model\Interest',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -614,7 +614,7 @@ class InterestsApi
      */
     public function interestsGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['interestsGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Interest';
+        $returnType = '\Topal\Client\Model\Interest';
         $request = $this->interestsGet_0Request($id, $client_id, $contentType);
 
         return $this->client

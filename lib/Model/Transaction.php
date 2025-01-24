@@ -68,7 +68,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_confirmed' => 'bool',
         'num_range_fid' => 'int',
         'has_document' => 'bool',
-        'postings' => '\OpenAPI\Client\Model\Posting[]'
+        'postings' => '\Topal\Client\Model\Posting[]'
     ];
 
     /**
@@ -669,7 +669,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets postings
      *
-     * @return \OpenAPI\Client\Model\Posting[]|null
+     * @return \Topal\Client\Model\Posting[]|null
      */
     public function getPostings()
     {
@@ -679,7 +679,7 @@ class Transaction implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets postings
      *
-     * @param \OpenAPI\Client\Model\Posting[]|null $postings postings
+     * @param \Topal\Client\Model\Posting[]|null $postings postings
      *
      * @return self
      */

@@ -144,7 +144,7 @@ class FiscalYearApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -163,7 +163,7 @@ class FiscalYearApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -471,9 +471,9 @@ class FiscalYearApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FiscalYear[]
+     * @return \Topal\Client\Model\FiscalYear[]
      */
     public function fiscalYearGet($client_id, string $contentType = self::contentTypes['fiscalYearGet'][0])
     {
@@ -489,9 +489,9 @@ class FiscalYearApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FiscalYear[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\FiscalYear[], HTTP status code, HTTP response headers (array of strings)
      */
     public function fiscalYearGetWithHttpInfo($client_id, string $contentType = self::contentTypes['fiscalYearGet'][0])
     {
@@ -522,11 +522,11 @@ class FiscalYearApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FiscalYear[]' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\FiscalYear[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FiscalYear[]' !== 'string') {
+                        if ('\Topal\Client\Model\FiscalYear[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -544,7 +544,7 @@ class FiscalYearApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FiscalYear[]', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\FiscalYear[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -563,7 +563,7 @@ class FiscalYearApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\FiscalYear[]';
+            $returnType = '\Topal\Client\Model\FiscalYear[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -596,7 +596,7 @@ class FiscalYearApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FiscalYear[]',
+                        '\Topal\Client\Model\FiscalYear[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -640,7 +640,7 @@ class FiscalYearApi
      */
     public function fiscalYearGetAsyncWithHttpInfo($client_id, string $contentType = self::contentTypes['fiscalYearGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FiscalYear[]';
+        $returnType = '\Topal\Client\Model\FiscalYear[]';
         $request = $this->fiscalYearGetRequest($client_id, $contentType);
 
         return $this->client
@@ -780,9 +780,9 @@ class FiscalYearApi
      * @param  string $client_id client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FiscalYear
+     * @return \Topal\Client\Model\FiscalYear
      */
     public function fiscalYearGet_0($id, $client_id, string $contentType = self::contentTypes['fiscalYearGet_0'][0])
     {
@@ -799,9 +799,9 @@ class FiscalYearApi
      * @param  string $client_id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearGet_0'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FiscalYear, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\FiscalYear, HTTP status code, HTTP response headers (array of strings)
      */
     public function fiscalYearGet_0WithHttpInfo($id, $client_id, string $contentType = self::contentTypes['fiscalYearGet_0'][0])
     {
@@ -832,11 +832,11 @@ class FiscalYearApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FiscalYear' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\FiscalYear' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FiscalYear' !== 'string') {
+                        if ('\Topal\Client\Model\FiscalYear' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -854,7 +854,7 @@ class FiscalYearApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FiscalYear', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\FiscalYear', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -873,7 +873,7 @@ class FiscalYearApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\FiscalYear';
+            $returnType = '\Topal\Client\Model\FiscalYear';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -906,7 +906,7 @@ class FiscalYearApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FiscalYear',
+                        '\Topal\Client\Model\FiscalYear',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -952,7 +952,7 @@ class FiscalYearApi
      */
     public function fiscalYearGet_0AsyncWithHttpInfo($id, $client_id, string $contentType = self::contentTypes['fiscalYearGet_0'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FiscalYear';
+        $returnType = '\Topal\Client\Model\FiscalYear';
         $request = $this->fiscalYearGet_0Request($id, $client_id, $contentType);
 
         return $this->client
@@ -1105,12 +1105,12 @@ class FiscalYearApi
      * saves fiscal year
      *
      * @param  string $client_id client_id (required)
-     * @param  \OpenAPI\Client\Model\FiscalYear $fiscal_year fiscal_year (required)
+     * @param  \Topal\Client\Model\FiscalYear $fiscal_year fiscal_year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FiscalYear
+     * @return \Topal\Client\Model\FiscalYear
      */
     public function fiscalYearPost($client_id, $fiscal_year, string $contentType = self::contentTypes['fiscalYearPost'][0])
     {
@@ -1124,12 +1124,12 @@ class FiscalYearApi
      * saves fiscal year
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\FiscalYear $fiscal_year (required)
+     * @param  \Topal\Client\Model\FiscalYear $fiscal_year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Topal\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FiscalYear, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Topal\Client\Model\FiscalYear, HTTP status code, HTTP response headers (array of strings)
      */
     public function fiscalYearPostWithHttpInfo($client_id, $fiscal_year, string $contentType = self::contentTypes['fiscalYearPost'][0])
     {
@@ -1160,11 +1160,11 @@ class FiscalYearApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FiscalYear' === '\SplFileObject') {
+                    if ('\Topal\Client\Model\FiscalYear' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FiscalYear' !== 'string') {
+                        if ('\Topal\Client\Model\FiscalYear' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1182,7 +1182,7 @@ class FiscalYearApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FiscalYear', []),
+                        ObjectSerializer::deserialize($content, '\Topal\Client\Model\FiscalYear', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1201,7 +1201,7 @@ class FiscalYearApi
                 );
             }
 
-            $returnType = '\OpenAPI\Client\Model\FiscalYear';
+            $returnType = '\Topal\Client\Model\FiscalYear';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1234,7 +1234,7 @@ class FiscalYearApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FiscalYear',
+                        '\Topal\Client\Model\FiscalYear',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1250,7 +1250,7 @@ class FiscalYearApi
      * saves fiscal year
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\FiscalYear $fiscal_year (required)
+     * @param  \Topal\Client\Model\FiscalYear $fiscal_year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1272,7 +1272,7 @@ class FiscalYearApi
      * saves fiscal year
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\FiscalYear $fiscal_year (required)
+     * @param  \Topal\Client\Model\FiscalYear $fiscal_year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1280,7 +1280,7 @@ class FiscalYearApi
      */
     public function fiscalYearPostAsyncWithHttpInfo($client_id, $fiscal_year, string $contentType = self::contentTypes['fiscalYearPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\FiscalYear';
+        $returnType = '\Topal\Client\Model\FiscalYear';
         $request = $this->fiscalYearPostRequest($client_id, $fiscal_year, $contentType);
 
         return $this->client
@@ -1323,7 +1323,7 @@ class FiscalYearApi
      * Create request for operation 'fiscalYearPost'
      *
      * @param  string $client_id (required)
-     * @param  \OpenAPI\Client\Model\FiscalYear $fiscal_year (required)
+     * @param  \Topal\Client\Model\FiscalYear $fiscal_year (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['fiscalYearPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
