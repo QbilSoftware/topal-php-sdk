@@ -29,7 +29,7 @@
 namespace Topal\Client;
 
 use GuzzleHttp\Psr7\Utils;
-use OpenAPI\Client\Model\ModelInterface;
+use Topal\Client\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
