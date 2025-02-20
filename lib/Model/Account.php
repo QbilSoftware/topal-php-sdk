@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Topal\Client\Api;
+namespace Topal\Client\Model;
 
 use \ArrayAccess;
 use \Topal\Client\ObjectSerializer;
