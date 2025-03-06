@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Topal\Client\Model;
+namespace Topal\Client\ModelTest;
 
 use \ArrayAccess;
 use \Topal\Client\ObjectSerializer;
